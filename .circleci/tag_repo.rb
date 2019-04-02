@@ -38,17 +38,10 @@ tags.each do |tag_key|
   tag     = available_tags[tag_key]
   puts "Tagging the repo with #{tag}..."
 	# puts "."
-	`cd #{WORK_DIR} && git push origin ":#{tag}"`
-  # `cd #{WORK_DIR} && git push origin ":#{tag}" > /dev/null 2>&1`
-
-	`cd #{WORK_DIR} && git tag --delete #{tag}`
-  # `cd #{WORK_DIR} && git tag --delete #{tag} > /dev/null 2>&1`
-
-	`cd #{WORK_DIR} && git tag -a #{tag} -m "Used tag-repo.rb on for '#{tag_key}' tagging"`
-  # `cd #{WORK_DIR} && git tag -a #{tag} -m "Used tag-for-build.sh on component=${component}" > /dev/null 2>&1`
-
-  `cd #{WORK_DIR} && git push --tags >`
-	# `cd #{WORK_DIR} && git push --tags > /dev/null 2>&1`
+  `cd #{WORK_DIR} && git push origin ":#{tag}" > /dev/null 2>&1`
+  `cd #{WORK_DIR} && git tag --delete #{tag} > /dev/null 2>&1`
+  `cd #{WORK_DIR} && git tag -a #{tag} -m "Used tag-for-build.sh on component=${component}" > /dev/null 2>&1`
+	`cd #{WORK_DIR} && git push --tags > /dev/null 2>&1`
 	puts " |> Tag updated!"
 end
 #
