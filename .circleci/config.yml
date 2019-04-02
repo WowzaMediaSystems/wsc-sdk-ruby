@@ -1,0 +1,73 @@
+version: 2
+
+# The workflows that drive this project
+workflows:
+  version: 2
+
+  build-and-deploy:
+    jobs:
+      - build-and-deploy-master:
+          context: wsc-sdk-ruby
+          filters:
+            branches:
+              only: /master/
+
+      - build-and-deploy-release:
+          context: wsc-sdk-ruby
+          filters:
+            branches:
+              only: /release\/.*/
+
+      - test-development:
+          context: wsc-sdk-ruby
+          filters:
+            branches:
+              only: /development/
+
+jobs:
+
+  build-and-deploy-master:
+
+    docker:
+      - image: quay.io/wowzaprivate/wsc-sdk-ruby-build:0.0.0
+        auth:
+          username: $DOCKER_REG_USERNAME
+          password: $DOCKER_REG_PASSWORD
+
+    steps:
+      - checkout
+      - run:
+          name: Build and Deploy (Master)
+          command: ". ./.circleci/jobs/build-and-deploy-master.sh"
+
+  build-and-deploy-release:
+
+    docker:
+      - image: quay.io/wowzaprivate/wsc-sdk-ruby-build:0.0.0
+        auth:
+          username: $DOCKER_REG_USERNAME
+          password: $DOCKER_REG_PASSWORD
+
+    steps:
+      - checkout
+      - run:
+          name: Build and Deploy (Release)
+          command: ". ./.circleci/jobs/build-and-deploy-release.sh"
+      - store_test_results:
+          path: test_results
+
+  test-development:
+
+    docker:
+      - image: quay.io/wowzaprivate/wsc-sdk-ruby-build:0.0.0
+        auth:
+          username: $DOCKER_REG_USERNAME
+          password: $DOCKER_REG_PASSWORD
+
+    steps:
+      - checkout
+      - run:
+          name: Run Unit Tests (Development)
+          command: ". ./.circleci/jobs/test-development.sh"
+      - store_test_results:
+          path: test_results

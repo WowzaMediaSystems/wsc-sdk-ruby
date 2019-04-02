@@ -1,0 +1,10 @@
+<meta charset="<%= charset %>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wowza Streaming Cloud - SDK Code Documentation</title>
+<% stylesheets.each do |stylesheet| %>
+  <link rel="stylesheet" href="<%= mtime_url(stylesheet) %>" type="text/css" charset="utf-8" />
+<% end %>
+<%= erb :script_setup %>
+<% javascripts.each do |javascript| %>
+  <script type="text/javascript" charset="utf-8" src="<%= mtime_url(javascript) %>"></script>
+<% end %>
