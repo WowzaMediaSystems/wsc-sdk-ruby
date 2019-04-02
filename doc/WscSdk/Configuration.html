@@ -339,24 +339,24 @@
       <pre class="lines">
 
 
-9
-10
-11
 12
 13
 14
-15</pre>
+15
+16
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/configuration.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/configuration.rb', line 12</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">initialize</span>
-  <span style="color:#33B">@api_key</span>    = <span style="color:#069">ENV</span>[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">WSC_API_KEY</span><span style="color:#710">&quot;</span></span>]
-  <span style="color:#33B">@access_key</span> = <span style="color:#069">ENV</span>[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">WSC_API_ACCESS_KEY</span><span style="color:#710">&quot;</span></span>]
-  <span style="color:#33B">@logger</span>     = ::<span style="color:#036;font-weight:bold">Logger</span>.new(<span style="color:#069">STDOUT</span>)
-  <span style="color:#33B">@hostname</span>   = <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">HOSTNAME</span>
-  <span style="color:#33B">@version</span>    = <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">PATH_VERSION</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+  <span class='ivar'>@api_key</span>    <span class='op'>=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WSC_API_KEY</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='ivar'>@access_key</span> <span class='op'>=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WSC_API_ACCESS_KEY</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+  <span class='ivar'>@logger</span>     <span class='op'>=</span> <span class='op'>::</span><span class='const'>Logger</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>STDOUT</span><span class='rparen'>)</span>
+  <span class='ivar'>@hostname</span>   <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../WscSdk.html#HOSTNAME-constant" title="WscSdk::HOSTNAME (constant)">HOSTNAME</a></span></span>
+  <span class='ivar'>@version</span>    <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../WscSdk.html#PATH_VERSION-constant" title="WscSdk::PATH_VERSION (constant)">PATH_VERSION</a></span></span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -395,16 +395,16 @@
       <pre class="lines">
 
 
-7
-8
-9</pre>
+10
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/configuration.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/configuration.rb', line 10</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">access_key</span>
-  <span style="color:#33B">@access_key</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_access_key'>access_key</span>
+  <span class='ivar'>@access_key</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -438,16 +438,16 @@
       <pre class="lines">
 
 
-7
-8
-9</pre>
+10
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/configuration.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/configuration.rb', line 10</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">api_key</span>
-  <span style="color:#33B">@api_key</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_api_key'>api_key</span>
+  <span class='ivar'>@api_key</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -481,16 +481,16 @@
       <pre class="lines">
 
 
-7
-8
-9</pre>
+10
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/configuration.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/configuration.rb', line 10</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">hostname</span>
-  <span style="color:#33B">@hostname</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_hostname'>hostname</span>
+  <span class='ivar'>@hostname</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -524,16 +524,16 @@
       <pre class="lines">
 
 
-7
-8
-9</pre>
+10
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/configuration.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/configuration.rb', line 10</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">logger</span>
-  <span style="color:#33B">@logger</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_logger'>logger</span>
+  <span class='ivar'>@logger</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -567,16 +567,16 @@
       <pre class="lines">
 
 
-7
-8
-9</pre>
+10
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/configuration.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/configuration.rb', line 10</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">version</span>
-  <span style="color:#33B">@version</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_version'>version</span>
+  <span class='ivar'>@version</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>

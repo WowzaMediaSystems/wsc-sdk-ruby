@@ -291,24 +291,24 @@
       <pre class="lines">
 
 
-36
-37
-38
 39
 40
 41
-42</pre>
+42
+43
+44
+45</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/ull_stream_target.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/ull_stream_target.rb', line 39</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">pull</span>(name, source_url, modifiers={})
-  <span style="color:#069">self</span>.merge({
-    <span style="color:#606">name</span>:                         name,
-    <span style="color:#606">source_delivery_method</span>:       <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">DeliveryMethod</span>::<span style="color:#036;font-weight:bold">PULL</span>,
-    <span style="color:#606">source_url</span>:                   source_url
-  }, modifiers)
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_pull'>pull</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_source_url'>source_url</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+    <span class='label'>name:</span>                         <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+    <span class='label'>source_delivery_method:</span>       <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html" title="WscSdk::Enums::DeliveryMethod (module)">DeliveryMethod</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html#PULL-constant" title="WscSdk::Enums::DeliveryMethod::PULL (constant)">PULL</a></span></span><span class='comma'>,</span>
+    <span class='label'>source_url:</span>                   <span class='id identifier rubyid_source_url'>source_url</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -378,22 +378,22 @@
       <pre class="lines">
 
 
-18
-19
-20
 21
 22
-23</pre>
+23
+24
+25
+26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/ull_stream_target.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/ull_stream_target.rb', line 21</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">push</span>(name, modifiers={})
-  <span style="color:#069">self</span>.merge({
-    <span style="color:#606">name</span>:                   name,
-    <span style="color:#606">source_delivery_method</span>: <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">DeliveryMethod</span>::<span style="color:#036;font-weight:bold">PUSH</span>
-  }, modifiers)
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+    <span class='label'>name:</span>                   <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+    <span class='label'>source_delivery_method:</span> <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html" title="WscSdk::Enums::DeliveryMethod (module)">DeliveryMethod</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html#PUSH-constant" title="WscSdk::Enums::DeliveryMethod::PUSH (constant)">PUSH</a></span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>

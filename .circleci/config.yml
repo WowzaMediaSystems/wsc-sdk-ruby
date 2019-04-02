@@ -28,7 +28,7 @@ workflows:
           context: wsc-sdk-ruby
           filters:
             tags:
-              only: /release\/v.*/
+              only: /release/
             branches:
               only: /master/
 
@@ -38,7 +38,7 @@ workflows:
           context: wsc-sdk-ruby
           filters:
             tags:
-              only: /publish\/v.*/
+              only: /publish/
             branches:
               ignore: /master/
 
@@ -46,7 +46,7 @@ workflows:
           context: wsc-sdk-ruby
           filters:
             tags:
-              only: /publish\/v.*/
+              only: /publish/
             branches:
               only: /master/
 
@@ -56,9 +56,9 @@ jobs:
 
     docker:
       - image: quay.io/wowzaprivate/wsc-sdk-ruby-build:0.0.0
-        auth:
-          username: $DOCKER_REG_USERNAME
-          password: $DOCKER_REG_PASSWORD
+        # auth:
+        #   username: $DOCKER_REG_USERNAME
+        #   password: $DOCKER_REG_PASSWORD
 
     steps:
       - checkout
@@ -69,9 +69,9 @@ jobs:
   publish-staging:
     docker:
       - image: quay.io/wowzaprivate/wsc-sdk-ruby-build:0.0.0
-        auth:
-          username: $DOCKER_REG_USERNAME
-          password: $DOCKER_REG_PASSWORD
+        # auth:
+        #   username: $DOCKER_REG_USERNAME
+        #   password: $DOCKER_REG_PASSWORD
 
     steps:
       - checkout
@@ -82,9 +82,9 @@ jobs:
   publish-production:
     docker:
       - image: quay.io/wowzaprivate/wsc-sdk-ruby-build:0.0.0
-        auth:
-          username: $DOCKER_REG_USERNAME
-          password: $DOCKER_REG_PASSWORD
+        # auth:
+        #   username: $DOCKER_REG_USERNAME
+        #   password: $DOCKER_REG_PASSWORD
 
     steps:
       - checkout
@@ -96,9 +96,9 @@ jobs:
 
     docker:
       - image: quay.io/wowzaprivate/wsc-sdk-ruby-build:0.0.0
-        auth:
-          username: $DOCKER_REG_USERNAME
-          password: $DOCKER_REG_PASSWORD
+        # auth:
+        #   username: $DOCKER_REG_USERNAME
+        #   password: $DOCKER_REG_PASSWORD
 
     steps:
       - checkout
@@ -112,9 +112,9 @@ jobs:
 
     docker:
       - image: quay.io/wowzaprivate/wsc-sdk-ruby-build:0.0.0
-        auth:
-          username: $DOCKER_REG_USERNAME
-          password: $DOCKER_REG_PASSWORD
+        # auth:
+        #   username: $DOCKER_REG_USERNAME
+        #   password: $DOCKER_REG_PASSWORD
 
     steps:
       - checkout

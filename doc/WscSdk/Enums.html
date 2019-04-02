@@ -227,20 +227,20 @@ exception otherwise.</p>
       <pre class="lines">
 
 
-22
-23
-24
 25
-26</pre>
+26
+27
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/enums.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/enums.rb', line 25</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">to_constant</span>(name)
-  constant_name = name.to_s.upcase.to_sym
-  raise <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Model type '</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>name.to_s<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">' doesn't exist</span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">unless</span> <span style="color:#069">self</span>.constants.include?(constant_name)
-  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>.const_get(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span><span style="color:#069">self</span>.name<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">::</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>constant_name<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>)
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_to_constant'>to_constant</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_constant_name'>constant_name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Model type &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; doesn&#39;t exist</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_constants'>constants</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_constant_name'>constant_name</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_const_get'>const_get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>::</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_constant_name'>constant_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -290,20 +290,20 @@ exception otherwise.</p>
       <pre class="lines">
 
 
-12
-13
-14
 15
-16</pre>
+16
+17
+18
+19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/enums.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/enums.rb', line 15</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">values</span>
-  _values = []
-  <span style="color:#069">self</span>.constants(<span style="color:#069">false</span>).each { |constant| _values &lt;&lt; <span style="color:#069">self</span>.const_get(constant) }
-  _values
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_values'>values</span>
+  <span class='id identifier rubyid__values'>_values</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_constants'>constants</span><span class='lparen'>(</span><span class='kw'>false</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_constant'>constant</span><span class='op'>|</span> <span class='id identifier rubyid__values'>_values</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_const_get'>const_get</span><span class='lparen'>(</span><span class='id identifier rubyid_constant'>constant</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid__values'>_values</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
