@@ -1,5 +1,5 @@
 
-echo "-----=====[ build-and-deploy-release.sh ]======-----"
+echo "-----=====[ publish-staging.sh ]======-----"
 echo
 
 . ./.circleci/helpers/setup.sh
@@ -8,10 +8,8 @@ echo
 
 . ./.circleci/helpers/test_integration.sh
 
-. ./.circleci/helpers/build_gem.sh
-
 . ./.circleci/helpers/build_docs.sh
 
 . ./.circleci/helpers/publish_docs_staging.sh
 
-/bin/bash ./.circleci/helpers/finalize_release.sh
+# /bin/bash ./.circleci/helpers/finalize_release.sh

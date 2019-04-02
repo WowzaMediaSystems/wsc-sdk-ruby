@@ -1,5 +1,5 @@
 echo
-echo "---===[ publish_gem.sh ]===---"
+echo "---===[ release_gem.sh ]===---"
 echo
 
 

@@ -30,8 +30,9 @@ tags      = (available_tags.keys & ARGV).map{ |t| t.downcase }.flatten
 # Generate usage if we got a bad tag.
 usage if (ARGV - tags).length > 0
 
-tags = tags - ["unit"] if tags.include?("release")
-tags = tags - ["integration"] if tags.include?("release")
+tags = tags - ["unit"] if tags.include?("release") or tags.include?("publish")
+tags = tags - ["integration"] if tags.include?("release") or tags.include?("publish")
+tags = tags - ["publish"] if tags.include?("release")
 
 puts "Tags: #{tags}"
 
@@ -45,7 +46,7 @@ tags.each do |tag_key|
 	`cd #{WORK_DIR} && git tag --delete #{tag}`
   # `cd #{WORK_DIR} && git tag --delete #{tag} > /dev/null 2>&1`
 
-	`cd #{WORK_DIR} && git tag -a #{tag} -m "Used tag-for-build.sh on component=${component}"`
+	`cd #{WORK_DIR} && git tag -a #{tag} -m "Used tag-repo.rb on for '#{tag_key}' tagging"`
   # `cd #{WORK_DIR} && git tag -a #{tag} -m "Used tag-for-build.sh on component=${component}" > /dev/null 2>&1`
 
 	# `cd #{WORK_DIR} && git push --tags > /dev/null 2>&1`
