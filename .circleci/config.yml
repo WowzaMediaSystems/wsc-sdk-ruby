@@ -40,7 +40,7 @@ workflows:
             tags:
               only: /publish/
             branches:
-              ignore: /master/
+              only: /(development|release\/*)/
 
       - publish-production:
           context: wsc-sdk-ruby
