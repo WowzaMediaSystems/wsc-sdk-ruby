@@ -5,8 +5,6 @@ WORK_DIR = File.absolute_path(File.join(__dir__, "..", ".."))
 ruby_files = Dir[File.join(WORK_DIR, "**/*.rb")]
 
 ruby_files.each do |ruby_file|
-  puts "-"*80
-  puts "File: #{ruby_file}"
   file_contents   = File.read(ruby_file)
 
   next if file_contents.nil?
@@ -25,5 +23,7 @@ ruby_files.each do |ruby_file|
 
   lines = preamble + lines
 
-  puts lines.join("\n")
+  puts "-"*80
+  puts "File: #{ruby_file}"
+  File.open(ruby_file, 'w') { |f| f.puts lines.join("\n") }
 end

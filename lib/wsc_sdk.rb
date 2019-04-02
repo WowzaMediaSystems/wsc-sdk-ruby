@@ -1,3 +1,6 @@
+####> This code and all components © 2015 – 2019 Wowza Media Systems, LLC. All rights reserved.
+####> This code is licensed pursuant to the BSD 3-Clause License.
+
 # The root path of the SDK code base.
 WSC_SDK_ROOT_PATH = File.expand_path(File.join(File.dirname(__FILE__), ".."))
 

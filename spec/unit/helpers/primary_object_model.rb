@@ -1,3 +1,6 @@
+####> This code and all components © 2015 – 2019 Wowza Media Systems, LLC. All rights reserved.
+####> This code is licensed pursuant to the BSD 3-Clause License.
+
 # Define a model class to use for testing primary key assignment.
 #
 class PrimaryObjectModel < WscSdk::Model
