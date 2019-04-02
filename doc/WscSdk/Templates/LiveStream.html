@@ -454,30 +454,30 @@ single-bitrate delivery.</p>
       <pre class="lines">
 
 
-77
-78
-79
 80
 81
 82
 83
 84
 85
-86</pre>
+86
+87
+88
+89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/live_stream.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/live_stream.rb', line 80</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">gocoder</span>(name, width, height, modifiers={})
-  <span style="color:#069">self</span>.merge({
-    <span style="color:#606">name</span>:                       name,
-    <span style="color:#606">encoder</span>:                    <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">Encoder</span>::<span style="color:#036;font-weight:bold">WOWZA_GOCODER</span>,
-    <span style="color:#606">broadcast_location</span>:         <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">BroadcastLocation</span>::<span style="color:#036;font-weight:bold">US_WEST_CALIFORNIA</span>,
-    <span style="color:#606">aspect_ratio_width</span>:         width,
-    <span style="color:#606">aspect_ratio_height</span>:        height,
-    <span style="color:#606">delivery_method</span>:            <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">DeliveryMethod</span>::<span style="color:#036;font-weight:bold">PUSH</span>
-  }, modifiers)
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_gocoder'>gocoder</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='id identifier rubyid_height'>height</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+    <span class='label'>name:</span>                       <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+    <span class='label'>encoder:</span>                    <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Encoder.html" title="WscSdk::Enums::Encoder (module)">Encoder</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Encoder.html#WOWZA_GOCODER-constant" title="WscSdk::Enums::Encoder::WOWZA_GOCODER (constant)">WOWZA_GOCODER</a></span></span><span class='comma'>,</span>
+    <span class='label'>broadcast_location:</span>         <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html" title="WscSdk::Enums::BroadcastLocation (module)">BroadcastLocation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html#US_WEST_CALIFORNIA-constant" title="WscSdk::Enums::BroadcastLocation::US_WEST_CALIFORNIA (constant)">US_WEST_CALIFORNIA</a></span></span><span class='comma'>,</span>
+    <span class='label'>aspect_ratio_width:</span>         <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span>
+    <span class='label'>aspect_ratio_height:</span>        <span class='id identifier rubyid_height'>height</span><span class='comma'>,</span>
+    <span class='label'>delivery_method:</span>            <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html" title="WscSdk::Enums::DeliveryMethod (module)">DeliveryMethod</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html#PUSH-constant" title="WscSdk::Enums::DeliveryMethod::PUSH (constant)">PUSH</a></span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -595,9 +595,6 @@ single-bitrate delivery.</p>
       <pre class="lines">
 
 
-107
-108
-109
 110
 111
 112
@@ -605,22 +602,25 @@ single-bitrate delivery.</p>
 114
 115
 116
-117</pre>
+117
+118
+119
+120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/live_stream.rb', line 107</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/live_stream.rb', line 110</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">ip_camera</span>(name, width, height, source_url, modifiers={})
-  <span style="color:#069">self</span>.merge({
-    <span style="color:#606">name</span>:                       name,
-    <span style="color:#606">encoder</span>:                    <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">Encoder</span>::<span style="color:#036;font-weight:bold">IP_CAMERA</span>,
-    <span style="color:#606">broadcast_location</span>:         <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">BroadcastLocation</span>::<span style="color:#036;font-weight:bold">US_WEST_CALIFORNIA</span>,
-    <span style="color:#606">aspect_ratio_width</span>:         width,
-    <span style="color:#606">aspect_ratio_height</span>:        height,
-    <span style="color:#606">source_url</span>:                 source_url,
-    <span style="color:#606">delivery_method</span>:            <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">DeliveryMethod</span>::<span style="color:#036;font-weight:bold">PULL</span>
-  }, modifiers)
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ip_camera'>ip_camera</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='id identifier rubyid_height'>height</span><span class='comma'>,</span> <span class='id identifier rubyid_source_url'>source_url</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+    <span class='label'>name:</span>                       <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+    <span class='label'>encoder:</span>                    <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Encoder.html" title="WscSdk::Enums::Encoder (module)">Encoder</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Encoder.html#IP_CAMERA-constant" title="WscSdk::Enums::Encoder::IP_CAMERA (constant)">IP_CAMERA</a></span></span><span class='comma'>,</span>
+    <span class='label'>broadcast_location:</span>         <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html" title="WscSdk::Enums::BroadcastLocation (module)">BroadcastLocation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html#US_WEST_CALIFORNIA-constant" title="WscSdk::Enums::BroadcastLocation::US_WEST_CALIFORNIA (constant)">US_WEST_CALIFORNIA</a></span></span><span class='comma'>,</span>
+    <span class='label'>aspect_ratio_width:</span>         <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span>
+    <span class='label'>aspect_ratio_height:</span>        <span class='id identifier rubyid_height'>height</span><span class='comma'>,</span>
+    <span class='label'>source_url:</span>                 <span class='id identifier rubyid_source_url'>source_url</span><span class='comma'>,</span>
+    <span class='label'>delivery_method:</span>            <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html" title="WscSdk::Enums::DeliveryMethod (module)">DeliveryMethod</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html#PULL-constant" title="WscSdk::Enums::DeliveryMethod::PULL (constant)">PULL</a></span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -738,9 +738,6 @@ single-bitrate delivery.</p>
       <pre class="lines">
 
 
-161
-162
-163
 164
 165
 166
@@ -749,23 +746,26 @@ single-bitrate delivery.</p>
 169
 170
 171
-172</pre>
+172
+173
+174
+175</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/live_stream.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/live_stream.rb', line 164</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">rtmp_pull</span>(name, width, height, source_url, modifiers={})
-  <span style="color:#069">self</span>.merge({
-    <span style="color:#606">name</span>:                       name,
-    <span style="color:#606">encoder</span>:                    <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">Encoder</span>::<span style="color:#036;font-weight:bold">OTHER_RTMP</span>,
-    <span style="color:#606">protocol</span>:                   <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">Protocol</span>::<span style="color:#036;font-weight:bold">RTMP</span>,
-    <span style="color:#606">delivery_method</span>:            <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">DeliveryMethod</span>::<span style="color:#036;font-weight:bold">PULL</span>,
-    <span style="color:#606">broadcast_location</span>:         <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">BroadcastLocation</span>::<span style="color:#036;font-weight:bold">US_WEST_CALIFORNIA</span>,
-    <span style="color:#606">aspect_ratio_width</span>:         width,
-    <span style="color:#606">aspect_ratio_height</span>:        height,
-    <span style="color:#606">source_url</span>:                 source_url
-  }, modifiers)
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rtmp_pull'>rtmp_pull</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='id identifier rubyid_height'>height</span><span class='comma'>,</span> <span class='id identifier rubyid_source_url'>source_url</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+    <span class='label'>name:</span>                       <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+    <span class='label'>encoder:</span>                    <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Encoder.html" title="WscSdk::Enums::Encoder (module)">Encoder</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Encoder.html#OTHER_RTMP-constant" title="WscSdk::Enums::Encoder::OTHER_RTMP (constant)">OTHER_RTMP</a></span></span><span class='comma'>,</span>
+    <span class='label'>protocol:</span>                   <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Protocol.html" title="WscSdk::Enums::Protocol (module)">Protocol</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Protocol.html#RTMP-constant" title="WscSdk::Enums::Protocol::RTMP (constant)">RTMP</a></span></span><span class='comma'>,</span>
+    <span class='label'>delivery_method:</span>            <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html" title="WscSdk::Enums::DeliveryMethod (module)">DeliveryMethod</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html#PULL-constant" title="WscSdk::Enums::DeliveryMethod::PULL (constant)">PULL</a></span></span><span class='comma'>,</span>
+    <span class='label'>broadcast_location:</span>         <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html" title="WscSdk::Enums::BroadcastLocation (module)">BroadcastLocation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html#US_WEST_CALIFORNIA-constant" title="WscSdk::Enums::BroadcastLocation::US_WEST_CALIFORNIA (constant)">US_WEST_CALIFORNIA</a></span></span><span class='comma'>,</span>
+    <span class='label'>aspect_ratio_width:</span>         <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span>
+    <span class='label'>aspect_ratio_height:</span>        <span class='id identifier rubyid_height'>height</span><span class='comma'>,</span>
+    <span class='label'>source_url:</span>                 <span class='id identifier rubyid_source_url'>source_url</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -867,30 +867,30 @@ single-bitrate delivery.</p>
       <pre class="lines">
 
 
-133
-134
-135
 136
 137
 138
 139
 140
 141
-142</pre>
+142
+143
+144
+145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/live_stream.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/live_stream.rb', line 136</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">rtmp_push</span>(name, width, height, modifiers={})
-  <span style="color:#069">self</span>.merge({
-    <span style="color:#606">name</span>:                       name,
-    <span style="color:#606">encoder</span>:                    <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">Encoder</span>::<span style="color:#036;font-weight:bold">OTHER_RTMP</span>,
-    <span style="color:#606">delivery_method</span>:            <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">DeliveryMethod</span>::<span style="color:#036;font-weight:bold">PUSH</span>,
-    <span style="color:#606">broadcast_location</span>:         <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">BroadcastLocation</span>::<span style="color:#036;font-weight:bold">US_WEST_CALIFORNIA</span>,
-    <span style="color:#606">aspect_ratio_width</span>:         width,
-    <span style="color:#606">aspect_ratio_height</span>:        height
-  }, modifiers)
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rtmp_push'>rtmp_push</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='id identifier rubyid_height'>height</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+    <span class='label'>name:</span>                       <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+    <span class='label'>encoder:</span>                    <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Encoder.html" title="WscSdk::Enums::Encoder (module)">Encoder</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Encoder.html#OTHER_RTMP-constant" title="WscSdk::Enums::Encoder::OTHER_RTMP (constant)">OTHER_RTMP</a></span></span><span class='comma'>,</span>
+    <span class='label'>delivery_method:</span>            <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html" title="WscSdk::Enums::DeliveryMethod (module)">DeliveryMethod</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html#PUSH-constant" title="WscSdk::Enums::DeliveryMethod::PUSH (constant)">PUSH</a></span></span><span class='comma'>,</span>
+    <span class='label'>broadcast_location:</span>         <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html" title="WscSdk::Enums::BroadcastLocation (module)">BroadcastLocation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html#US_WEST_CALIFORNIA-constant" title="WscSdk::Enums::BroadcastLocation::US_WEST_CALIFORNIA (constant)">US_WEST_CALIFORNIA</a></span></span><span class='comma'>,</span>
+    <span class='label'>aspect_ratio_width:</span>         <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span>
+    <span class='label'>aspect_ratio_height:</span>        <span class='id identifier rubyid_height'>height</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1008,9 +1008,6 @@ single-bitrate delivery.</p>
       <pre class="lines">
 
 
-217
-218
-219
 220
 221
 222
@@ -1018,22 +1015,25 @@ single-bitrate delivery.</p>
 224
 225
 226
-227</pre>
+227
+228
+229
+230</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/live_stream.rb', line 217</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/live_stream.rb', line 220</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">rtsp_pull</span>(name, width, height, source_url, modifiers={})
-  <span style="color:#069">self</span>.merge({
-    <span style="color:#606">name</span>:                       name,
-    <span style="color:#606">encoder</span>:                    <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">Encoder</span>::<span style="color:#036;font-weight:bold">OTHER_RTSP</span>,
-    <span style="color:#606">delivery_method</span>:            <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">DeliveryMethod</span>::<span style="color:#036;font-weight:bold">PULL</span>,
-    <span style="color:#606">broadcast_location</span>:         <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">BroadcastLocation</span>::<span style="color:#036;font-weight:bold">US_WEST_CALIFORNIA</span>,
-    <span style="color:#606">aspect_ratio_width</span>:         width,
-    <span style="color:#606">aspect_ratio_height</span>:        height,
-    <span style="color:#606">source_url</span>:                 source_url
-  }, modifiers)
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rtsp_pull'>rtsp_pull</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='id identifier rubyid_height'>height</span><span class='comma'>,</span> <span class='id identifier rubyid_source_url'>source_url</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+    <span class='label'>name:</span>                       <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+    <span class='label'>encoder:</span>                    <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Encoder.html" title="WscSdk::Enums::Encoder (module)">Encoder</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Encoder.html#OTHER_RTSP-constant" title="WscSdk::Enums::Encoder::OTHER_RTSP (constant)">OTHER_RTSP</a></span></span><span class='comma'>,</span>
+    <span class='label'>delivery_method:</span>            <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html" title="WscSdk::Enums::DeliveryMethod (module)">DeliveryMethod</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html#PULL-constant" title="WscSdk::Enums::DeliveryMethod::PULL (constant)">PULL</a></span></span><span class='comma'>,</span>
+    <span class='label'>broadcast_location:</span>         <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html" title="WscSdk::Enums::BroadcastLocation (module)">BroadcastLocation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html#US_WEST_CALIFORNIA-constant" title="WscSdk::Enums::BroadcastLocation::US_WEST_CALIFORNIA (constant)">US_WEST_CALIFORNIA</a></span></span><span class='comma'>,</span>
+    <span class='label'>aspect_ratio_width:</span>         <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span>
+    <span class='label'>aspect_ratio_height:</span>        <span class='id identifier rubyid_height'>height</span><span class='comma'>,</span>
+    <span class='label'>source_url:</span>                 <span class='id identifier rubyid_source_url'>source_url</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1135,30 +1135,30 @@ single-bitrate delivery.</p>
       <pre class="lines">
 
 
-189
-190
-191
 192
 193
 194
 195
 196
 197
-198</pre>
+198
+199
+200
+201</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/live_stream.rb', line 189</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/live_stream.rb', line 192</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">rtsp_push</span>(name, width, height, modifiers={})
-  <span style="color:#069">self</span>.merge({
-    <span style="color:#606">name</span>:                       name,
-    <span style="color:#606">encoder</span>:                    <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">Encoder</span>::<span style="color:#036;font-weight:bold">OTHER_RTSP</span>,
-    <span style="color:#606">delivery_method</span>:            <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">DeliveryMethod</span>::<span style="color:#036;font-weight:bold">PUSH</span>,
-    <span style="color:#606">broadcast_location</span>:         <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">BroadcastLocation</span>::<span style="color:#036;font-weight:bold">US_WEST_CALIFORNIA</span>,
-    <span style="color:#606">aspect_ratio_width</span>:         width,
-    <span style="color:#606">aspect_ratio_height</span>:        height
-  }, modifiers)
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rtsp_push'>rtsp_push</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='id identifier rubyid_height'>height</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+    <span class='label'>name:</span>                       <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+    <span class='label'>encoder:</span>                    <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Encoder.html" title="WscSdk::Enums::Encoder (module)">Encoder</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Encoder.html#OTHER_RTSP-constant" title="WscSdk::Enums::Encoder::OTHER_RTSP (constant)">OTHER_RTSP</a></span></span><span class='comma'>,</span>
+    <span class='label'>delivery_method:</span>            <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html" title="WscSdk::Enums::DeliveryMethod (module)">DeliveryMethod</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html#PUSH-constant" title="WscSdk::Enums::DeliveryMethod::PUSH (constant)">PUSH</a></span></span><span class='comma'>,</span>
+    <span class='label'>broadcast_location:</span>         <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html" title="WscSdk::Enums::BroadcastLocation (module)">BroadcastLocation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html#US_WEST_CALIFORNIA-constant" title="WscSdk::Enums::BroadcastLocation::US_WEST_CALIFORNIA (constant)">US_WEST_CALIFORNIA</a></span></span><span class='comma'>,</span>
+    <span class='label'>aspect_ratio_width:</span>         <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span>
+    <span class='label'>aspect_ratio_height:</span>        <span class='id identifier rubyid_height'>height</span>
+  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1261,9 +1261,6 @@ single-bitrate delivery</p>
       <pre class="lines">
 
 
-50
-51
-52
 53
 54
 55
@@ -1271,22 +1268,25 @@ single-bitrate delivery</p>
 57
 58
 59
-60</pre>
+60
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/live_stream.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/live_stream.rb', line 53</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">wse_multi_bitrate</span>(name, width, height, modifiers={})
-  <span style="color:#069">self</span>.merge({
-    <span style="color:#606">name</span>:                       name,
-    <span style="color:#606">encoder</span>:                    <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">Encoder</span>::<span style="color:#036;font-weight:bold">WOWZA_STREAMING_ENGINE</span>,
-    <span style="color:#606">broadcast_location</span>:         <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">BroadcastLocation</span>::<span style="color:#036;font-weight:bold">US_WEST_CALIFORNIA</span>,
-    <span style="color:#606">aspect_ratio_width</span>:         width,
-    <span style="color:#606">aspect_ratio_height</span>:        height,
-    <span style="color:#606">delivery_type</span>:              <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">DeliveryType</span>::<span style="color:#036;font-weight:bold">MULTI_BITRATE</span>,
-    <span style="color:#606">delivery_method</span>:            <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">DeliveryMethod</span>::<span style="color:#036;font-weight:bold">PUSH</span>
-  }, modifiers)
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_wse_multi_bitrate'>wse_multi_bitrate</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='id identifier rubyid_height'>height</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+    <span class='label'>name:</span>                       <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+    <span class='label'>encoder:</span>                    <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Encoder.html" title="WscSdk::Enums::Encoder (module)">Encoder</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Encoder.html#WOWZA_STREAMING_ENGINE-constant" title="WscSdk::Enums::Encoder::WOWZA_STREAMING_ENGINE (constant)">WOWZA_STREAMING_ENGINE</a></span></span><span class='comma'>,</span>
+    <span class='label'>broadcast_location:</span>         <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html" title="WscSdk::Enums::BroadcastLocation (module)">BroadcastLocation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html#US_WEST_CALIFORNIA-constant" title="WscSdk::Enums::BroadcastLocation::US_WEST_CALIFORNIA (constant)">US_WEST_CALIFORNIA</a></span></span><span class='comma'>,</span>
+    <span class='label'>aspect_ratio_width:</span>         <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span>
+    <span class='label'>aspect_ratio_height:</span>        <span class='id identifier rubyid_height'>height</span><span class='comma'>,</span>
+    <span class='label'>delivery_type:</span>              <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryType.html" title="WscSdk::Enums::DeliveryType (module)">DeliveryType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryType.html#MULTI_BITRATE-constant" title="WscSdk::Enums::DeliveryType::MULTI_BITRATE (constant)">MULTI_BITRATE</a></span></span><span class='comma'>,</span>
+    <span class='label'>delivery_method:</span>            <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html" title="WscSdk::Enums::DeliveryMethod (module)">DeliveryMethod</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html#PUSH-constant" title="WscSdk::Enums::DeliveryMethod::PUSH (constant)">PUSH</a></span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -1389,9 +1389,6 @@ single-bitrate delivery</p>
       <pre class="lines">
 
 
-23
-24
-25
 26
 27
 28
@@ -1399,22 +1396,25 @@ single-bitrate delivery</p>
 30
 31
 32
-33</pre>
+33
+34
+35
+36</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/live_stream.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/live_stream.rb', line 26</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">wse_single_bitrate</span>(name, width, height, modifiers={})
-  <span style="color:#069">self</span>.merge({
-    <span style="color:#606">name</span>:                   name,
-    <span style="color:#606">encoder</span>:                <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">Encoder</span>::<span style="color:#036;font-weight:bold">WOWZA_STREAMING_ENGINE</span>,
-    <span style="color:#606">broadcast_location</span>:     <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">BroadcastLocation</span>::<span style="color:#036;font-weight:bold">US_WEST_CALIFORNIA</span>,
-    <span style="color:#606">aspect_ratio_width</span>:     width,
-    <span style="color:#606">aspect_ratio_height</span>:    height,
-    <span style="color:#606">delivery_type</span>:          <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">DeliveryType</span>::<span style="color:#036;font-weight:bold">SINGLE_BITRATE</span>,
-    <span style="color:#606">delivery_method</span>:        <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">DeliveryMethod</span>::<span style="color:#036;font-weight:bold">PUSH</span>
-  }, modifiers)
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_wse_single_bitrate'>wse_single_bitrate</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='id identifier rubyid_height'>height</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
+    <span class='label'>name:</span>                   <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+    <span class='label'>encoder:</span>                <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Encoder.html" title="WscSdk::Enums::Encoder (module)">Encoder</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Encoder.html#WOWZA_STREAMING_ENGINE-constant" title="WscSdk::Enums::Encoder::WOWZA_STREAMING_ENGINE (constant)">WOWZA_STREAMING_ENGINE</a></span></span><span class='comma'>,</span>
+    <span class='label'>broadcast_location:</span>     <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html" title="WscSdk::Enums::BroadcastLocation (module)">BroadcastLocation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html#US_WEST_CALIFORNIA-constant" title="WscSdk::Enums::BroadcastLocation::US_WEST_CALIFORNIA (constant)">US_WEST_CALIFORNIA</a></span></span><span class='comma'>,</span>
+    <span class='label'>aspect_ratio_width:</span>     <span class='id identifier rubyid_width'>width</span><span class='comma'>,</span>
+    <span class='label'>aspect_ratio_height:</span>    <span class='id identifier rubyid_height'>height</span><span class='comma'>,</span>
+    <span class='label'>delivery_type:</span>          <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryType.html" title="WscSdk::Enums::DeliveryType (module)">DeliveryType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryType.html#SINGLE_BITRATE-constant" title="WscSdk::Enums::DeliveryType::SINGLE_BITRATE (constant)">SINGLE_BITRATE</a></span></span><span class='comma'>,</span>
+    <span class='label'>delivery_method:</span>        <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html" title="WscSdk::Enums::DeliveryMethod (module)">DeliveryMethod</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html#PUSH-constant" title="WscSdk::Enums::DeliveryMethod::PUSH (constant)">PUSH</a></span></span>
+  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>

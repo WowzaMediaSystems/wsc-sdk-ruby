@@ -287,16 +287,16 @@
       <pre class="lines">
 
 
-13
-14
-15</pre>
+16
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model_list.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model_list.rb', line 16</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">add</span>(model)
-  <span style="color:#069">self</span>[model.primary_key] = model
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_primary_key'>primary_key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_model'>model</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -346,16 +346,16 @@
       <pre class="lines">
 
 
-34
-35
-36</pre>
+37
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model_list.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model_list.rb', line 37</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">pagination</span>
-  <span style="color:#33B">@pagination</span> ||= <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Pagination</span>.new()
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_pagination'>pagination</span>
+  <span class='ivar'>@pagination</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Pagination.html" title="WscSdk::Pagination (class)">Pagination</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Pagination.html#initialize-instance_method" title="WscSdk::Pagination#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -407,24 +407,24 @@
       <pre class="lines">
 
 
-22
-23
-24
 25
 26
 27
-28</pre>
+28
+29
+30
+31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model_list.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model_list.rb', line 25</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">pagination=</span> pagination
-  <span style="color:#080;font-weight:bold">if</span> pagination.is_a?(<span style="color:#036;font-weight:bold">Hash</span>)
-    <span style="color:#33B">@pagination</span> = <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Pagination</span>.new(pagination)
-  <span style="color:#080;font-weight:bold">elsif</span> pagination.is_a?(<span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Pagination</span>)
-    <span style="color:#33B">@pagination</span> = pagination
-  <span style="color:#080;font-weight:bold">end</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_pagination='>pagination=</span> <span class='id identifier rubyid_pagination'>pagination</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_pagination'>pagination</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span>
+    <span class='ivar'>@pagination</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Pagination.html" title="WscSdk::Pagination (class)">Pagination</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Pagination.html#initialize-instance_method" title="WscSdk::Pagination#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_pagination'>pagination</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_pagination'>pagination</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Pagination.html" title="WscSdk::Pagination (class)">Pagination</a></span></span><span class='rparen'>)</span>
+    <span class='ivar'>@pagination</span> <span class='op'>=</span> <span class='id identifier rubyid_pagination'>pagination</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>

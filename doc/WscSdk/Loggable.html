@@ -238,9 +238,6 @@ your own.</p>
       <pre class="lines">
 
 
-19
-20
-21
 22
 23
 24
@@ -250,24 +247,27 @@ your own.</p>
 28
 29
 30
-31</pre>
+31
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/modules/loggable.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/modules/loggable.rb', line 22</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">logger</span>
-  <span style="color:#080;font-weight:bold">if</span> <span style="color:#33B">@logger</span>.nil?
-    <span style="color:#080;font-weight:bold">if</span> <span style="color:#069">self</span>.respond_to?(<span style="color:#A60">:client</span>)
-      <span style="color:#33B">@logger</span> = <span style="color:#069">self</span>.client.logger
-    <span style="color:#080;font-weight:bold">elsif</span> <span style="color:#069">self</span>.respond_to?(<span style="color:#A60">:endpoint</span>)
-      <span style="color:#33B">@logger</span> = <span style="color:#069">self</span>.endpoint.logger
-    <span style="color:#080;font-weight:bold">end</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_logger'>logger</span>
+  <span class='kw'>if</span> <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='kw'>if</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:client</span><span class='rparen'>)</span>
+      <span class='ivar'>@logger</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_client'>client</span><span class='period'>.</span><span class='id identifier rubyid_logger'>logger</span>
+    <span class='kw'>elsif</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:endpoint</span><span class='rparen'>)</span>
+      <span class='ivar'>@logger</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='period'>.</span><span class='id identifier rubyid_logger'>logger</span>
+    <span class='kw'>end</span>
 
-    <span style="color:#33B">@logger</span> ||= <span style="color:#036;font-weight:bold">Logger</span>.new(<span style="color:#069">STDOUT</span>)
-  <span style="color:#080;font-weight:bold">end</span>
+    <span class='ivar'>@logger</span> <span class='op'>||=</span> <span class='const'>Logger</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>STDOUT</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
 
-  <span style="color:#33B">@logger</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
+  <span class='ivar'>@logger</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -319,16 +319,16 @@ your own.</p>
       <pre class="lines">
 
 
-37
-38
-39</pre>
+40
+41
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/modules/loggable.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/modules/loggable.rb', line 40</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">logger=</span> _logger
-  <span style="color:#33B">@logger</span> = _logger
-<span style="color:#080;font-weight:bold">end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_logger='>logger=</span> <span class='id identifier rubyid__logger'>_logger</span>
+  <span class='ivar'>@logger</span> <span class='op'>=</span> <span class='id identifier rubyid__logger'>_logger</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
