@@ -40,7 +40,7 @@ workflows:
             tags:
               only: /publish/
             branches:
-              only: /(development|release\/.*)/
+              ignore: /master/
 
       - publish-production:
           context: wsc-sdk-ruby
@@ -48,7 +48,7 @@ workflows:
             tags:
               only: /publish/
             branches:
-              only: /master/
+              ignore: /(development|release\/.*)/
 
 jobs:
 
