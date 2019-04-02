@@ -15,3 +15,5 @@ echo
 . ./.circleci/helpers/release_gem.sh
 
 . ./.circleci/helpers/publish_docs_prod.sh
+
+. ./.circleci/helpers/finalize_release.sh

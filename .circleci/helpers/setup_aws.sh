@@ -1,4 +1,4 @@
-aws_dir="~/.aws"
+aws_dir=~/.aws
 
 echo "Reading the AWS configuration from the environment variables so we can"
 echo "build the ${aws_dir}/credentials file."

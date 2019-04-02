@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative "../lib/wsc_sdk/version"
 WORK_DIR = File.absolute_path(File.join(__dir__, ".."))
-
 
 def usage
   puts ""
@@ -21,8 +19,8 @@ end
 available_tags = {
 	"integration"  => "run-integration-tests",
 	"unit"         => "run-unit-tests",
-	"release"      => "release/v{{version}}",
-	"publish"      => "publish/v{{version}}"
+	"release"      => "release",
+	"publish"      => "publish"
 }
 
 tags      = (available_tags.keys & ARGV).map{ |t| t.downcase }.flatten
@@ -37,7 +35,7 @@ tags = tags - ["publish"] if tags.include?("release")
 puts "Tags: #{tags}"
 
 tags.each do |tag_key|
-  tag     = available_tags[tag_key].gsub("{{version}}", WscSdk::VERSION)
+  tag     = available_tags[tag_key]
   puts "Tagging the repo with #{tag}..."
 	# puts "."
 	`cd #{WORK_DIR} && git push origin ":#{tag}"`
@@ -49,6 +47,7 @@ tags.each do |tag_key|
 	`cd #{WORK_DIR} && git tag -a #{tag} -m "Used tag-repo.rb on for '#{tag_key}' tagging"`
   # `cd #{WORK_DIR} && git tag -a #{tag} -m "Used tag-for-build.sh on component=${component}" > /dev/null 2>&1`
 
+  `cd #{WORK_DIR} && git push --tags >`
 	# `cd #{WORK_DIR} && git push --tags > /dev/null 2>&1`
 	puts " |> Tag updated!"
 end
