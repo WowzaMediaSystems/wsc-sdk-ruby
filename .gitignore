@@ -11,8 +11,9 @@
 # Defensive ignore patterns.
 **/~
 **/.aws
-**/.bash_history
 **/.circleci
+!/.circleci
+**/.bash_history
 **/credential
 **/credentials
 **/.credential
