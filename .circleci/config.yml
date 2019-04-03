@@ -36,7 +36,7 @@ workflows:
             tags:
               only: /release/
             branches:
-              only: /master/
+              ignore: /.*/
 
   publish:
     jobs:
@@ -44,19 +44,17 @@ workflows:
           context: wsc-sdk-ruby
           filters:
             tags:
-              only: /publish/
+              only: /publish-staging/
             branches:
               ignore: /.*/
-              only: /development/
 
       - publish-production:
           context: wsc-sdk-ruby
           filters:
             tags:
-              only: /publish/
+              only: /publish-production/
             branches:
               ignore: /.*/
-              only: /master/
 
 jobs:
 
