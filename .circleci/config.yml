@@ -31,7 +31,7 @@ workflows:
   release:
     jobs:
       - release-production:
-          context: wsc-sdk-ruby
+          context: wsc-sdk-ruby-publish-staging
           filters:
             tags:
               only: /release/
@@ -41,7 +41,7 @@ workflows:
   publish:
     jobs:
       - publish-staging:
-          context: wsc-sdk-ruby
+          context: wsc-sdk-ruby-publish-staging
           filters:
             tags:
               only: /publish-staging/
@@ -49,7 +49,7 @@ workflows:
               ignore: /.*/
 
       - publish-production:
-          context: wsc-sdk-ruby
+          context: wsc-sdk-ruby-publish-production
           filters:
             tags:
               only: /publish-production/
