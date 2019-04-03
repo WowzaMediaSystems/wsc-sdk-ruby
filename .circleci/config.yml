@@ -6,6 +6,12 @@ workflows:
 
   test:
     jobs:
+      - test-unit-development:
+          context: wsc-sdk-ruby
+          filters:
+            branches:
+              ignore: /development/
+
       - test-unit:
           context: wsc-sdk-ruby
           filters:
@@ -40,7 +46,8 @@ workflows:
             tags:
               only: /publish/
             branches:
-              ignore: /master/
+              ignore: /.*/
+              only: /development/
 
       - publish-production:
           context: wsc-sdk-ruby
@@ -48,7 +55,8 @@ workflows:
             tags:
               only: /publish/
             branches:
-              ignore: /(development|release\/.*)/
+              ignore: /.*/
+              only: /master/
 
 jobs:
 
@@ -94,6 +102,21 @@ jobs:
 
   test-unit:
 
+    docker:
+      - image: quay.io/wowzaprivate/wsc-sdk-ruby-build:0.0.0
+        # auth:
+        #   username: $DOCKER_REG_USERNAME
+        #   password: $DOCKER_REG_PASSWORD
+
+    steps:
+      - checkout
+      - run:
+          name: Run Unit Tests
+          command: ". ./.circleci/jobs/test-unit.sh"
+      - store_test_results:
+          path: test_results
+
+  test-unit-development:
     docker:
       - image: quay.io/wowzaprivate/wsc-sdk-ruby-build:0.0.0
         # auth:
