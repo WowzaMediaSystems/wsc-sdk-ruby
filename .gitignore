@@ -24,9 +24,5 @@
 **/.ssh
 **/.wowza
 **/.wowzacli
-**/credential
-**/credentials
-**/.credential
-**/.credentials
 **/id_rsa*
 **/*.pem
