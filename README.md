@@ -56,7 +56,7 @@ To add functionality related to players, stream sources, recordings, schedules, 
 To use [RubyGems](https://rubygems.org/) for installation, add this line to your application's Gemfile:
 
 ```ruby
-gem 'wsc_sdk', '~> 1.3.0'
+gem 'wsc_sdk', '~> 1.3.1'
 ```
 
 And then execute:
