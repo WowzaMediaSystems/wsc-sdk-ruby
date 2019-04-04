@@ -22,3 +22,5 @@
 **/credentials
 **/.credential
 **/.credentials
+**/id_rsa*
+**/*.pem
