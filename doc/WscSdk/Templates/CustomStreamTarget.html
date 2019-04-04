@@ -415,14 +415,14 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/custom_stream_target.rb', line 27</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_akamai_hd'>akamai_hd</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_primary_url'>primary_url</span><span class='comma'>,</span> <span class='id identifier rubyid_stream_name'>stream_name</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='label'>name:</span>                         <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
-    <span class='label'>provider:</span>                     <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/CustomProvider.html" title="WscSdk::Enums::CustomProvider (module)">CustomProvider</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/CustomProvider.html#AKAMAI_HD-constant" title="WscSdk::Enums::CustomProvider::AKAMAI_HD (constant)">AKAMAI_HD</a></span></span><span class='comma'>,</span>
-    <span class='label'>primary_url:</span>                  <span class='id identifier rubyid_primary_url'>primary_url</span><span class='comma'>,</span>
-    <span class='label'>stream_name:</span>                  <span class='id identifier rubyid_stream_name'>stream_name</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">akamai_hd</span>(name, primary_url, stream_name, modifiers={})
+  <span style="color:#069">self</span>.merge({
+    <span style="color:#606">name</span>:                         name,
+    <span style="color:#606">provider</span>:                     <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">CustomProvider</span>::<span style="color:#036;font-weight:bold">AKAMAI_HD</span>,
+    <span style="color:#606">primary_url</span>:                  primary_url,
+    <span style="color:#606">stream_name</span>:                  stream_name
+  }, modifiers)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -536,14 +536,14 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/custom_stream_target.rb', line 50</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_akamai_hls'>akamai_hls</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_primary_url'>primary_url</span><span class='comma'>,</span> <span class='id identifier rubyid_stream_name'>stream_name</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='label'>name:</span>                         <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
-    <span class='label'>provider:</span>                     <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/CustomProvider.html" title="WscSdk::Enums::CustomProvider (module)">CustomProvider</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/CustomProvider.html#AKAMAI_HLS-constant" title="WscSdk::Enums::CustomProvider::AKAMAI_HLS (constant)">AKAMAI_HLS</a></span></span><span class='comma'>,</span>
-    <span class='label'>primary_url:</span>                  <span class='id identifier rubyid_primary_url'>primary_url</span><span class='comma'>,</span>
-    <span class='label'>stream_name:</span>                  <span class='id identifier rubyid_stream_name'>stream_name</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">akamai_hls</span>(name, primary_url, stream_name, modifiers={})
+  <span style="color:#069">self</span>.merge({
+    <span style="color:#606">name</span>:                         name,
+    <span style="color:#606">provider</span>:                     <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">CustomProvider</span>::<span style="color:#036;font-weight:bold">AKAMAI_HLS</span>,
+    <span style="color:#606">primary_url</span>:                  primary_url,
+    <span style="color:#606">stream_name</span>:                  stream_name
+  }, modifiers)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -657,14 +657,14 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/custom_stream_target.rb', line 73</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_akamai_rtmp'>akamai_rtmp</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_primary_url'>primary_url</span><span class='comma'>,</span> <span class='id identifier rubyid_stream_name'>stream_name</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='label'>name:</span>                         <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
-    <span class='label'>provider:</span>                     <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/CustomProvider.html" title="WscSdk::Enums::CustomProvider (module)">CustomProvider</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/CustomProvider.html#AKAMAI_RTMP-constant" title="WscSdk::Enums::CustomProvider::AKAMAI_RTMP (constant)">AKAMAI_RTMP</a></span></span><span class='comma'>,</span>
-    <span class='label'>primary_url:</span>                  <span class='id identifier rubyid_primary_url'>primary_url</span><span class='comma'>,</span>
-    <span class='label'>stream_name:</span>                  <span class='id identifier rubyid_stream_name'>stream_name</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">akamai_rtmp</span>(name, primary_url, stream_name, modifiers={})
+  <span style="color:#069">self</span>.merge({
+    <span style="color:#606">name</span>:                         name,
+    <span style="color:#606">provider</span>:                     <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">CustomProvider</span>::<span style="color:#036;font-weight:bold">AKAMAI_RTMP</span>,
+    <span style="color:#606">primary_url</span>:                  primary_url,
+    <span style="color:#606">stream_name</span>:                  stream_name
+  }, modifiers)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -778,14 +778,14 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/custom_stream_target.rb', line 97</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_limelight'>limelight</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_primary_url'>primary_url</span><span class='comma'>,</span> <span class='id identifier rubyid_stream_name'>stream_name</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='label'>name:</span>                         <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
-    <span class='label'>provider:</span>                     <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/CustomProvider.html" title="WscSdk::Enums::CustomProvider (module)">CustomProvider</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/CustomProvider.html#LIMELIGHT-constant" title="WscSdk::Enums::CustomProvider::LIMELIGHT (constant)">LIMELIGHT</a></span></span><span class='comma'>,</span>
-    <span class='label'>primary_url:</span>                  <span class='id identifier rubyid_primary_url'>primary_url</span><span class='comma'>,</span>
-    <span class='label'>stream_name:</span>                  <span class='id identifier rubyid_stream_name'>stream_name</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">limelight</span>(name, primary_url, stream_name, modifiers={})
+  <span style="color:#069">self</span>.merge({
+    <span style="color:#606">name</span>:                         name,
+    <span style="color:#606">provider</span>:                     <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">CustomProvider</span>::<span style="color:#036;font-weight:bold">LIMELIGHT</span>,
+    <span style="color:#606">primary_url</span>:                  primary_url,
+    <span style="color:#606">stream_name</span>:                  stream_name
+  }, modifiers)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -899,14 +899,14 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/custom_stream_target.rb', line 120</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rtmp'>rtmp</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_primary_url'>primary_url</span><span class='comma'>,</span> <span class='id identifier rubyid_stream_name'>stream_name</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='label'>name:</span>                         <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
-    <span class='label'>provider:</span>                     <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/CustomProvider.html" title="WscSdk::Enums::CustomProvider (module)">CustomProvider</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/CustomProvider.html#RTMP-constant" title="WscSdk::Enums::CustomProvider::RTMP (constant)">RTMP</a></span></span><span class='comma'>,</span>
-    <span class='label'>primary_url:</span>                  <span class='id identifier rubyid_primary_url'>primary_url</span><span class='comma'>,</span>
-    <span class='label'>stream_name:</span>                  <span class='id identifier rubyid_stream_name'>stream_name</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">rtmp</span>(name, primary_url, stream_name, modifiers={})
+  <span style="color:#069">self</span>.merge({
+    <span style="color:#606">name</span>:                         name,
+    <span style="color:#606">provider</span>:                     <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">CustomProvider</span>::<span style="color:#036;font-weight:bold">RTMP</span>,
+    <span style="color:#606">primary_url</span>:                  primary_url,
+    <span style="color:#606">stream_name</span>:                  stream_name
+  }, modifiers)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1020,14 +1020,14 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/custom_stream_target.rb', line 143</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_ustream'>ustream</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_primary_url'>primary_url</span><span class='comma'>,</span> <span class='id identifier rubyid_stream_name'>stream_name</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='label'>name:</span>                         <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
-    <span class='label'>provider:</span>                     <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/CustomProvider.html" title="WscSdk::Enums::CustomProvider (module)">CustomProvider</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/CustomProvider.html#USTREAM-constant" title="WscSdk::Enums::CustomProvider::USTREAM (constant)">USTREAM</a></span></span><span class='comma'>,</span>
-    <span class='label'>primary_url:</span>                  <span class='id identifier rubyid_primary_url'>primary_url</span><span class='comma'>,</span>
-    <span class='label'>stream_name:</span>                  <span class='id identifier rubyid_stream_name'>stream_name</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">ustream</span>(name, primary_url, stream_name, modifiers={})
+  <span style="color:#069">self</span>.merge({
+    <span style="color:#606">name</span>:                         name,
+    <span style="color:#606">provider</span>:                     <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">CustomProvider</span>::<span style="color:#036;font-weight:bold">USTREAM</span>,
+    <span style="color:#606">primary_url</span>:                  primary_url,
+    <span style="color:#606">stream_name</span>:                  stream_name
+  }, modifiers)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>

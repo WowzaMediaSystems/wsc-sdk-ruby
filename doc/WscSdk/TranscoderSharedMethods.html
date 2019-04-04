@@ -322,22 +322,22 @@ limit is reached.</p>
 <p>Simple Reset Request</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_state'>state</span> <span class='op'>=</span> <span class='id identifier rubyid_transcoder'>transcoder</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span></code></pre>
+      <pre class="example code"><code>state = transcoder.reset</code></pre>
     
       
         <p class="example_title"><div class='inline'>
 <p>Reset and Wait for Started</p>
 </div></p>
       
-      <pre class="example code"><code>transcoder.reset do |wait_state, transcoder_state|
-  if wait_state == :waiting
-    puts &quot;Waiting for the transcoder to start...&quot;
-  if wait_state == :timeout
-    puts &quot;The transcoder did not start in within the timeout period.&quot;
-  else
-    puts &quot;Transcoder is #{state.state}.  The IP Address is #{state.ip_address}.&quot;
-  end
-end</code></pre>
+      <pre class="example code"><code>transcoder.reset <span style="color:#080;font-weight:bold">do</span> |wait_state, transcoder_state|
+  <span style="color:#080;font-weight:bold">if</span> wait_state == <span style="color:#A60">:waiting</span>
+    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Waiting for the transcoder to start...</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">if</span> wait_state == <span style="color:#A60">:timeout</span>
+    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">The transcoder did not start in within the timeout period.</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">else</span>
+    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Transcoder is </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>state.state<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">.  The IP Address is </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>state.ip_address<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">.</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -493,11 +493,11 @@ end</code></pre>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/modules/transcoder_shared_methods.rb', line 147</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_reset'>reset</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_current_state'>current_state</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_wait_for_state'>wait_for_state</span><span class='lparen'>(</span><span class='symbol'>:started</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_current_state'>current_state</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span> <span class='kw'>and</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_current_state'>current_state</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">reset</span>(options={}, &amp;block)
+  current_state = <span style="color:#069">self</span>.endpoint.reset(<span style="color:#069">self</span>.id)
+  <span style="color:#080;font-weight:bold">return</span> wait_for_state(<span style="color:#A60">:started</span>, options, &amp;block) <span style="color:#080;font-weight:bold">if</span> current_state.success? <span style="color:#080;font-weight:bold">and</span> block_given?
+  <span style="color:#080;font-weight:bold">return</span> current_state
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -540,22 +540,22 @@ limit is reached.</p>
 <p>Simple Start Request</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_state'>state</span> <span class='op'>=</span> <span class='id identifier rubyid_transcoder'>transcoder</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span></code></pre>
+      <pre class="example code"><code>state = transcoder.start</code></pre>
     
       
         <p class="example_title"><div class='inline'>
 <p>Start and Wait for Started</p>
 </div></p>
       
-      <pre class="example code"><code>transcoder.start do |wait_state, transcoder_state|
-  if wait_state == :waiting
-    puts &quot;Waiting for the transcoder to start...&quot;
-  if wait_state == :timeout
-    puts &quot;The transcoder did not start in within the timeout period.&quot;
-  else
-    puts &quot;Transcoder is #{state.state}.  The IP Address is #{state.ip_address}.&quot;
-  end
-end</code></pre>
+      <pre class="example code"><code>transcoder.start <span style="color:#080;font-weight:bold">do</span> |wait_state, transcoder_state|
+  <span style="color:#080;font-weight:bold">if</span> wait_state == <span style="color:#A60">:waiting</span>
+    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Waiting for the transcoder to start...</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">if</span> wait_state == <span style="color:#A60">:timeout</span>
+    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">The transcoder did not start in within the timeout period.</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">else</span>
+    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Transcoder is </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>state.state<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">.  The IP Address is </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>state.ip_address<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">.</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -711,11 +711,11 @@ end</code></pre>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/modules/transcoder_shared_methods.rb', line 59</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_current_state'>current_state</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_wait_for_state'>wait_for_state</span><span class='lparen'>(</span><span class='symbol'>:started</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_current_state'>current_state</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span> <span class='kw'>and</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_current_state'>current_state</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">start</span>(options={}, &amp;block)
+  current_state = <span style="color:#069">self</span>.endpoint.start(<span style="color:#069">self</span>.id)
+  <span style="color:#080;font-weight:bold">return</span> wait_for_state(<span style="color:#A60">:started</span>, options, &amp;block) <span style="color:#080;font-weight:bold">if</span> current_state.success? <span style="color:#080;font-weight:bold">and</span> block_given?
+  <span style="color:#080;font-weight:bold">return</span> current_state
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -767,9 +767,9 @@ end</code></pre>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/modules/transcoder_shared_methods.rb', line 157</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_state'>state</span>
-  <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='period'>.</span><span class='id identifier rubyid_state'>state</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">state</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>.endpoint.state(<span style="color:#069">self</span>.id)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -821,9 +821,9 @@ end</code></pre>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/modules/transcoder_shared_methods.rb', line 174</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_stats'>stats</span>
-  <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='period'>.</span><span class='id identifier rubyid_stats'>stats</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">stats</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>.endpoint.stats(<span style="color:#069">self</span>.id)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -866,22 +866,22 @@ limit is reached.</p>
 <p>Simple Stop Request</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_state'>state</span> <span class='op'>=</span> <span class='id identifier rubyid_transcoder'>transcoder</span><span class='period'>.</span><span class='id identifier rubyid_stop'>stop</span></code></pre>
+      <pre class="example code"><code>state = transcoder.stop</code></pre>
     
       
         <p class="example_title"><div class='inline'>
 <p>Stop and Wait for Stopped</p>
 </div></p>
       
-      <pre class="example code"><code>transcoder.stop do |wait_state, transcoder_state|
-  if wait_state == :waiting
-    puts &quot;Waiting for the transcoder to stop...&quot;
-  if wait_state == :timeout
-    puts &quot;The transcoder did not stop in within the timeout period.&quot;
-  else
-    puts &quot;Transcoder is #{state.state}.&quot;
-  end
-end</code></pre>
+      <pre class="example code"><code>transcoder.stop <span style="color:#080;font-weight:bold">do</span> |wait_state, transcoder_state|
+  <span style="color:#080;font-weight:bold">if</span> wait_state == <span style="color:#A60">:waiting</span>
+    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Waiting for the transcoder to stop...</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">if</span> wait_state == <span style="color:#A60">:timeout</span>
+    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">The transcoder did not stop in within the timeout period.</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">else</span>
+    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Transcoder is </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>state.state<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">.</span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1037,11 +1037,11 @@ end</code></pre>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/modules/transcoder_shared_methods.rb', line 103</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_stop'>stop</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_current_state'>current_state</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='period'>.</span><span class='id identifier rubyid_stop'>stop</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_wait_for_state'>wait_for_state</span><span class='lparen'>(</span><span class='symbol'>:stopped</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_current_state'>current_state</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span> <span class='kw'>and</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_current_state'>current_state</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">stop</span>(options={}, &amp;block)
+  current_state = <span style="color:#069">self</span>.endpoint.stop(<span style="color:#069">self</span>.id)
+  <span style="color:#080;font-weight:bold">return</span> wait_for_state(<span style="color:#A60">:stopped</span>, options, &amp;block) <span style="color:#080;font-weight:bold">if</span> current_state.success? <span style="color:#080;font-weight:bold">and</span> block_given?
+  <span style="color:#080;font-weight:bold">return</span> current_state
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1093,9 +1093,9 @@ end</code></pre>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/modules/transcoder_shared_methods.rb', line 166</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span>
-  <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">thumbnail_url</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>.endpoint.thumbnail_url(<span style="color:#069">self</span>.id)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>

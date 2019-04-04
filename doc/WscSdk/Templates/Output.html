@@ -373,20 +373,20 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/output.rb', line 16</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_full_hd'>full_hd</span><span class='lparen'>(</span><span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='label'>stream_format:</span>        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>audiovideo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>passthrough_video:</span>    <span class='kw'>false</span><span class='comma'>,</span>
-    <span class='label'>passthrough_audio:</span>    <span class='kw'>false</span><span class='comma'>,</span>
-    <span class='label'>aspect_ratio_height:</span>  <span class='int'>1080</span><span class='comma'>,</span>
-    <span class='label'>aspect_ratio_width:</span>   <span class='int'>1920</span><span class='comma'>,</span>
-    <span class='label'>bitrate_audio:</span>        <span class='int'>128</span><span class='comma'>,</span>
-    <span class='label'>bitrate_video:</span>        <span class='int'>4000</span><span class='comma'>,</span>
-    <span class='label'>h264_profile:</span>         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>high</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>framerate_reduction:</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>keyframes:</span>            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>follow_source</span><span class='tstring_end'>&quot;</span></span>
-  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">full_hd</span>(modifiers={})
+  <span style="color:#069">self</span>.merge({
+    <span style="color:#606">stream_format</span>:        <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">audiovideo</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">passthrough_video</span>:    <span style="color:#069">false</span>,
+    <span style="color:#606">passthrough_audio</span>:    <span style="color:#069">false</span>,
+    <span style="color:#606">aspect_ratio_height</span>:  <span style="color:#00D">1080</span>,
+    <span style="color:#606">aspect_ratio_width</span>:   <span style="color:#00D">1920</span>,
+    <span style="color:#606">bitrate_audio</span>:        <span style="color:#00D">128</span>,
+    <span style="color:#606">bitrate_video</span>:        <span style="color:#00D">4000</span>,
+    <span style="color:#606">h264_profile</span>:         <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">high</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">framerate_reduction</span>:  <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">0</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">keyframes</span>:            <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">follow_source</span><span style="color:#710">&quot;</span></span>
+  }, modifiers)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -458,20 +458,20 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/output.rb', line 36</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_hd'>hd</span><span class='lparen'>(</span><span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='label'>stream_format:</span>        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>audiovideo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>passthrough_video:</span>    <span class='kw'>false</span><span class='comma'>,</span>
-    <span class='label'>passthrough_audio:</span>    <span class='kw'>false</span><span class='comma'>,</span>
-    <span class='label'>aspect_ratio_height:</span>  <span class='int'>720</span><span class='comma'>,</span>
-    <span class='label'>aspect_ratio_width:</span>   <span class='int'>1280</span><span class='comma'>,</span>
-    <span class='label'>bitrate_audio:</span>        <span class='int'>128</span><span class='comma'>,</span>
-    <span class='label'>bitrate_video:</span>        <span class='int'>2600</span><span class='comma'>,</span>
-    <span class='label'>h264_profile:</span>         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>high</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>framerate_reduction:</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>keyframes:</span>            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>follow_source</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">hd</span>(modifiers={})
+  <span style="color:#069">self</span>.merge({
+    <span style="color:#606">stream_format</span>:        <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">audiovideo</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">passthrough_video</span>:    <span style="color:#069">false</span>,
+    <span style="color:#606">passthrough_audio</span>:    <span style="color:#069">false</span>,
+    <span style="color:#606">aspect_ratio_height</span>:  <span style="color:#00D">720</span>,
+    <span style="color:#606">aspect_ratio_width</span>:   <span style="color:#00D">1280</span>,
+    <span style="color:#606">bitrate_audio</span>:        <span style="color:#00D">128</span>,
+    <span style="color:#606">bitrate_video</span>:        <span style="color:#00D">2600</span>,
+    <span style="color:#606">h264_profile</span>:         <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">high</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">framerate_reduction</span>:  <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">0</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">keyframes</span>:            <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">follow_source</span><span style="color:#710">&quot;</span></span>,
+  }, modifiers)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -543,20 +543,20 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/output.rb', line 77</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_low_res_large'>low_res_large</span><span class='lparen'>(</span><span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='label'>stream_format:</span>        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>audiovideo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>passthrough_video:</span>    <span class='kw'>false</span><span class='comma'>,</span>
-    <span class='label'>passthrough_audio:</span>    <span class='kw'>false</span><span class='comma'>,</span>
-    <span class='label'>aspect_ratio_height:</span>  <span class='int'>360</span><span class='comma'>,</span>
-    <span class='label'>aspect_ratio_width:</span>   <span class='int'>640</span><span class='comma'>,</span>
-    <span class='label'>bitrate_audio:</span>        <span class='int'>128</span><span class='comma'>,</span>
-    <span class='label'>bitrate_video:</span>        <span class='int'>1024</span><span class='comma'>,</span>
-    <span class='label'>h264_profile:</span>         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>main</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>framerate_reduction:</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>keyframes:</span>            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>follow_source</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">low_res_large</span>(modifiers={})
+  <span style="color:#069">self</span>.merge({
+    <span style="color:#606">stream_format</span>:        <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">audiovideo</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">passthrough_video</span>:    <span style="color:#069">false</span>,
+    <span style="color:#606">passthrough_audio</span>:    <span style="color:#069">false</span>,
+    <span style="color:#606">aspect_ratio_height</span>:  <span style="color:#00D">360</span>,
+    <span style="color:#606">aspect_ratio_width</span>:   <span style="color:#00D">640</span>,
+    <span style="color:#606">bitrate_audio</span>:        <span style="color:#00D">128</span>,
+    <span style="color:#606">bitrate_video</span>:        <span style="color:#00D">1024</span>,
+    <span style="color:#606">h264_profile</span>:         <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">main</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">framerate_reduction</span>:  <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">0</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">keyframes</span>:            <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">follow_source</span><span style="color:#710">&quot;</span></span>,
+  }, modifiers)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -628,20 +628,20 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/output.rb', line 97</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_low_res_medium'>low_res_medium</span><span class='lparen'>(</span><span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='label'>stream_format:</span>        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>audiovideo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>passthrough_video:</span>    <span class='kw'>false</span><span class='comma'>,</span>
-    <span class='label'>passthrough_audio:</span>    <span class='kw'>false</span><span class='comma'>,</span>
-    <span class='label'>aspect_ratio_height:</span>  <span class='int'>288</span><span class='comma'>,</span>
-    <span class='label'>aspect_ratio_width:</span>   <span class='int'>512</span><span class='comma'>,</span>
-    <span class='label'>bitrate_audio:</span>        <span class='int'>128</span><span class='comma'>,</span>
-    <span class='label'>bitrate_video:</span>        <span class='int'>512</span><span class='comma'>,</span>
-    <span class='label'>h264_profile:</span>         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>baseline</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>framerate_reduction:</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>keyframes:</span>            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>follow_source</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">low_res_medium</span>(modifiers={})
+  <span style="color:#069">self</span>.merge({
+    <span style="color:#606">stream_format</span>:        <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">audiovideo</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">passthrough_video</span>:    <span style="color:#069">false</span>,
+    <span style="color:#606">passthrough_audio</span>:    <span style="color:#069">false</span>,
+    <span style="color:#606">aspect_ratio_height</span>:  <span style="color:#00D">288</span>,
+    <span style="color:#606">aspect_ratio_width</span>:   <span style="color:#00D">512</span>,
+    <span style="color:#606">bitrate_audio</span>:        <span style="color:#00D">128</span>,
+    <span style="color:#606">bitrate_video</span>:        <span style="color:#00D">512</span>,
+    <span style="color:#606">h264_profile</span>:         <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">baseline</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">framerate_reduction</span>:  <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">0</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">keyframes</span>:            <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">follow_source</span><span style="color:#710">&quot;</span></span>,
+  }, modifiers)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -713,20 +713,20 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/output.rb', line 117</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_low_res_small'>low_res_small</span><span class='lparen'>(</span><span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='label'>stream_format:</span>        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>audiovideo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>passthrough_video:</span>    <span class='kw'>false</span><span class='comma'>,</span>
-    <span class='label'>passthrough_audio:</span>    <span class='kw'>false</span><span class='comma'>,</span>
-    <span class='label'>aspect_ratio_height:</span>  <span class='int'>180</span><span class='comma'>,</span>
-    <span class='label'>aspect_ratio_width:</span>   <span class='int'>320</span><span class='comma'>,</span>
-    <span class='label'>bitrate_audio:</span>        <span class='int'>128</span><span class='comma'>,</span>
-    <span class='label'>bitrate_video:</span>        <span class='int'>320</span><span class='comma'>,</span>
-    <span class='label'>h264_profile:</span>         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>baseline</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>framerate_reduction:</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>keyframes:</span>            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>follow_source</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">low_res_small</span>(modifiers={})
+  <span style="color:#069">self</span>.merge({
+    <span style="color:#606">stream_format</span>:        <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">audiovideo</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">passthrough_video</span>:    <span style="color:#069">false</span>,
+    <span style="color:#606">passthrough_audio</span>:    <span style="color:#069">false</span>,
+    <span style="color:#606">aspect_ratio_height</span>:  <span style="color:#00D">180</span>,
+    <span style="color:#606">aspect_ratio_width</span>:   <span style="color:#00D">320</span>,
+    <span style="color:#606">bitrate_audio</span>:        <span style="color:#00D">128</span>,
+    <span style="color:#606">bitrate_video</span>:        <span style="color:#00D">320</span>,
+    <span style="color:#606">h264_profile</span>:         <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">baseline</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">framerate_reduction</span>:  <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">0</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">keyframes</span>:            <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">follow_source</span><span style="color:#710">&quot;</span></span>,
+  }, modifiers)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -798,20 +798,20 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/output.rb', line 57</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sd_wide'>sd_wide</span><span class='lparen'>(</span><span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='label'>stream_format:</span>        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>audiovideo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>passthrough_video:</span>    <span class='kw'>false</span><span class='comma'>,</span>
-    <span class='label'>passthrough_audio:</span>    <span class='kw'>false</span><span class='comma'>,</span>
-    <span class='label'>aspect_ratio_height:</span>  <span class='int'>480</span><span class='comma'>,</span>
-    <span class='label'>aspect_ratio_width:</span>   <span class='int'>854</span><span class='comma'>,</span>
-    <span class='label'>bitrate_audio:</span>        <span class='int'>128</span><span class='comma'>,</span>
-    <span class='label'>bitrate_video:</span>        <span class='int'>1600</span><span class='comma'>,</span>
-    <span class='label'>h264_profile:</span>         <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>main</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>framerate_reduction:</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>0</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-    <span class='label'>keyframes:</span>            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>follow_source</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">sd_wide</span>(modifiers={})
+  <span style="color:#069">self</span>.merge({
+    <span style="color:#606">stream_format</span>:        <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">audiovideo</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">passthrough_video</span>:    <span style="color:#069">false</span>,
+    <span style="color:#606">passthrough_audio</span>:    <span style="color:#069">false</span>,
+    <span style="color:#606">aspect_ratio_height</span>:  <span style="color:#00D">480</span>,
+    <span style="color:#606">aspect_ratio_width</span>:   <span style="color:#00D">854</span>,
+    <span style="color:#606">bitrate_audio</span>:        <span style="color:#00D">128</span>,
+    <span style="color:#606">bitrate_video</span>:        <span style="color:#00D">1600</span>,
+    <span style="color:#606">h264_profile</span>:         <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">main</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">framerate_reduction</span>:  <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">0</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606">keyframes</span>:            <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">follow_source</span><span style="color:#710">&quot;</span></span>,
+  }, modifiers)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>

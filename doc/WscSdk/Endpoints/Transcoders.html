@@ -135,11 +135,11 @@
 <p>Usage: Listing Transcoders</p>
 </div></p>
       
-      <pre class="example code"><code># View the WscSdk::Client documentation for how to establish a client instance.
+      <pre class="example code"><code><span style="color:#777"># View the WscSdk::Client documentation for how to establish a client instance.</span>
 list = client.transcoders
 
-list.each do |id, transcoder|
-  puts &quot;#{id}: #{transcoder.name}&quot;
+list.each <span style="color:#080;font-weight:bold">do</span> |id, transcoder|
+  puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>id<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>transcoder.name<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>
 ends</code></pre>
     
   </div>

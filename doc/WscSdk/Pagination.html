@@ -556,14 +556,14 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/pagination.rb', line 15</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_pagination_data'>pagination_data</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='ivar'>@page</span>               <span class='op'>=</span> <span class='id identifier rubyid_pagination_data'>pagination_data</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:page</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span>
-  <span class='ivar'>@per_page</span>           <span class='op'>=</span> <span class='id identifier rubyid_pagination_data'>pagination_data</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:per_page</span><span class='comma'>,</span> <span class='int'>1000</span><span class='rparen'>)</span>
-  <span class='ivar'>@total_pages</span>        <span class='op'>=</span> <span class='id identifier rubyid_pagination_data'>pagination_data</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:total_pages</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span>
-  <span class='ivar'>@total_records</span>      <span class='op'>=</span> <span class='id identifier rubyid_pagination_data'>pagination_data</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:total_records</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span>
-  <span class='ivar'>@page_first_index</span>   <span class='op'>=</span> <span class='id identifier rubyid_pagination_data'>pagination_data</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:page_first_index</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span>
-  <span class='ivar'>@page_last_index</span>    <span class='op'>=</span> <span class='id identifier rubyid_pagination_data'>pagination_data</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:page_last_index</span><span class='comma'>,</span> <span class='op'>-</span><span class='int'>1</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">initialize</span>(pagination_data={})
+  <span style="color:#33B">@page</span>               = pagination_data.fetch(<span style="color:#A60">:page</span>, <span style="color:#00D">1</span>)
+  <span style="color:#33B">@per_page</span>           = pagination_data.fetch(<span style="color:#A60">:per_page</span>, <span style="color:#00D">1000</span>)
+  <span style="color:#33B">@total_pages</span>        = pagination_data.fetch(<span style="color:#A60">:total_pages</span>, <span style="color:#00D">1</span>)
+  <span style="color:#33B">@total_records</span>      = pagination_data.fetch(<span style="color:#A60">:total_records</span>, <span style="color:#00D">-1</span>)
+  <span style="color:#33B">@page_first_index</span>   = pagination_data.fetch(<span style="color:#A60">:page_first_index</span>, <span style="color:#00D">-1</span>)
+  <span style="color:#33B">@page_last_index</span>    = pagination_data.fetch(<span style="color:#A60">:page_last_index</span>, <span style="color:#00D">-1</span>)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -609,9 +609,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/pagination.rb', line 9</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_page'>page</span>
-  <span class='ivar'>@page</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">page</span>
+  <span style="color:#33B">@page</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -652,9 +652,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/pagination.rb', line 9</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_page_first_index'>page_first_index</span>
-  <span class='ivar'>@page_first_index</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">page_first_index</span>
+  <span style="color:#33B">@page_first_index</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -695,9 +695,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/pagination.rb', line 9</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_page_last_index'>page_last_index</span>
-  <span class='ivar'>@page_last_index</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">page_last_index</span>
+  <span style="color:#33B">@page_last_index</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -738,9 +738,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/pagination.rb', line 9</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_per_page'>per_page</span>
-  <span class='ivar'>@per_page</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">per_page</span>
+  <span style="color:#33B">@per_page</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -781,9 +781,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/pagination.rb', line 9</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_total_pages'>total_pages</span>
-  <span class='ivar'>@total_pages</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">total_pages</span>
+  <span style="color:#33B">@total_pages</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -824,9 +824,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/pagination.rb', line 9</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_total_records'>total_records</span>
-  <span class='ivar'>@total_records</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">total_records</span>
+  <span style="color:#33B">@total_records</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -905,10 +905,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/pagination.rb', line 39</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_first_page'>first_page</span>
-  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_total_pages'>total_pages</span> <span class='op'>&lt;</span> <span class='int'>1</span>
-  <span class='kw'>return</span> <span class='int'>1</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">first_page</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span> <span style="color:#080;font-weight:bold">if</span> total_pages &lt; <span style="color:#00D">1</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">1</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -966,10 +966,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/pagination.rb', line 28</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_first_page?'>first_page?</span>
-  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_total_pages'>total_pages</span> <span class='op'>&lt;</span> <span class='int'>1</span>
-  <span class='kw'>return</span> <span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span> <span class='op'>==</span> <span class='int'>1</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">first_page?</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">true</span> <span style="color:#080;font-weight:bold">if</span> total_pages &lt; <span style="color:#00D">1</span>
+  <span style="color:#080;font-weight:bold">return</span> (page == <span style="color:#00D">1</span>)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1041,10 +1041,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/pagination.rb', line 74</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_last_page'>last_page</span>
-  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_total_pages'>total_pages</span> <span class='op'>&lt;</span> <span class='int'>1</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_total_pages'>total_pages</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">last_page</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span> <span style="color:#080;font-weight:bold">if</span> total_pages &lt; <span style="color:#00D">1</span>
+  <span style="color:#080;font-weight:bold">return</span> total_pages
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1102,10 +1102,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/pagination.rb', line 83</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_last_page?'>last_page?</span>
-  <span class='kw'>return</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_total_pages'>total_pages</span> <span class='op'>&lt;</span> <span class='int'>1</span>
-  <span class='kw'>return</span> <span class='lparen'>(</span><span class='id identifier rubyid_page'>page</span> <span class='op'>==</span> <span class='id identifier rubyid_total_pages'>total_pages</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">last_page?</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">true</span> <span style="color:#080;font-weight:bold">if</span> total_pages &lt; <span style="color:#00D">1</span>
+  <span style="color:#080;font-weight:bold">return</span> (page == total_pages)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1178,11 +1178,11 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/pagination.rb', line 50</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_next_page'>next_page</span>
-  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_total_pages'>total_pages</span> <span class='op'>==</span> <span class='op'>-</span><span class='int'>1</span>
-  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_page'>page</span> <span class='op'>==</span> <span class='id identifier rubyid_total_pages'>total_pages</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_page'>page</span> <span class='op'>+</span> <span class='int'>1</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">next_page</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span> <span style="color:#080;font-weight:bold">if</span> total_pages == <span style="color:#00D">-1</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span> <span style="color:#080;font-weight:bold">if</span> page == total_pages
+  <span style="color:#080;font-weight:bold">return</span> page + <span style="color:#00D">1</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1255,11 +1255,11 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/pagination.rb', line 62</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_previous_page'>previous_page</span>
-  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_total_pages'>total_pages</span> <span class='op'>&lt;</span> <span class='int'>1</span>
-  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_page'>page</span> <span class='op'>==</span> <span class='int'>1</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_page'>page</span> <span class='op'>-</span> <span class='int'>1</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">previous_page</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span> <span style="color:#080;font-weight:bold">if</span> total_pages &lt; <span style="color:#00D">1</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span> <span style="color:#080;font-weight:bold">if</span> page == <span style="color:#00D">1</span>
+  <span style="color:#080;font-weight:bold">return</span> page - <span style="color:#00D">1</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>

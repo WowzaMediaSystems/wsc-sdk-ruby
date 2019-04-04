@@ -1099,16 +1099,16 @@ requirements of the schema.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 66</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='ivar'>@endpoint</span>     <span class='op'>=</span> <span class='id identifier rubyid_endpoint'>endpoint</span>
-  <span class='ivar'>@changes</span>      <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='ivar'>@partial_data</span> <span class='op'>=</span> <span class='kw'>false</span>
-  <span class='ivar'>@data_mode</span>    <span class='op'>=</span> <span class='symbol'>:access</span>
-  <span class='id identifier rubyid_initialize_attributes'>initialize_attributes</span>
-  <span class='id identifier rubyid_ingest_attributes'>ingest_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='comma'>,</span> <span class='label'>write_to_read_only:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>mark_clean:</span> <span class='kw'>true</span><span class='rparen'>)</span>
-  <span class='ivar'>@errors</span>       <span class='op'>=</span> <span class='kw'>nil</span>
-  <span class='ivar'>@dirty</span>        <span class='op'>=</span> <span class='kw'>false</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">initialize</span>(endpoint, attributes={})
+  <span style="color:#33B">@endpoint</span>     = endpoint
+  <span style="color:#33B">@changes</span>      = []
+  <span style="color:#33B">@partial_data</span> = <span style="color:#069">false</span>
+  <span style="color:#33B">@data_mode</span>    = <span style="color:#A60">:access</span>
+  initialize_attributes
+  ingest_attributes(attributes, <span style="color:#606">write_to_read_only</span>: <span style="color:#069">true</span>, <span style="color:#606">mark_clean</span>: <span style="color:#069">true</span>)
+  <span style="color:#33B">@errors</span>       = <span style="color:#069">nil</span>
+  <span style="color:#33B">@dirty</span>        = <span style="color:#069">false</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1172,9 +1172,9 @@ data, which may generate unwanted outcomes.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 32</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_attributes'>attributes</span>
-  <span class='ivar'>@attributes</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">attributes</span>
+  <span style="color:#33B">@attributes</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1227,9 +1227,9 @@ API.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 48</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_changes'>changes</span>
-  <span class='ivar'>@changes</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">changes</span>
+  <span style="color:#33B">@changes</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1281,9 +1281,9 @@ API.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 56</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_data_mode'>data_mode</span>
-  <span class='ivar'>@data_mode</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">data_mode</span>
+  <span style="color:#33B">@data_mode</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1335,9 +1335,9 @@ API.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 43</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_endpoint'>endpoint</span>
-  <span class='ivar'>@endpoint</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">endpoint</span>
+  <span style="color:#33B">@endpoint</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1391,9 +1391,9 @@ the information necessary to fix the concerns.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 39</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_errors'>errors</span>
-  <span class='ivar'>@errors</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">errors</span>
+  <span style="color:#33B">@errors</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1445,9 +1445,9 @@ the information necessary to fix the concerns.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 52</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_partial_data'>partial_data</span>
-  <span class='ivar'>@partial_data</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">partial_data</span>
+  <span style="color:#33B">@partial_data</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1527,42 +1527,42 @@ getters/setters according to its access settings.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 477</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_attribute'>attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_name'>name</span>            <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
-  <span class='id identifier rubyid_accessor_name'>accessor_name</span>   <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:as</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
-  <span class='id identifier rubyid_type'>type</span>            <span class='op'>=</span> <span class='id identifier rubyid_type'>type</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
-  <span class='id identifier rubyid_current_schema'>current_schema</span>  <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_schema'>schema</span>
-  <span class='id identifier rubyid_attr'>attr</span>            <span class='op'>=</span> <span class='id identifier rubyid_current_schema'>current_schema</span><span class='period'>.</span><span class='id identifier rubyid_add_attribute'>add_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">attribute</span>(name, type, options={})
+  name            = name.to_sym
+  accessor_name   = options.fetch(<span style="color:#A60">:as</span>, name).to_sym
+  type            = type.to_sym
+  current_schema  = <span style="color:#069">self</span>.schema
+  attr            = current_schema.add_attribute(name, type, options)
 
-  <span class='id identifier rubyid_define_singleton_method'>define_singleton_method</span> <span class='symbol'>:schema</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_current_schema'>current_schema</span>
-  <span class='kw'>end</span>
+  define_singleton_method <span style="color:#A60">:schema</span> <span style="color:#080;font-weight:bold">do</span>
+    current_schema
+  <span style="color:#080;font-weight:bold">end</span>
 
-  <span class='id identifier rubyid_define_method'>define_method</span> <span class='id identifier rubyid_accessor_name'>accessor_name</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='op'>::</span><span class='const'>NoMethodError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>the &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_accessor_name'>accessor_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; attribute is not currently readable</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_schema'>schema</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_read_access?'>read_access?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_current_value'>current_value</span> <span class='op'>=</span> <span class='ivar'>@attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span>
-    <span class='id identifier rubyid_request_remaining_data'>request_remaining_data</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@partial_data</span> <span class='kw'>and</span> <span class='id identifier rubyid_current_value'>current_value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span><span class='rparen'>)</span>
-    <span class='ivar'>@attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span>
-  <span class='kw'>end</span>
+  define_method accessor_name <span style="color:#080;font-weight:bold">do</span>
+    raise ::<span style="color:#036;font-weight:bold">NoMethodError</span>.new(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">the '</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>accessor_name<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">' attribute is not currently readable</span><span style="color:#710">&quot;</span></span>) <span style="color:#080;font-weight:bold">unless</span> schema[name].read_access?(<span style="color:#069">self</span>)
+    current_value = <span style="color:#33B">@attributes</span>[name.to_sym]
+    request_remaining_data <span style="color:#080;font-weight:bold">if</span> (<span style="color:#33B">@partial_data</span> <span style="color:#080;font-weight:bold">and</span> current_value.nil?)
+    <span style="color:#33B">@attributes</span>[name.to_sym]
+  <span style="color:#080;font-weight:bold">end</span>
 
-  <span class='id identifier rubyid_set_sym'>set_sym</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_accessor_name'>accessor_name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='embexpr_end'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
-  <span class='id identifier rubyid_define_method'>define_method</span><span class='lparen'>(</span><span class='id identifier rubyid_set_sym'>set_sym</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
-    <span class='id identifier rubyid_not_writable'>not_writable</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='ivar'>@data_mode</span> <span class='op'>==</span> <span class='symbol'>:access</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='op'>!</span><span class='id identifier rubyid_schema'>schema</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_write_access?'>write_access?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_not_writable'>not_writable</span>
-      <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Attempting to write to non-writable attribute: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_accessor_name'>accessor_name</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-      <span class='kw'>return</span>
-    <span class='kw'>end</span>
-    <span class='id identifier rubyid_valid_type'>valid_type</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_valid_type?'>valid_type?</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_valid_type'>valid_type</span>
-      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_transform_value'>transform_value</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
-      <span class='ivar'>@errors</span>               <span class='op'>=</span> <span class='kw'>nil</span>
-      <span class='ivar'>@changes</span>              <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_name'>name</span>
-    <span class='kw'>else</span>
-      <span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_warn'>warn</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The attribute &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_accessor_name'>accessor_name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; expected a(n) </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_type'>type</span><span class='embexpr_end'>}</span><span class='tstring_content'> value but got &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'>] instead!</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-    <span class='kw'>end</span>
-  <span class='kw'>end</span>
+  set_sym = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>accessor_name.to_s<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">=</span><span style="color:#710">&quot;</span></span>.to_sym
+  define_method(set_sym) <span style="color:#080;font-weight:bold">do</span> |value|
+    not_writable = ((<span style="color:#33B">@data_mode</span> == <span style="color:#A60">:access</span>) <span style="color:#080;font-weight:bold">and</span> (!schema[name].write_access?(<span style="color:#069">self</span>)))
+    <span style="color:#080;font-weight:bold">if</span> not_writable
+      logger.warn(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Attempting to write to non-writable attribute: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>accessor_name<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>)
+      <span style="color:#080;font-weight:bold">return</span>
+    <span style="color:#080;font-weight:bold">end</span>
+    valid_type = <span style="color:#069">self</span>.class.schema.valid_type?(name, value)
+    <span style="color:#080;font-weight:bold">if</span> valid_type
+      <span style="color:#069">self</span>.attributes[name] = <span style="color:#069">self</span>.class.schema.transform_value(name, <span style="color:#069">self</span>, value)
+      <span style="color:#33B">@errors</span>               = <span style="color:#069">nil</span>
+      <span style="color:#33B">@changes</span>              &lt;&lt; name
+    <span style="color:#080;font-weight:bold">else</span>
+      logger.warn(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">The attribute '</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>accessor_name.to_s<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">' expected a(n) </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>type<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> value but got '</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>value<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">' [</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>value.class.name<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">] instead!</span><span style="color:#710">&quot;</span></span>)
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
 
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1604,11 +1604,11 @@ model in plural form.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 462</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_model_name_plural'>model_name_plural</span><span class='lparen'>(</span><span class='id identifier rubyid_wrapper'>wrapper</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_define_singleton_method'>define_singleton_method</span> <span class='symbol'>:plural_name</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_wrapper'>wrapper</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">model_name_plural</span>(wrapper)
+  define_singleton_method <span style="color:#A60">:plural_name</span> <span style="color:#080;font-weight:bold">do</span>
+    wrapper
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1650,11 +1650,11 @@ model in singular form.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 453</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_model_name_singular'>model_name_singular</span><span class='lparen'>(</span><span class='id identifier rubyid_wrapper'>wrapper</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_define_singleton_method'>define_singleton_method</span> <span class='symbol'>:singular_name</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_wrapper'>wrapper</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">model_name_singular</span>(wrapper)
+  define_singleton_method <span style="color:#A60">:singular_name</span> <span style="color:#080;font-weight:bold">do</span>
+    wrapper
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1716,11 +1716,11 @@ attribute other than the default as the primary key</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 444</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_primary_key'>primary_key</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_define_method'>define_method</span> <span class='symbol'>:primary_key_attribute</span> <span class='kw'>do</span>
-    <span class='kw'>return</span> <span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">primary_key</span>(attribute_name)
+  define_method <span style="color:#A60">:primary_key_attribute</span> <span style="color:#080;font-weight:bold">do</span>
+    <span style="color:#080;font-weight:bold">return</span> attribute_name.to_sym
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1759,9 +1759,9 @@ attribute other than the default as the primary key</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 470</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_schema'>schema</span>
-  <span class='const'><span class='object_link'><a href="Schema.html" title="WscSdk::Schema (class)">Schema</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">schema</span>
+  <span style="color:#036;font-weight:bold">Schema</span>.new
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1843,10 +1843,10 @@ attribute other than the default as the primary key</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 294</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute'>attribute</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
-  <span class='ivar'>@errors</span><span class='lbracket'>[</span><span class='id identifier rubyid_attribute'>attribute</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='ivar'>@errors</span><span class='lbracket'>[</span><span class='id identifier rubyid_attribute'>attribute</span><span class='rbracket'>]</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_message'>message</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">add_error</span>(attribute, message)
+  <span style="color:#33B">@errors</span>[attribute] ||= []
+  <span style="color:#33B">@errors</span>[attribute] &lt;&lt; message
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1920,26 +1920,26 @@ attribute other than the default as the primary key</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 408</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_build_payload'>build_payload</span>
-  <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>unless</span> <span class='id identifier rubyid_valid?'>valid?</span>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">build_payload</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span> <span style="color:#080;font-weight:bold">unless</span> valid?
 
-  <span class='id identifier rubyid_model_wrapper'>model_wrapper</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_singular_name'>singular_name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
-  <span class='id identifier rubyid_payload'>payload</span>       <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-  <span class='id identifier rubyid_wrapper'>wrapper</span>       <span class='op'>=</span> <span class='id identifier rubyid_payload'>payload</span><span class='lbracket'>[</span><span class='id identifier rubyid_model_wrapper'>model_wrapper</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  model_wrapper = <span style="color:#069">self</span>.class.singular_name.to_sym
+  payload       = {}
+  wrapper       = payload[model_wrapper] = {}
 
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='op'>|</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='period'>.</span><span class='id identifier rubyid_write_access?'>write_access?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
-      <span class='id identifier rubyid_value'>value</span>     <span class='op'>=</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='period'>.</span><span class='id identifier rubyid_value_or_default'>value_or_default</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
-      <span class='id identifier rubyid_required'>required</span>  <span class='op'>=</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='period'>.</span><span class='id identifier rubyid_required?'>required?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+  <span style="color:#069">self</span>.schema.each <span style="color:#080;font-weight:bold">do</span> |name, attribute|
+    <span style="color:#080;font-weight:bold">if</span> attribute.write_access?(<span style="color:#069">self</span>)
+      value     = attribute.value_or_default(<span style="color:#069">self</span>)
+      required  = attribute.required?(<span style="color:#069">self</span>)
 
-      <span class='kw'>if</span> <span class='id identifier rubyid_required'>required</span> <span class='kw'>or</span> <span class='op'>!</span><span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-        <span class='id identifier rubyid_wrapper'>wrapper</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
-      <span class='kw'>end</span>
-    <span class='kw'>end</span>
-  <span class='kw'>end</span>
+      <span style="color:#080;font-weight:bold">if</span> required <span style="color:#080;font-weight:bold">or</span> !value.nil?
+        wrapper[name] = value
+      <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
 
-  <span class='id identifier rubyid_payload'>payload</span>
-<span class='kw'>end</span></pre>
+  payload
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2016,10 +2016,10 @@ valid.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 398</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_build_payload!'>build_payload!</span>
-  <span class='id identifier rubyid_valid!'>valid!</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_build_payload'>build_payload</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">build_payload!</span>
+  valid!
+  <span style="color:#080;font-weight:bold">return</span> build_payload
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2059,9 +2059,9 @@ as dirty.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 211</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_clean!'>clean!</span>
-  <span class='ivar'>@changes</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">clean!</span>
+  <span style="color:#33B">@changes</span> = []
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2102,9 +2102,9 @@ as dirty.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 117</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_clear_primary_key'>clear_primary_key</span>
-  <span class='ivar'>@attributes</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_primary_key_attribute'>primary_key_attribute</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>nil</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">clear_primary_key</span>
+  <span style="color:#33B">@attributes</span>[<span style="color:#069">self</span>.primary_key_attribute] = <span style="color:#069">nil</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2183,16 +2183,16 @@ endpoint.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 348</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span>
-  <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Errors.html" title="WscSdk::Errors (module)">Errors</a></span></span><span class='period'>.</span><span class='id identifier rubyid_model_does_not_exist'><span class='object_link'><a href="Errors.html#model_does_not_exist-class_method" title="WscSdk::Errors.model_does_not_exist (method)">model_does_not_exist</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_new_model?'>new_model?</span>
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_endpoint'>endpoint</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
-    <span class='id identifier rubyid_clean!'>clean!</span>
-    <span class='id identifier rubyid_clear_primary_key'>clear_primary_key</span>
-    <span class='ivar'>@partial_data</span> <span class='op'>=</span> <span class='kw'>false</span>
-  <span class='kw'>end</span>
-  <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">delete</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Errors</span>.model_does_not_exist(<span style="color:#069">self</span>.endpoint) <span style="color:#080;font-weight:bold">if</span> new_model?
+  result = endpoint.delete(<span style="color:#069">self</span>)
+  <span style="color:#080;font-weight:bold">if</span> result.success?
+    clean!
+    clear_primary_key
+    <span style="color:#33B">@partial_data</span> = <span style="color:#069">false</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">return</span> result
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2245,9 +2245,9 @@ marked in the changes array.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 218</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_dirty?'>dirty?</span>
-  <span class='ivar'>@changes</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&gt;</span> <span class='int'>0</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">dirty?</span>
+  <span style="color:#33B">@changes</span>.length &gt; <span style="color:#00D">0</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2319,9 +2319,9 @@ marked in the changes array.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 204</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_has_attribute?'>has_attribute?</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute'>attribute</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute'>attribute</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">has_attribute?</span>(attribute)
+  attributes.keys.include?(attribute)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2453,20 +2453,20 @@ used by the model class, and not by users.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 184</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_ingest_attribute'>ingest_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute'>attribute</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_has_attribute?'>has_attribute?</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute'>attribute</span><span class='rparen'>)</span>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">ingest_attribute</span>(attribute, value, options={})
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">unless</span> has_attribute?(attribute)
 
-  <span class='id identifier rubyid_write_to_read_only'>write_to_read_only</span>  <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:write_to_read_only</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_attr'>attr</span>                <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_schema'>schema</span><span class='lbracket'>[</span><span class='id identifier rubyid_attribute'>attribute</span><span class='rbracket'>]</span>
-  <span class='ivar'>@data_mode</span>          <span class='op'>=</span> <span class='id identifier rubyid_write_to_read_only'>write_to_read_only</span> <span class='op'>?</span> <span class='symbol'>:ingest</span> <span class='op'>:</span> <span class='symbol'>:access</span>
-  <span class='id identifier rubyid__temp_partial_data'>_temp_partial_data</span>  <span class='op'>=</span> <span class='ivar'>@partial_data</span>
-  <span class='ivar'>@partial_data</span>       <span class='op'>=</span> <span class='kw'>false</span>
-  <span class='id identifier rubyid_set_sym'>set_sym</span>             <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_attr'>attr</span><span class='period'>.</span><span class='id identifier rubyid_attribute_name'>attribute_name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='embexpr_end'>}</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+  write_to_read_only  = options.fetch(<span style="color:#A60">:write_to_read_only</span>, <span style="color:#069">false</span>)
+  attr                = <span style="color:#069">self</span>.class.schema[attribute]
+  <span style="color:#33B">@data_mode</span>          = write_to_read_only ? <span style="color:#A60">:ingest</span> : <span style="color:#A60">:access</span>
+  _temp_partial_data  = <span style="color:#33B">@partial_data</span>
+  <span style="color:#33B">@partial_data</span>       = <span style="color:#069">false</span>
+  set_sym             = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>attr.attribute_name.to_s<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">=</span><span style="color:#710">&quot;</span></span>.to_sym
 
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_set_sym'>set_sym</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span style="color:#069">self</span>.send(set_sym, value)
 
-  <span class='ivar'>@partial_data</span>       <span class='op'>=</span> <span class='id identifier rubyid__temp_partial_data'>_temp_partial_data</span>
-<span class='kw'>end</span></pre>
+  <span style="color:#33B">@partial_data</span>       = _temp_partial_data
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2592,19 +2592,19 @@ used by the model class, and not by users.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 154</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_ingest_attributes'>ingest_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_write_to_read_only'>write_to_read_only</span>  <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:write_to_read_only</span><span class='comma'>,</span>  <span class='kw'>false</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_mark_clean'>mark_clean</span>          <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:mark_clean</span><span class='comma'>,</span>          <span class='kw'>false</span><span class='rparen'>)</span>
-  <span class='ivar'>@partial_data</span>       <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:partial_data</span><span class='comma'>,</span>        <span class='kw'>false</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_attributes'>attributes</span>          <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_deep_symbolize_keys'>deep_symbolize_keys</span>
-  <span class='id identifier rubyid_root_key'>root_key</span>            <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_singular_name'>singular_name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
-  <span class='id identifier rubyid_attributes'>attributes</span>          <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='id identifier rubyid_root_key'>root_key</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_root_key'>root_key</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='id identifier rubyid_attributes'>attributes</span>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">ingest_attributes</span>(attributes, options={})
+  write_to_read_only  = options.fetch(<span style="color:#A60">:write_to_read_only</span>,  <span style="color:#069">false</span>)
+  mark_clean          = options.fetch(<span style="color:#A60">:mark_clean</span>,          <span style="color:#069">false</span>)
+  <span style="color:#33B">@partial_data</span>       = options.fetch(<span style="color:#A60">:partial_data</span>,        <span style="color:#069">false</span>)
+  attributes          = (attributes || {}).deep_symbolize_keys
+  root_key            = <span style="color:#069">self</span>.class.singular_name.to_sym
+  attributes          = attributes.has_key?(root_key) ? attributes[root_key] : attributes
 
-  <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_attribute'>attribute</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
-    <span class='id identifier rubyid_ingest_attribute'>ingest_attribute</span><span class='lparen'>(</span><span class='id identifier rubyid_attribute'>attribute</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
-  <span class='id identifier rubyid_clean!'>clean!</span> <span class='kw'>if</span> <span class='id identifier rubyid_mark_clean'>mark_clean</span>
-<span class='kw'>end</span></pre>
+  attributes.each <span style="color:#080;font-weight:bold">do</span> |attribute, value|
+    ingest_attribute(attribute, value, options)
+  <span style="color:#080;font-weight:bold">end</span>
+  clean! <span style="color:#080;font-weight:bold">if</span> mark_clean
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2654,17 +2654,17 @@ established and have values, then nothing will happen to them.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 126</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize_attributes'>initialize_attributes</span><span class='lparen'>(</span><span class='rparen'>)</span>
-  <span class='ivar'>@attributes</span>       <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-  <span class='id identifier rubyid_merged_attributes'>merged_attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-  <span class='id identifier rubyid_defaults'>defaults</span>          <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_defaults'>defaults</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">initialize_attributes</span>()
+  <span style="color:#33B">@attributes</span>       ||= {}
+  merged_attributes = {}
+  defaults          = <span style="color:#069">self</span>.class.schema.defaults(<span style="color:#069">self</span>)
 
-  <span class='comment'># Merge the defaults in where attributes don&#39;t have a value defined.
-</span>  <span class='id identifier rubyid_defaults'>defaults</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
-    <span class='id identifier rubyid_merged_attributes'>merged_attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='id identifier rubyid_value'>value</span>
-  <span class='kw'>end</span>
-  <span class='ivar'>@attributes</span> <span class='op'>=</span> <span class='id identifier rubyid_merged_attributes'>merged_attributes</span>
-<span class='kw'>end</span></pre>
+  <span style="color:#777"># Merge the defaults in where attributes don't have a value defined.</span>
+  defaults.each <span style="color:#080;font-weight:bold">do</span> |name, value|
+    merged_attributes[name] = attributes[name] || value
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#33B">@attributes</span> = merged_attributes
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2721,9 +2721,9 @@ established and have values, then nothing will happen to them.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 247</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_new_model?'>new_model?</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_primary_key'>primary_key</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='kw'>or</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_primary_key'>primary_key</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">new_model?</span>
+  <span style="color:#069">self</span>.primary_key.nil? <span style="color:#080;font-weight:bold">or</span> <span style="color:#069">self</span>.primary_key.empty?
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2780,9 +2780,9 @@ established and have values, then nothing will happen to them.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 99</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_primary_key'>primary_key</span>
-  <span class='ivar'>@attributes</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_primary_key_attribute'>primary_key_attribute</span><span class='rbracket'>]</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">primary_key</span>
+  <span style="color:#33B">@attributes</span>[<span style="color:#069">self</span>.primary_key_attribute]
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2839,9 +2839,9 @@ established and have values, then nothing will happen to them.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 109</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_primary_key_attribute'>primary_key_attribute</span>
-  <span class='symbol'>:id</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">primary_key_attribute</span>
+  <span style="color:#A60">:id</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2903,13 +2903,13 @@ refresh was a failure.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 305</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_refresh'>refresh</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_new_model?'>new_model?</span>
-    <span class='kw'>return</span> <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Errors.html" title="WscSdk::Errors (module)">Errors</a></span></span><span class='period'>.</span><span class='id identifier rubyid_model_does_not_exist'><span class='object_link'><a href="Errors.html#model_does_not_exist-class_method" title="WscSdk::Errors.model_does_not_exist (method)">model_does_not_exist</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='rparen'>)</span>
-  <span class='kw'>else</span>
-    <span class='kw'>return</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_endpoint'>endpoint</span><span class='period'>.</span><span class='id identifier rubyid_refresh'>refresh</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">refresh</span>
+  <span style="color:#080;font-weight:bold">if</span> new_model?
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Errors</span>.model_does_not_exist(<span style="color:#069">self</span>.endpoint)
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>.endpoint.refresh(<span style="color:#069">self</span>)
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2994,19 +2994,19 @@ endpoint.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 325</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_save'>save</span>
-  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='kw'>nil</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_new_model?'>new_model?</span>
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_endpoint'>endpoint</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
-    <span class='ivar'>@attributes</span><span class='lbracket'>[</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_primary_key_attribute'>primary_key_attribute</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_primary_key'>primary_key</span> <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
-  <span class='kw'>elsif</span> <span class='id identifier rubyid_dirty?'>dirty?</span>
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_endpoint'>endpoint</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
-  <span class='kw'>else</span>
-    <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='kw'>self</span>
-  <span class='kw'>end</span>
-  <span class='id identifier rubyid_clean!'>clean!</span> <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_success?'>success?</span>
-  <span class='id identifier rubyid_result'>result</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">save</span>
+  result = <span style="color:#069">nil</span>
+  <span style="color:#080;font-weight:bold">if</span> new_model?
+    result = endpoint.create(<span style="color:#069">self</span>)
+    <span style="color:#33B">@attributes</span>[<span style="color:#069">self</span>.primary_key_attribute] = result.primary_key <span style="color:#080;font-weight:bold">if</span> result.success?
+  <span style="color:#080;font-weight:bold">elsif</span> dirty?
+    result = endpoint.update(<span style="color:#069">self</span>)
+  <span style="color:#080;font-weight:bold">else</span>
+    result = <span style="color:#069">self</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  clean! <span style="color:#080;font-weight:bold">if</span> result.success?
+  result
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -3058,9 +3058,9 @@ endpoint.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 90</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_schema'>schema</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_schema'>schema</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">schema</span>
+  <span style="color:#069">self</span>.class.schema
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -3117,9 +3117,9 @@ endpoint.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 364</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_success?'>success?</span>
-  <span class='kw'>return</span> <span class='kw'>true</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">success?</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">true</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -3176,9 +3176,9 @@ endpoint.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 256</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_valid!'>valid!</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Invalid attribute values: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@errors</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='op'>|</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_f'>f</span><span class='embexpr_end'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_m'>m</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> | </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_valid?'>valid?</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">valid!</span>
+  raise <span style="color:#036;font-weight:bold">ArgumentError</span>.new(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Invalid attribute values: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span><span style="color:#33B">@errors</span>.map{ |f, m| <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>f<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>m<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>}.join(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20"> | </span><span style="color:#710">&quot;</span></span>)<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>) <span style="color:#080;font-weight:bold">unless</span> valid?
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -3236,10 +3236,10 @@ endpoint.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 265</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_valid?'>valid?</span>
-  <span class='id identifier rubyid_validate'>validate</span>
-  <span class='lparen'>(</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">valid?</span>
+  validate
+  (errors.keys.length == <span style="color:#00D">0</span>)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -3288,17 +3288,17 @@ endpoint.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 274</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_validate'>validate</span>
-  <span class='ivar'>@errors</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_schema'>schema</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='op'>|</span>
-    <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='period'>.</span><span class='id identifier rubyid_value_or_default'>value_or_default</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='period'>.</span><span class='id identifier rubyid_required?'>required?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span> <span class='kw'>and</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-      <span class='id identifier rubyid_add_error'>add_error</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>is required</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-    <span class='kw'>end</span>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">validate</span>
+  <span style="color:#33B">@errors</span> = {}
+  <span style="color:#069">self</span>.class.schema.each <span style="color:#080;font-weight:bold">do</span> |name, attribute|
+    value = attribute.value_or_default(<span style="color:#069">self</span>)
+    <span style="color:#080;font-weight:bold">if</span> attribute.required?(<span style="color:#069">self</span>) <span style="color:#080;font-weight:bold">and</span> value.nil?
+      add_error(name, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">is required</span><span style="color:#710">&quot;</span></span>)
+    <span style="color:#080;font-weight:bold">end</span>
 
-    <span class='id identifier rubyid_attribute'>attribute</span><span class='period'>.</span><span class='id identifier rubyid_valid?'>valid?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_value'>value</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
+    attribute.valid?(<span style="color:#069">self</span>) <span style="color:#080;font-weight:bold">unless</span> value.nil?
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>

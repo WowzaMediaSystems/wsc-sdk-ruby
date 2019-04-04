@@ -1,2 +1,0 @@
-# License info goes here
-

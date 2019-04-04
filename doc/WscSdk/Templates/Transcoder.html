@@ -352,15 +352,15 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/transcoder.rb', line 22</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rtmp_pull'>rtmp_pull</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_source_url'>source_url</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='label'>name:</span>                   <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
-    <span class='label'>source_url:</span>             <span class='id identifier rubyid_source_url'>source_url</span><span class='comma'>,</span>
-    <span class='label'>broadcast_location:</span>     <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html" title="WscSdk::Enums::BroadcastLocation (module)">BroadcastLocation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html#US_WEST_CALIFORNIA-constant" title="WscSdk::Enums::BroadcastLocation::US_WEST_CALIFORNIA (constant)">US_WEST_CALIFORNIA</a></span></span><span class='comma'>,</span>
-    <span class='label'>protocol:</span>               <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Protocol.html" title="WscSdk::Enums::Protocol (module)">Protocol</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Protocol.html#RTMP-constant" title="WscSdk::Enums::Protocol::RTMP (constant)">RTMP</a></span></span><span class='comma'>,</span>
-    <span class='label'>delivery_method:</span>        <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html" title="WscSdk::Enums::DeliveryMethod (module)">DeliveryMethod</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html#PULL-constant" title="WscSdk::Enums::DeliveryMethod::PULL (constant)">PULL</a></span></span>
-  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">rtmp_pull</span>(name, source_url, modifiers={})
+  <span style="color:#069">self</span>.merge({
+    <span style="color:#606">name</span>:                   name,
+    <span style="color:#606">source_url</span>:             source_url,
+    <span style="color:#606">broadcast_location</span>:     <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">BroadcastLocation</span>::<span style="color:#036;font-weight:bold">US_WEST_CALIFORNIA</span>,
+    <span style="color:#606">protocol</span>:               <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">Protocol</span>::<span style="color:#036;font-weight:bold">RTMP</span>,
+    <span style="color:#606">delivery_method</span>:        <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">DeliveryMethod</span>::<span style="color:#036;font-weight:bold">PULL</span>
+  }, modifiers)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -459,15 +459,15 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/transcoder.rb', line 43</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rtmp_push'>rtmp_push</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_stream_source_id'>stream_source_id</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='label'>name:</span>                   <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
-    <span class='label'>stream_source_id:</span>       <span class='id identifier rubyid_stream_source_id'>stream_source_id</span><span class='comma'>,</span>
-    <span class='label'>broadcast_location:</span>     <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html" title="WscSdk::Enums::BroadcastLocation (module)">BroadcastLocation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html#US_WEST_CALIFORNIA-constant" title="WscSdk::Enums::BroadcastLocation::US_WEST_CALIFORNIA (constant)">US_WEST_CALIFORNIA</a></span></span><span class='comma'>,</span>
-    <span class='label'>protocol:</span>               <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Protocol.html" title="WscSdk::Enums::Protocol (module)">Protocol</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Protocol.html#RTMP-constant" title="WscSdk::Enums::Protocol::RTMP (constant)">RTMP</a></span></span><span class='comma'>,</span>
-    <span class='label'>delivery_method:</span>        <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html" title="WscSdk::Enums::DeliveryMethod (module)">DeliveryMethod</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html#PUSH-constant" title="WscSdk::Enums::DeliveryMethod::PUSH (constant)">PUSH</a></span></span>
-  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">rtmp_push</span>(name, stream_source_id, modifiers={})
+  <span style="color:#069">self</span>.merge({
+    <span style="color:#606">name</span>:                   name,
+    <span style="color:#606">stream_source_id</span>:       stream_source_id,
+    <span style="color:#606">broadcast_location</span>:     <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">BroadcastLocation</span>::<span style="color:#036;font-weight:bold">US_WEST_CALIFORNIA</span>,
+    <span style="color:#606">protocol</span>:               <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">Protocol</span>::<span style="color:#036;font-weight:bold">RTMP</span>,
+    <span style="color:#606">delivery_method</span>:        <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">DeliveryMethod</span>::<span style="color:#036;font-weight:bold">PUSH</span>
+  }, modifiers)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -566,15 +566,15 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/transcoder.rb', line 65</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rtsp_pull'>rtsp_pull</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_source_url'>source_url</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='label'>name:</span>                   <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
-    <span class='label'>source_url:</span>             <span class='id identifier rubyid_source_url'>source_url</span><span class='comma'>,</span>
-    <span class='label'>broadcast_location:</span>     <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html" title="WscSdk::Enums::BroadcastLocation (module)">BroadcastLocation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html#US_WEST_CALIFORNIA-constant" title="WscSdk::Enums::BroadcastLocation::US_WEST_CALIFORNIA (constant)">US_WEST_CALIFORNIA</a></span></span><span class='comma'>,</span>
-    <span class='label'>protocol:</span>               <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Protocol.html" title="WscSdk::Enums::Protocol (module)">Protocol</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Protocol.html#RTSP-constant" title="WscSdk::Enums::Protocol::RTSP (constant)">RTSP</a></span></span><span class='comma'>,</span>
-    <span class='label'>delivery_method:</span>        <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html" title="WscSdk::Enums::DeliveryMethod (module)">DeliveryMethod</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html#PULL-constant" title="WscSdk::Enums::DeliveryMethod::PULL (constant)">PULL</a></span></span>
-  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">rtsp_pull</span>(name, source_url, modifiers={})
+  <span style="color:#069">self</span>.merge({
+    <span style="color:#606">name</span>:                   name,
+    <span style="color:#606">source_url</span>:             source_url,
+    <span style="color:#606">broadcast_location</span>:     <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">BroadcastLocation</span>::<span style="color:#036;font-weight:bold">US_WEST_CALIFORNIA</span>,
+    <span style="color:#606">protocol</span>:               <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">Protocol</span>::<span style="color:#036;font-weight:bold">RTSP</span>,
+    <span style="color:#606">delivery_method</span>:        <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">DeliveryMethod</span>::<span style="color:#036;font-weight:bold">PULL</span>
+  }, modifiers)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -673,15 +673,15 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/templates/transcoder.rb', line 86</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_rtsp_push'>rtsp_push</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_stream_source_id'>stream_source_id</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='label'>name:</span>                   <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
-    <span class='label'>stream_source_id:</span>       <span class='id identifier rubyid_stream_source_id'>stream_source_id</span><span class='comma'>,</span>
-    <span class='label'>broadcast_location:</span>     <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html" title="WscSdk::Enums::BroadcastLocation (module)">BroadcastLocation</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/BroadcastLocation.html#US_WEST_CALIFORNIA-constant" title="WscSdk::Enums::BroadcastLocation::US_WEST_CALIFORNIA (constant)">US_WEST_CALIFORNIA</a></span></span><span class='comma'>,</span>
-    <span class='label'>protocol:</span>               <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Protocol.html" title="WscSdk::Enums::Protocol (module)">Protocol</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/Protocol.html#RTSP-constant" title="WscSdk::Enums::Protocol::RTSP (constant)">RTSP</a></span></span><span class='comma'>,</span>
-    <span class='label'>delivery_method:</span>        <span class='const'><span class='object_link'><a href="../../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums.html" title="WscSdk::Enums (module)">Enums</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html" title="WscSdk::Enums::DeliveryMethod (module)">DeliveryMethod</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Enums/DeliveryMethod.html#PUSH-constant" title="WscSdk::Enums::DeliveryMethod::PUSH (constant)">PUSH</a></span></span>
-  <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_modifiers'>modifiers</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">rtsp_push</span>(name, stream_source_id, modifiers={})
+  <span style="color:#069">self</span>.merge({
+    <span style="color:#606">name</span>:                   name,
+    <span style="color:#606">stream_source_id</span>:       stream_source_id,
+    <span style="color:#606">broadcast_location</span>:     <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">BroadcastLocation</span>::<span style="color:#036;font-weight:bold">US_WEST_CALIFORNIA</span>,
+    <span style="color:#606">protocol</span>:               <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">Protocol</span>::<span style="color:#036;font-weight:bold">RTSP</span>,
+    <span style="color:#606">delivery_method</span>:        <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Enums</span>::<span style="color:#036;font-weight:bold">DeliveryMethod</span>::<span style="color:#036;font-weight:bold">PUSH</span>
+  }, modifiers)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>

@@ -139,9 +139,9 @@ API interactions.</p>
 <p>Usage</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_api_key'>api_key</span>     <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[your-api-key]</span><span class='tstring_end'>&quot;</span></span>
-<span class='id identifier rubyid_access_key'>access_key</span>  <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[your-api-access-key]</span><span class='tstring_end'>&quot;</span></span>
-<span class='id identifier rubyid_client'>client</span>      <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="WscSdk::Client#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_api_key'>api_key</span><span class='comma'>,</span> <span class='id identifier rubyid_access_key'>access_key</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code>api_key     = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">[your-api-key]</span><span style="color:#710">&quot;</span></span>
+access_key  = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">[your-api-access-key]</span><span style="color:#710">&quot;</span></span>
+client      = <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Client</span>.new(api_key, access_key)</code></pre>
     
       
         <p class="example_title"><div class='inline'>
@@ -156,7 +156,7 @@ export WSC_API_ACCESS_KEY=[your-api-access-key]</code></pre>
 <p>Usage with Environment Variables: Client Config</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_client'>client</span>      <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="WscSdk::Client#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='rparen'>)</span></code></pre>
+      <pre class="example code"><code>client      = <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Client</span>.new()</code></pre>
     
   </div>
 
@@ -184,7 +184,7 @@ export WSC_API_ACCESS_KEY=[your-api-access-key]</code></pre>
 
 </div>
         </dt>
-        <dd><pre class="code"><span class='int'>5</span></pre></dd>
+        <dd><pre class="code"><span style="color:#00D">5</span></pre></dd>
       
     </dl>
   
@@ -963,15 +963,15 @@ requests.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 61</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='ivar'>@api_key</span>        <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:api_key</span><span class='comma'>,</span>     <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configuration'><span class='object_link'><a href="../WscSdk.html#configuration-class_method" title="WscSdk.configuration (method)">configuration</a></span></span><span class='period'>.</span><span class='id identifier rubyid_api_key'><span class='object_link'><a href="Configuration.html#api_key-instance_method" title="WscSdk::Configuration#api_key (method)">api_key</a></span></span><span class='rparen'>)</span>
-  <span class='ivar'>@access_key</span>     <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:access_key</span><span class='comma'>,</span>  <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configuration'><span class='object_link'><a href="../WscSdk.html#configuration-class_method" title="WscSdk.configuration (method)">configuration</a></span></span><span class='period'>.</span><span class='id identifier rubyid_access_key'><span class='object_link'><a href="Configuration.html#access_key-instance_method" title="WscSdk::Configuration#access_key (method)">access_key</a></span></span><span class='rparen'>)</span>
-  <span class='ivar'>@hostname</span>       <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:hostname</span><span class='comma'>,</span>    <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configuration'><span class='object_link'><a href="../WscSdk.html#configuration-class_method" title="WscSdk.configuration (method)">configuration</a></span></span><span class='period'>.</span><span class='id identifier rubyid_hostname'><span class='object_link'><a href="Configuration.html#hostname-instance_method" title="WscSdk::Configuration#hostname (method)">hostname</a></span></span><span class='rparen'>)</span>
-  <span class='ivar'>@path_version</span>   <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:version</span><span class='comma'>,</span>     <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configuration'><span class='object_link'><a href="../WscSdk.html#configuration-class_method" title="WscSdk.configuration (method)">configuration</a></span></span><span class='period'>.</span><span class='id identifier rubyid_version'><span class='object_link'><a href="Configuration.html#version-instance_method" title="WscSdk::Configuration#version (method)">version</a></span></span><span class='rparen'>)</span>
-  <span class='ivar'>@base_path</span>      <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>api</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='ivar'>@path_version</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-  <span class='ivar'>@logger</span>         <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:logger</span><span class='comma'>,</span>      <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='period'>.</span><span class='id identifier rubyid_configuration'><span class='object_link'><a href="../WscSdk.html#configuration-class_method" title="WscSdk.configuration (method)">configuration</a></span></span><span class='period'>.</span><span class='id identifier rubyid_logger'><span class='object_link'><a href="Configuration.html#logger-instance_method" title="WscSdk::Configuration#logger (method)">logger</a></span></span><span class='rparen'>)</span>
-  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_base_uri'>base_uri</span><span class='lparen'>(</span><span class='ivar'>@hostname</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">initialize</span>(options={})
+  <span style="color:#33B">@api_key</span>        = options.fetch(<span style="color:#A60">:api_key</span>,     <span style="color:#036;font-weight:bold">WscSdk</span>.configuration.api_key)
+  <span style="color:#33B">@access_key</span>     = options.fetch(<span style="color:#A60">:access_key</span>,  <span style="color:#036;font-weight:bold">WscSdk</span>.configuration.access_key)
+  <span style="color:#33B">@hostname</span>       = options.fetch(<span style="color:#A60">:hostname</span>,    <span style="color:#036;font-weight:bold">WscSdk</span>.configuration.hostname)
+  <span style="color:#33B">@path_version</span>   = options.fetch(<span style="color:#A60">:version</span>,     <span style="color:#036;font-weight:bold">WscSdk</span>.configuration.version)
+  <span style="color:#33B">@base_path</span>      = [<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">api</span><span style="color:#710">&quot;</span></span>, <span style="color:#33B">@path_version</span>].join(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/</span><span style="color:#710">&quot;</span></span>)
+  <span style="color:#33B">@logger</span>         = options.fetch(<span style="color:#A60">:logger</span>,      <span style="color:#036;font-weight:bold">WscSdk</span>.configuration.logger)
+  <span style="color:#069">self</span>.class.base_uri(<span style="color:#33B">@hostname</span>)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1017,9 +1017,9 @@ requests.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 35</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_access_key'>access_key</span>
-  <span class='ivar'>@access_key</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">access_key</span>
+  <span style="color:#33B">@access_key</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1060,9 +1060,9 @@ requests.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 35</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_api_key'>api_key</span>
-  <span class='ivar'>@api_key</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">api_key</span>
+  <span style="color:#33B">@api_key</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1103,9 +1103,9 @@ requests.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 35</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_base_path'>base_path</span>
-  <span class='ivar'>@base_path</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">base_path</span>
+  <span style="color:#33B">@base_path</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1146,9 +1146,9 @@ requests.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 35</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_hostname'>hostname</span>
-  <span class='ivar'>@hostname</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">hostname</span>
+  <span style="color:#33B">@hostname</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1189,9 +1189,9 @@ requests.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 37</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_last_request_time'>last_request_time</span>
-  <span class='ivar'>@last_request_time</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">last_request_time</span>
+  <span style="color:#33B">@last_request_time</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1232,9 +1232,9 @@ requests.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 35</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_logger'>logger</span>
-  <span class='ivar'>@logger</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">logger</span>
+  <span style="color:#33B">@logger</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1275,9 +1275,9 @@ requests.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 35</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_path_version'>path_version</span>
-  <span class='ivar'>@path_version</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">path_version</span>
+  <span style="color:#33B">@path_version</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1341,9 +1341,9 @@ requests.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 399</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_configured_instance'>configured_instance</span>
-  <span class='cvar'>@@client_instance</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="" title="WscSdk::Client (class)">Client</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="#initialize-instance_method" title="WscSdk::Client#initialize (method)">new</a></span></span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">configured_instance</span>
+  <span style="color:#369">@@client_instance</span> ||= <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Client</span>.new
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1439,10 +1439,10 @@ requests.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 412</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_file_to_base64'>file_to_base64</span><span class='lparen'>(</span><span class='id identifier rubyid_file_path'>file_path</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Could not convert the specified file to Base64, the file couldn&#39;t be found: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file_path'>file_path</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span><span class='lparen'>(</span><span class='id identifier rubyid_file_path'>file_path</span><span class='rparen'>)</span>
-  <span class='const'>Base64</span><span class='period'>.</span><span class='id identifier rubyid_encode64'>encode64</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='id identifier rubyid_file_path'>file_path</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rb</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">file_to_base64</span>(file_path)
+  raise <span style="color:#036;font-weight:bold">ArgumentError</span>.new(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Could not convert the specified file to Base64, the file couldn't be found: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>file_path<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>) <span style="color:#080;font-weight:bold">unless</span> <span style="color:#036;font-weight:bold">File</span>.exists?(file_path)
+  <span style="color:#036;font-weight:bold">Base64</span>.encode64(<span style="color:#036;font-weight:bold">File</span>.open(file_path, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">rb</span><span style="color:#710">&quot;</span></span>).read)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1525,9 +1525,9 @@ requests.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 192</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='symbol'>:delete</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">delete</span>(path, options={})
+  send_request(<span style="color:#A60">:delete</span>, path, options)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1604,9 +1604,9 @@ requests.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 80</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_full_request_path'>full_request_path</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
-  <span class='lbracket'>[</span> <span class='id identifier rubyid_base_path'>base_path</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span> <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">full_request_path</span>(path)
+  [ base_path, path ].join(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/</span><span style="color:#710">&quot;</span></span>)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1754,21 +1754,21 @@ signed authentication headers.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 270</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_generate_headers'>generate_headers</span><span class='lparen'>(</span><span class='id identifier rubyid_request_path'>request_path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_timestamp'>timestamp</span>     <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:timestamp</span><span class='comma'>,</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_request_path'>request_path</span>  <span class='op'>=</span> <span class='id identifier rubyid_request_path'>request_path</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span><span class='period'>.</span><span class='id identifier rubyid_chomp'>chomp</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_data'>data</span>          <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_timestamp'>timestamp</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_request_path'>request_path</span><span class='embexpr_end'>}</span><span class='tstring_content'>:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_api_key'>api_key</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
-  <span class='id identifier rubyid_signature'>signature</span>     <span class='op'>=</span> <span class='const'>OpenSSL</span><span class='op'>::</span><span class='const'>HMAC</span><span class='period'>.</span><span class='id identifier rubyid_hexdigest'>hexdigest</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SHA256</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_api_key'>api_key</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_content_type'>content_type</span>  <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:content_type</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>multipart/form-data</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">generate_headers</span>(request_path, options={})
+  timestamp     = options.fetch(<span style="color:#A60">:timestamp</span>, <span style="color:#036;font-weight:bold">Time</span>.now.to_i)
+  request_path  = request_path.split(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">?</span><span style="color:#710">&quot;</span></span>).first.chomp(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/</span><span style="color:#710">&quot;</span></span>)
+  data          = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>timestamp<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">:</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>request_path<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">:</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>api_key<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>
+  signature     = <span style="color:#036;font-weight:bold">OpenSSL</span>::<span style="color:#036;font-weight:bold">HMAC</span>.hexdigest(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">SHA256</span><span style="color:#710">&quot;</span></span>, api_key, data)
+  content_type  = options.fetch(<span style="color:#A60">:content_type</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">multipart/form-data</span><span style="color:#710">&quot;</span></span>)
 
-  <span class='lbrace'>{</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>User-Agent</span><span class='tstring_end'>&#39;</span></span>      <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../WscSdk.html#USER_AGENT-constant" title="WscSdk::USER_AGENT (constant)">USER_AGENT</a></span></span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Wsc-Access-Key</span><span class='tstring_end'>&#39;</span></span>  <span class='op'>=&gt;</span> <span class='id identifier rubyid_access_key'>access_key</span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Wsc-Timestamp</span><span class='tstring_end'>&#39;</span></span>   <span class='op'>=&gt;</span> <span class='id identifier rubyid_timestamp'>timestamp</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Wsc-Signature</span><span class='tstring_end'>&#39;</span></span>   <span class='op'>=&gt;</span> <span class='id identifier rubyid_signature'>signature</span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Content-Type</span><span class='tstring_end'>&#39;</span></span>    <span class='op'>=&gt;</span> <span class='id identifier rubyid_content_type'>content_type</span>
-  <span class='rbrace'>}</span>
-<span class='kw'>end</span></pre>
+  {
+    <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">User-Agent</span><span style="color:#710">'</span></span>      =&gt; <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">USER_AGENT</span>,
+    <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Wsc-Access-Key</span><span style="color:#710">'</span></span>  =&gt; access_key,
+    <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Wsc-Timestamp</span><span style="color:#710">'</span></span>   =&gt; timestamp.to_s,
+    <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Wsc-Signature</span><span style="color:#710">'</span></span>   =&gt; signature,
+    <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Content-Type</span><span style="color:#710">'</span></span>    =&gt; content_type
+  }
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1845,9 +1845,9 @@ signed authentication headers.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 144</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='symbol'>:get</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">get</span>(path, options={})
+  send_request(<span style="color:#A60">:get</span>, path, options)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1896,19 +1896,19 @@ signed authentication headers.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 326</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_info'>info</span>
-  <span class='lbrace'>{</span>
-    <span class='label'>access_key:</span>     <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_access_key'>access_key</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='int'>5</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>****</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_access_key'>access_key</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>6</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>rescue</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>invalid</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
-    <span class='label'>api_key:</span>        <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_api_key'>api_key</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='int'>5</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>****</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_api_key'>api_key</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>6</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>rescue</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>invalid</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
-    <span class='label'>base_path:</span>      <span class='id identifier rubyid_base_path'>base_path</span><span class='comma'>,</span>
-    <span class='label'>hostname:</span>       <span class='id identifier rubyid_hostname'>hostname</span><span class='comma'>,</span>
-    <span class='label'>path_version:</span>   <span class='id identifier rubyid_path_version'>path_version</span><span class='comma'>,</span>
-    <span class='label'>logger:</span>         <span class='lparen'>(</span><span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='kw'>rescue</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>nil</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
-    <span class='label'>logger_level:</span>   <span class='lparen'>(</span><span class='id identifier rubyid_logger'>logger</span><span class='period'>.</span><span class='id identifier rubyid_level'>level</span> <span class='kw'>rescue</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>nil</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='comma'>,</span>
-    <span class='label'>throttle:</span>       <span class='const'><span class='object_link'><a href="#MAX_REQUESTS_PER_SECOND-constant" title="WscSdk::Client::MAX_REQUESTS_PER_SECOND (constant)">MAX_REQUESTS_PER_SECOND</a></span></span><span class='comma'>,</span>
-    <span class='label'>user_agent:</span>     <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../WscSdk.html#USER_AGENT-constant" title="WscSdk::USER_AGENT (constant)">USER_AGENT</a></span></span>
-  <span class='rbrace'>}</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">info</span>
+  {
+    <span style="color:#606">access_key</span>:     (<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>access_key[<span style="color:#00D">0</span>..<span style="color:#00D">5</span>]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">****</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>access_key[<span style="color:#00D">-6</span>..<span style="color:#00D">-1</span>]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">rescue</span> <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">invalid</span><span style="color:#710">&quot;</span></span>),
+    <span style="color:#606">api_key</span>:        (<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>api_key[<span style="color:#00D">0</span>..<span style="color:#00D">5</span>]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">****</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>api_key[<span style="color:#00D">-6</span>..<span style="color:#00D">-1</span>]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span> <span style="color:#080;font-weight:bold">rescue</span> <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">invalid</span><span style="color:#710">&quot;</span></span>),
+    <span style="color:#606">base_path</span>:      base_path,
+    <span style="color:#606">hostname</span>:       hostname,
+    <span style="color:#606">path_version</span>:   path_version,
+    <span style="color:#606">logger</span>:         (logger.class.name <span style="color:#080;font-weight:bold">rescue</span> <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">nil</span><span style="color:#710">&quot;</span></span>),
+    <span style="color:#606">logger_level</span>:   (logger.level <span style="color:#080;font-weight:bold">rescue</span> <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">nil</span><span style="color:#710">&quot;</span></span>),
+    <span style="color:#606">throttle</span>:       <span style="color:#036;font-weight:bold">MAX_REQUESTS_PER_SECOND</span>,
+    <span style="color:#606">user_agent</span>:     <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">USER_AGENT</span>
+  }
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -1965,9 +1965,9 @@ signed authentication headers.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 105</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_live_streams'>live_streams</span>
-  <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Endpoints.html" title="WscSdk::Endpoints (module)">Endpoints</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Endpoints/LiveStreams.html" title="WscSdk::Endpoints::LiveStreams (class)">LiveStreams</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Endpoint.html#initialize-instance_method" title="WscSdk::Endpoint#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">live_streams</span>
+  <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Endpoints</span>::<span style="color:#036;font-weight:bold">LiveStreams</span>.new(<span style="color:#069">self</span>)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2044,9 +2044,9 @@ signed authentication headers.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 180</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_patch'>patch</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='symbol'>:patch</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">patch</span>(path, options={})
+  send_request(<span style="color:#A60">:patch</span>, path, options)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2123,9 +2123,9 @@ signed authentication headers.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 156</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='symbol'>:post</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">post</span>(path, options={})
+  send_request(<span style="color:#A60">:post</span>, path, options)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2202,9 +2202,9 @@ signed authentication headers.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 168</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_put'>put</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='symbol'>:put</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">put</span>(path, options={})
+  send_request(<span style="color:#A60">:put</span>, path, options)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2314,24 +2314,24 @@ presented in the request if it&#39;s a GET or DELETE method.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 209</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_request_endpoint'>request_endpoint</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_body'>body</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='kw'>begin</span>
-    <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
-    <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>body:</span> <span class='id identifier rubyid_body'>body</span> <span class='rbrace'>}</span> <span class='kw'>unless</span> <span class='lbracket'>[</span><span class='symbol'>:get</span><span class='comma'>,</span> <span class='symbol'>:delete</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_send_request'>send_request</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='kw'>nil</span> <span class='kw'>if</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">request_endpoint</span>(method, path, body={})
+  <span style="color:#080;font-weight:bold">begin</span>
+    options = {}
+    options = { <span style="color:#606">body</span>: body } <span style="color:#080;font-weight:bold">unless</span> [<span style="color:#A60">:get</span>, <span style="color:#A60">:delete</span>].include?(method)
+    response = send_request(method, path, options)
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span> <span style="color:#080;font-weight:bold">if</span> response.body.to_s.empty?
 
-    <span class='kw'>begin</span>
-      <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
-      <span class='kw'>return</span> <span class='id identifier rubyid_data'>data</span>
-    <span class='kw'>rescue</span> <span class='const'>JSON</span><span class='op'>::</span><span class='const'>ParserError</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_jpe'>jpe</span>
-      <span class='kw'>return</span> <span class='id identifier rubyid_build_exception_response'>build_exception_response</span><span class='lparen'>(</span><span class='int'>500</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Bad JSON returned by request: [</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_method'>method</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_upcase'>upcase</span><span class='embexpr_end'>}</span><span class='tstring_content'>] </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_jpe'>jpe</span><span class='rparen'>)</span>
-    <span class='kw'>end</span>
-  <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
-    <span class='comment'># return build_exception_response(500, &quot;Exception while requesting endpoint: [#{method.to_s.upcase}] #{path}&quot;, e)
-</span>    <span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_e'>e</span>
-  <span class='kw'>end</span>
-<span class='kw'>end</span></pre>
+    <span style="color:#080;font-weight:bold">begin</span>
+      data = <span style="color:#036;font-weight:bold">JSON</span>.parse(response.body)
+      <span style="color:#080;font-weight:bold">return</span> data
+    <span style="color:#080;font-weight:bold">rescue</span> <span style="color:#036;font-weight:bold">JSON</span>::<span style="color:#036;font-weight:bold">ParserError</span> =&gt; jpe
+      <span style="color:#080;font-weight:bold">return</span> build_exception_response(<span style="color:#00D">500</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Bad JSON returned by request: [</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>method.to_s.upcase<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">] </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>path<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>, jpe)
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">rescue</span> <span style="color:#036;font-weight:bold">Exception</span> =&gt; e
+    <span style="color:#777"># return build_exception_response(500, &quot;Exception while requesting endpoint: [#{method.to_s.upcase}] #{path}&quot;, e)</span>
+    raise e
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2460,29 +2460,29 @@ presented in the request if it&#39;s a GET or DELETE method.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 300</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_request_params'>request_params</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_pagination'>pagination</span>  <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:pagination</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_filters'>filters</span>     <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:filters</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_params'>params</span>      <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:params</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">request_params</span>(options={})
+  pagination  = options.fetch(<span style="color:#A60">:pagination</span>, <span style="color:#069">nil</span>)
+  filters     = options.fetch(<span style="color:#A60">:filters</span>, <span style="color:#069">nil</span>)
+  params      = options.fetch(<span style="color:#A60">:params</span>, {})
 
-  <span class='kw'>if</span> <span class='id identifier rubyid_pagination'>pagination</span>
-    <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:page</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_pagination'>pagination</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:page</span><span class='comma'>,</span> <span class='int'>1</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:per_page</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_pagination'>pagination</span><span class='period'>.</span><span class='id identifier rubyid_fetch'>fetch</span><span class='lparen'>(</span><span class='symbol'>:per_page</span><span class='comma'>,</span> <span class='int'>25</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
+  <span style="color:#080;font-weight:bold">if</span> pagination
+    params[<span style="color:#A60">:page</span>] = pagination.fetch(<span style="color:#A60">:page</span>, <span style="color:#00D">1</span>)
+    params[<span style="color:#A60">:per_page</span>] = pagination.fetch(<span style="color:#A60">:per_page</span>, <span style="color:#00D">25</span>)
+  <span style="color:#080;font-weight:bold">end</span>
 
-  <span class='kw'>if</span> <span class='id identifier rubyid_filters'>filters</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_filters'>filters</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Hash</span><span class='rparen'>)</span>
-      <span class='id identifier rubyid_filter_index'>filter_index</span> <span class='op'>=</span> <span class='int'>0</span>
-      <span class='id identifier rubyid_filters'>filters</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span>
-        <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>filter[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_filter_index'>filter_index</span><span class='embexpr_end'>}</span><span class='tstring_content'>][field]</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_key'>key</span>
-        <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>filter[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_filter_index'>filter_index</span><span class='embexpr_end'>}</span><span class='tstring_content'>][eq]</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
-        <span class='id identifier rubyid_filter_index'>filter_index</span> <span class='op'>+=</span> <span class='int'>1</span>
-      <span class='kw'>end</span>
-    <span class='kw'>end</span>
-  <span class='kw'>end</span>
+  <span style="color:#080;font-weight:bold">if</span> filters
+    <span style="color:#080;font-weight:bold">if</span> filters.is_a?(<span style="color:#036;font-weight:bold">Hash</span>)
+      filter_index = <span style="color:#00D">0</span>
+      filters.each <span style="color:#080;font-weight:bold">do</span> |key, value|
+        params[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">filter[</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>filter_index<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">][field]</span><span style="color:#710">&quot;</span></span>] = key
+        params[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">filter[</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>filter_index<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">][eq]</span><span style="color:#710">&quot;</span></span>] = value
+        filter_index += <span style="color:#00D">1</span>
+      <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
 
-  <span class='id identifier rubyid_params'>params</span>
-<span class='kw'>end</span></pre>
+  params
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2539,9 +2539,9 @@ presented in the request if it&#39;s a GET or DELETE method.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 114</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_stream_targets'>stream_targets</span>
-  <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Endpoints.html" title="WscSdk::Endpoints (module)">Endpoints</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Endpoints/StreamTargets.html" title="WscSdk::Endpoints::StreamTargets (class)">StreamTargets</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Endpoint.html#initialize-instance_method" title="WscSdk::Endpoint#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">stream_targets</span>
+  <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Endpoints</span>::<span style="color:#036;font-weight:bold">StreamTargets</span>.new(<span style="color:#069">self</span>)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2598,9 +2598,9 @@ presented in the request if it&#39;s a GET or DELETE method.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 89</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WSC SDK Client &gt; hostname: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_hostname'>hostname</span><span class='embexpr_end'>}</span><span class='tstring_content'> | version: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path_version'>path_version</span><span class='embexpr_end'>}</span><span class='tstring_content'> | base_path: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_base_path'>base_path</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">to_s</span>
+  <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">WSC SDK Client &gt; hostname: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>hostname<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> | version: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>path_version<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> | base_path: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>base_path<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
@@ -2657,9 +2657,9 @@ presented in the request if it&#39;s a GET or DELETE method.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/wsc_sdk/client.rb', line 123</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_transcoders'>transcoders</span>
-  <span class='const'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Endpoints.html" title="WscSdk::Endpoints (module)">Endpoints</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Endpoints/Transcoders.html" title="WscSdk::Endpoints::Transcoders (class)">Transcoders</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Endpoint.html#initialize-instance_method" title="WscSdk::Endpoint#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">transcoders</span>
+  <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Endpoints</span>::<span style="color:#036;font-weight:bold">Transcoders</span>.new(<span style="color:#069">self</span>)
+<span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
 </table>
