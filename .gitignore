@@ -11,16 +11,18 @@
 # Defensive ignore patterns.
 **/~
 **/.aws
+**/.circleci
+!/.circleci
 **/.bash_history
+**/credential
+**/credentials
+**/.credential
+**/.credentials
 **/.gem
 **/.mysql_history
 **/.profile
 **/.ssh
 **/.wowza
 **/.wowzacli
-**/credential
-**/credentials
-**/.credential
-**/.credentials
 **/id_rsa*
 **/*.pem

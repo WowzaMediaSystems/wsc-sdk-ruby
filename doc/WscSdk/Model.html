@@ -1,0 +1,3316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wowza Streaming Cloud - SDK Code Documentation</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/custom.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "WscSdk::Model";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="wowza-wrapper">
+      <header>
+        <div class="logo">
+          <a href="https://www.wowza.com">
+            <img src="https://cloud.wowza.com/apidocs/assets/logo.png" alt="Wowza Logo" />
+          </a>
+          <h1>Wowza Streaming Cloud<br/>SDK Code Documentation</h1>
+          <div class="clearfix"></div>
+        </div>
+        <div class="links">
+          <a href="https://www.wowza.com/">Wowza Home</a>
+          <a href="https://www.wowza.com/docs">Docs & APIS</a>
+          <a href="https://www.wowza.com/community/index.html">Forums</a>
+          <a href="https://www.wowza.com/support">Support</a>
+        </div>
+        <div class="clearfix"></div>
+      </header>
+
+      <div id="content">
+        <div class="nav_wrap">
+          <iframe id="nav" src="../class_list.html?1"></iframe>
+          <div id="resizer"></div>
+        </div>
+
+        <div id="main" tabindex="-1">
+          <div id="header">
+            <div id="menu">
+  
+    <a href="../_index.html">Index (M)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../WscSdk.html" title="WscSdk (module)">WscSdk</a></span></span>
+     &raquo; 
+    <span class="title">Model</span>
+  
+</div>
+
+            <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+            <div class="clear"></div>
+          </div>
+
+          <div id="content"><h1>Class: WscSdk::Model
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">WscSdk::Model</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="ApiResponse.html" title="WscSdk::ApiResponse (module)">ApiResponse</a></span>, <span class='object_link'><a href="Loggable.html" title="WscSdk::Loggable (module)">Loggable</a></span></dd>
+  </dl>
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/wsc_sdk/model.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Base class for defining model schemas and managing inbound/outbound model
+data.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="Models/CustomStreamTarget.html" title="WscSdk::Models::CustomStreamTarget (class)">WscSdk::Models::CustomStreamTarget</a></span>, <span class='object_link'><a href="Models/Error.html" title="WscSdk::Models::Error (class)">WscSdk::Models::Error</a></span>, <span class='object_link'><a href="Models/LiveStream.html" title="WscSdk::Models::LiveStream (class)">WscSdk::Models::LiveStream</a></span>, <span class='object_link'><a href="Models/LiveStreamConnectionCode.html" title="WscSdk::Models::LiveStreamConnectionCode (class)">WscSdk::Models::LiveStreamConnectionCode</a></span>, <span class='object_link'><a href="Models/Output.html" title="WscSdk::Models::Output (class)">WscSdk::Models::Output</a></span>, <span class='object_link'><a href="Models/OutputStreamTarget.html" title="WscSdk::Models::OutputStreamTarget (class)">WscSdk::Models::OutputStreamTarget</a></span>, <span class='object_link'><a href="Models/StreamTarget.html" title="WscSdk::Models::StreamTarget (class)">WscSdk::Models::StreamTarget</a></span>, <span class='object_link'><a href="Models/Transcoder.html" title="WscSdk::Models::Transcoder (class)">WscSdk::Models::Transcoder</a></span>, <span class='object_link'><a href="Models/TranscoderBooleanStat.html" title="WscSdk::Models::TranscoderBooleanStat (class)">WscSdk::Models::TranscoderBooleanStat</a></span>, <span class='object_link'><a href="Models/TranscoderConnectionCode.html" title="WscSdk::Models::TranscoderConnectionCode (class)">WscSdk::Models::TranscoderConnectionCode</a></span>, <span class='object_link'><a href="Models/TranscoderFloatStat.html" title="WscSdk::Models::TranscoderFloatStat (class)">WscSdk::Models::TranscoderFloatStat</a></span>, <span class='object_link'><a href="Models/TranscoderIntegerStat.html" title="WscSdk::Models::TranscoderIntegerStat (class)">WscSdk::Models::TranscoderIntegerStat</a></span>, <span class='object_link'><a href="Models/TranscoderState.html" title="WscSdk::Models::TranscoderState (class)">WscSdk::Models::TranscoderState</a></span>, <span class='object_link'><a href="Models/TranscoderStats.html" title="WscSdk::Models::TranscoderStats (class)">WscSdk::Models::TranscoderStats</a></span>, <span class='object_link'><a href="Models/TranscoderStreamTargetState.html" title="WscSdk::Models::TranscoderStreamTargetState (class)">WscSdk::Models::TranscoderStreamTargetState</a></span>, <span class='object_link'><a href="Models/TranscoderStringStat.html" title="WscSdk::Models::TranscoderStringStat (class)">WscSdk::Models::TranscoderStringStat</a></span>, <span class='object_link'><a href="Models/TranscoderThumbnailUrl.html" title="WscSdk::Models::TranscoderThumbnailUrl (class)">WscSdk::Models::TranscoderThumbnailUrl</a></span>, <span class='object_link'><a href="Models/UllStreamTarget.html" title="WscSdk::Models::UllStreamTarget (class)">WscSdk::Models::UllStreamTarget</a></span>, <span class='object_link'><a href="Models/WowzaStreamTarget.html" title="WscSdk::Models::WowzaStreamTarget (class)">WscSdk::Models::WowzaStreamTarget</a></span></p>
+</div>
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#attributes-instance_method" title="#attributes (instance method)">#<strong>attributes</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A hash of attributes and values for the model.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#changes-instance_method" title="#changes (instance method)">#<strong>changes</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>An array of fields that have changed since the model was last saved to the
+API.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#data_mode-instance_method" title="#data_mode (instance method)">#<strong>data_mode</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Determines what mode the data is being ingested/accesed in.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#endpoint-instance_method" title="#endpoint (instance method)">#<strong>endpoint</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The endpoint that generated the model.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#errors-instance_method" title="#errors (instance method)">#<strong>errors</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A hash of fields and messages that indicates validation errors for the
+model.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#partial_data-instance_method" title="#partial_data (instance method)">#<strong>partial_data</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Determines if the model contains a partial or complete dataset.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#attribute-class_method" title="attribute (class method)">.<strong>attribute</strong>(name, type, options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Defines an attribute in the model schema and establishes the appropriate
+getters/setters according to its access settings.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#model_name_plural-class_method" title="model_name_plural (class method)">.<strong>model_name_plural</strong>(wrapper)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Builds the `plural_name` static method that will return the name of the
+model in plural form.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#model_name_singular-class_method" title="model_name_singular (class method)">.<strong>model_name_singular</strong>(wrapper)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Builds the `singular_name` static method that will return the name of the
+model in singular form.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#primary_key-class_method" title="primary_key (class method)">.<strong>primary_key</strong>(attribute_name)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Rebuilds the `primary_key_attribute` method in the class to identify an
+attribute other than the default as the primary key.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#schema-class_method" title="schema (class method)">.<strong>schema</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Defines the default schema structure.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_error-instance_method" title="#add_error (instance method)">#<strong>add_error</strong>(attribute, message)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Adds an error message to the errors hash.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_payload-instance_method" title="#build_payload (instance method)">#<strong>build_payload</strong>  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Build the request payload.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_payload!-instance_method" title="#build_payload! (instance method)">#<strong>build_payload!</strong>  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Build the request payload, or generate an exception if the data is not
+valid.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clean!-instance_method" title="#clean! (instance method)">#<strong>clean!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Cleans out the changes array, which means that the data is no longer marked
+as dirty.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_primary_key-instance_method" title="#clear_primary_key (instance method)">#<strong>clear_primary_key</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Clear the primary key value.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete-instance_method" title="#delete (instance method)">#<strong>delete</strong>  &#x21d2; WscSdk::Model, Nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Delete the model data from the api.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dirty%3F-instance_method" title="#dirty? (instance method)">#<strong>dirty?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Determines if the data is dirty or not based on whether changes have been
+marked in the changes array.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_attribute%3F-instance_method" title="#has_attribute? (instance method)">#<strong>has_attribute?</strong>(attribute)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Determines if an attribute names exists in the schema.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ingest_attribute-instance_method" title="#ingest_attribute (instance method)">#<strong>ingest_attribute</strong>(attribute, value, options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Load an attribute value into the attributes hash and ensure that it meets
+the requirements of the schema.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ingest_attributes-instance_method" title="#ingest_attributes (instance method)">#<strong>ingest_attributes</strong>(attributes, options = {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Load data into the attributes hash and ensure that it meets the
+requirements of the schema.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(endpoint, attributes = {})  &#x21d2; Model </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a new model instance.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize_attributes-instance_method" title="#initialize_attributes (instance method)">#<strong>initialize_attributes</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Build the attributes hash from the schema definitions.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_model%3F-instance_method" title="#new_model? (instance method)">#<strong>new_model?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Determine if the model data is new or not.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#primary_key-instance_method" title="#primary_key (instance method)">#<strong>primary_key</strong>  &#x21d2; Any </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get the value of the primary key attribute.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#primary_key_attribute-instance_method" title="#primary_key_attribute (instance method)">#<strong>primary_key_attribute</strong>  &#x21d2; Symbol </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get the name of the attribute that represents the primary key of the model.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#refresh-instance_method" title="#refresh (instance method)">#<strong>refresh</strong>  &#x21d2; WscSdk::Model </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Refresh the data in the model from the API.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#save-instance_method" title="#save (instance method)">#<strong>save</strong>  &#x21d2; WscSdk::Model, Nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Save the data in the model to the api.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#schema-instance_method" title="#schema (instance method)">#<strong>schema</strong>  &#x21d2; WscSdk::Schema </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get the current schema definition.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#success%3F-instance_method" title="#success? (instance method)">#<strong>success?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Return the success status of the API call that generated this model.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#valid!-instance_method" title="#valid! (instance method)">#<strong>valid!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Determine if the model data is valid and raise an exception if its not.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#valid%3F-instance_method" title="#valid? (instance method)">#<strong>valid?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Determine if the model data is valid.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#validate-instance_method" title="#validate (instance method)">#<strong>validate</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Validate the model data.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Loggable.html" title="WscSdk::Loggable (module)">Loggable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Loggable.html#logger-instance_method" title="WscSdk::Loggable#logger (method)">#logger</a></span>, <span class='object_link'><a href="Loggable.html#logger=-instance_method" title="WscSdk::Loggable#logger= (method)">#logger=</a></span></p>
+
+  
+  
+  
+  
+  
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(endpoint, attributes = {})  &#x21d2; <tt><span class='object_link'><a href="" title="WscSdk::Model (class)">Model</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a new model instance.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>endpoint</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Endpoint.html" title="WscSdk::Endpoint (class)">WscSdk::Endpoint</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The endpoint instance that generated the model.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A hash of attribute values to assign to the model.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 66</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">initialize</span>(endpoint, attributes={})
+  <span style="color:#33B">@endpoint</span>     = endpoint
+  <span style="color:#33B">@changes</span>      = []
+  <span style="color:#33B">@partial_data</span> = <span style="color:#069">false</span>
+  <span style="color:#33B">@data_mode</span>    = <span style="color:#A60">:access</span>
+  initialize_attributes
+  ingest_attributes(attributes, <span style="color:#606">write_to_read_only</span>: <span style="color:#069">true</span>, <span style="color:#606">mark_clean</span>: <span style="color:#069">true</span>)
+  <span style="color:#33B">@errors</span>       = <span style="color:#069">nil</span>
+  <span style="color:#33B">@dirty</span>        = <span style="color:#069">false</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="attributes=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="attributes-instance_method">
+  
+    #<strong>attributes</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>A hash of attributes and values for the model</p>
+
+<p><strong>NOTE:</strong> The attributes accessor directly accesses the
+attributes for a model.  This is okay for reading data out of a model, but
+data assignment should be done using the getter (model.attribute) and
+setter (model.attribute=value) methods that are built into the model. 
+Otherwise you will be bypassing the structures necessary to validate the
+data, which may generate unwanted outcomes.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 32</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">attributes</span>
+  <span style="color:#33B">@attributes</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="changes-instance_method">
+  
+    #<strong>changes</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>An array of fields that have changed since the model was last saved to the
+API.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 48</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">changes</span>
+  <span style="color:#33B">@changes</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="data_mode-instance_method">
+  
+    #<strong>data_mode</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Determines what mode the data is being ingested/accesed in.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 56</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">data_mode</span>
+  <span style="color:#33B">@data_mode</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="endpoint-instance_method">
+  
+    #<strong>endpoint</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>The endpoint that generated the model.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 43</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">endpoint</span>
+  <span style="color:#33B">@endpoint</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="errors-instance_method">
+  
+    #<strong>errors</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>A hash of fields and messages that indicates validation errors for the
+model.  Use `model.valid?` if the response is false, this hash will contain
+the information necessary to fix the concerns.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 39</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">errors</span>
+  <span style="color:#33B">@errors</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="partial_data-instance_method">
+  
+    #<strong>partial_data</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="docstring">
+  <div class="discussion">
+    
+<p>Determines if the model contains a partial or complete dataset.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 52</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">partial_data</span>
+  <span style="color:#33B">@partial_data</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="attribute-class_method">
+  
+    .<strong>attribute</strong>(name, type, options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Defines an attribute in the model schema and establishes the appropriate
+getters/setters according to its access settings.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 477</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">attribute</span>(name, type, options={})
+  name            = name.to_sym
+  accessor_name   = options.fetch(<span style="color:#A60">:as</span>, name).to_sym
+  type            = type.to_sym
+  current_schema  = <span style="color:#069">self</span>.schema
+  attr            = current_schema.add_attribute(name, type, options)
+
+  define_singleton_method <span style="color:#A60">:schema</span> <span style="color:#080;font-weight:bold">do</span>
+    current_schema
+  <span style="color:#080;font-weight:bold">end</span>
+
+  define_method accessor_name <span style="color:#080;font-weight:bold">do</span>
+    raise ::<span style="color:#036;font-weight:bold">NoMethodError</span>.new(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">the '</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>accessor_name<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">' attribute is not currently readable</span><span style="color:#710">&quot;</span></span>) <span style="color:#080;font-weight:bold">unless</span> schema[name].read_access?(<span style="color:#069">self</span>)
+    current_value = <span style="color:#33B">@attributes</span>[name.to_sym]
+    request_remaining_data <span style="color:#080;font-weight:bold">if</span> (<span style="color:#33B">@partial_data</span> <span style="color:#080;font-weight:bold">and</span> current_value.nil?)
+    <span style="color:#33B">@attributes</span>[name.to_sym]
+  <span style="color:#080;font-weight:bold">end</span>
+
+  set_sym = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>accessor_name.to_s<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">=</span><span style="color:#710">&quot;</span></span>.to_sym
+  define_method(set_sym) <span style="color:#080;font-weight:bold">do</span> |value|
+    not_writable = ((<span style="color:#33B">@data_mode</span> == <span style="color:#A60">:access</span>) <span style="color:#080;font-weight:bold">and</span> (!schema[name].write_access?(<span style="color:#069">self</span>)))
+    <span style="color:#080;font-weight:bold">if</span> not_writable
+      logger.warn(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Attempting to write to non-writable attribute: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>accessor_name<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>)
+      <span style="color:#080;font-weight:bold">return</span>
+    <span style="color:#080;font-weight:bold">end</span>
+    valid_type = <span style="color:#069">self</span>.class.schema.valid_type?(name, value)
+    <span style="color:#080;font-weight:bold">if</span> valid_type
+      <span style="color:#069">self</span>.attributes[name] = <span style="color:#069">self</span>.class.schema.transform_value(name, <span style="color:#069">self</span>, value)
+      <span style="color:#33B">@errors</span>               = <span style="color:#069">nil</span>
+      <span style="color:#33B">@changes</span>              &lt;&lt; name
+    <span style="color:#080;font-weight:bold">else</span>
+      logger.warn(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">The attribute '</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>accessor_name.to_s<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">' expected a(n) </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>type<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> value but got '</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>value<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">' [</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>value.class.name<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">] instead!</span><span style="color:#710">&quot;</span></span>)
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="model_name_plural-class_method">
+  
+    .<strong>model_name_plural</strong>(wrapper)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Builds the `plural_name` static method that will return the name of the
+model in plural form.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+462
+463
+464
+465
+466</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 462</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">model_name_plural</span>(wrapper)
+  define_singleton_method <span style="color:#A60">:plural_name</span> <span style="color:#080;font-weight:bold">do</span>
+    wrapper
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="model_name_singular-class_method">
+  
+    .<strong>model_name_singular</strong>(wrapper)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Builds the `singular_name` static method that will return the name of the
+model in singular form.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+453
+454
+455
+456
+457</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 453</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">model_name_singular</span>(wrapper)
+  define_singleton_method <span style="color:#A60">:singular_name</span> <span style="color:#080;font-weight:bold">do</span>
+    wrapper
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="primary_key-class_method">
+  
+    .<strong>primary_key</strong>(attribute_name)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Rebuilds the `primary_key_attribute` method in the class to identify an
+attribute other than the default as the primary key</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>attribute_name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the attribute to use as the primary key.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+444
+445
+446
+447
+448</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 444</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">primary_key</span>(attribute_name)
+  define_method <span style="color:#A60">:primary_key_attribute</span> <span style="color:#080;font-weight:bold">do</span>
+    <span style="color:#080;font-weight:bold">return</span> attribute_name.to_sym
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="schema-class_method">
+  
+    .<strong>schema</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Defines the default schema structure.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+470
+471
+472</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 470</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">schema</span>
+  <span style="color:#036;font-weight:bold">Schema</span>.new
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_error-instance_method">
+  
+    #<strong>add_error</strong>(attribute, message)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Adds an error message to the errors hash.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>attribute</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the attribute to add the error to.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The message to add to the error</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+294
+295
+296
+297</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 294</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">add_error</span>(attribute, message)
+  <span style="color:#33B">@errors</span>[attribute] ||= []
+  <span style="color:#33B">@errors</span>[attribute] &lt;&lt; message
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="build_payload-instance_method">
+  
+    #<strong>build_payload</strong>  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Build the request payload.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The properly structure request data.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 408</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">build_payload</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">nil</span> <span style="color:#080;font-weight:bold">unless</span> valid?
+
+  model_wrapper = <span style="color:#069">self</span>.class.singular_name.to_sym
+  payload       = {}
+  wrapper       = payload[model_wrapper] = {}
+
+  <span style="color:#069">self</span>.schema.each <span style="color:#080;font-weight:bold">do</span> |name, attribute|
+    <span style="color:#080;font-weight:bold">if</span> attribute.write_access?(<span style="color:#069">self</span>)
+      value     = attribute.value_or_default(<span style="color:#069">self</span>)
+      required  = attribute.required?(<span style="color:#069">self</span>)
+
+      <span style="color:#080;font-weight:bold">if</span> required <span style="color:#080;font-weight:bold">or</span> !value.nil?
+        wrapper[name] = value
+      <span style="color:#080;font-weight:bold">end</span>
+    <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">end</span>
+
+  payload
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="build_payload!-instance_method">
+  
+    #<strong>build_payload!</strong>  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Build the request payload, or generate an exception if the data is not
+valid.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The properly structure request data.</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumenError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If the model has invalid data.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+398
+399
+400
+401</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 398</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">build_payload!</span>
+  valid!
+  <span style="color:#080;font-weight:bold">return</span> build_payload
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clean!-instance_method">
+  
+    #<strong>clean!</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Cleans out the changes array, which means that the data is no longer marked
+as dirty.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+211
+212
+213</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 211</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">clean!</span>
+  <span style="color:#33B">@changes</span> = []
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="clear_primary_key-instance_method">
+  
+    #<strong>clear_primary_key</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Clear the primary key value.</p>
+
+<p>This can be used to create a completely new instance of a model&#39;s data</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 117</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">clear_primary_key</span>
+  <span style="color:#33B">@attributes</span>[<span style="color:#069">self</span>.primary_key_attribute] = <span style="color:#069">nil</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete-instance_method">
+  
+    #<strong>delete</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="WscSdk::Model (class)">WscSdk::Model</a></span></tt>, <tt>Nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Delete the model data from the api.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="WscSdk::Model (class)">WscSdk::Model</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If the created/updated model is valid and returns properly from the
+endpoint.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If the created/updated model is invalid.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 348</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">delete</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Errors</span>.model_does_not_exist(<span style="color:#069">self</span>.endpoint) <span style="color:#080;font-weight:bold">if</span> new_model?
+  result = endpoint.delete(<span style="color:#069">self</span>)
+  <span style="color:#080;font-weight:bold">if</span> result.success?
+    clean!
+    clear_primary_key
+    <span style="color:#33B">@partial_data</span> = <span style="color:#069">false</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#080;font-weight:bold">return</span> result
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="dirty?-instance_method">
+  
+    #<strong>dirty?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Determines if the data is dirty or not based on whether changes have been
+marked in the changes array.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+218
+219
+220</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 218</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">dirty?</span>
+  <span style="color:#33B">@changes</span>.length &gt; <span style="color:#00D">0</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="has_attribute?-instance_method">
+  
+    #<strong>has_attribute?</strong>(attribute)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Determines if an attribute names exists in the schema.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>attribute</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the attribute to determine the existence of.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+204
+205
+206</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 204</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">has_attribute?</span>(attribute)
+  attributes.keys.include?(attribute)
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ingest_attribute-instance_method">
+  
+    #<strong>ingest_attribute</strong>(attribute, value, options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Load an attribute value into the attributes hash and ensure that it meets
+the requirements of the schema.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>attribute</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the attribute to ingest</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Any</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The value to ingest into the attribute.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A hash of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:write_to_read_only</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Allow data to be written to read only fields.  This option should only be
+used by the model class, and not by users.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 184</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">ingest_attribute</span>(attribute, value, options={})
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#080;font-weight:bold">unless</span> has_attribute?(attribute)
+
+  write_to_read_only  = options.fetch(<span style="color:#A60">:write_to_read_only</span>, <span style="color:#069">false</span>)
+  attr                = <span style="color:#069">self</span>.class.schema[attribute]
+  <span style="color:#33B">@data_mode</span>          = write_to_read_only ? <span style="color:#A60">:ingest</span> : <span style="color:#A60">:access</span>
+  _temp_partial_data  = <span style="color:#33B">@partial_data</span>
+  <span style="color:#33B">@partial_data</span>       = <span style="color:#069">false</span>
+  set_sym             = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>attr.attribute_name.to_s<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">=</span><span style="color:#710">&quot;</span></span>.to_sym
+
+  <span style="color:#069">self</span>.send(set_sym, value)
+
+  <span style="color:#33B">@partial_data</span>       = _temp_partial_data
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ingest_attributes-instance_method">
+  
+    #<strong>ingest_attributes</strong>(attributes, options = {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Load data into the attributes hash and ensure that it meets the
+requirements of the schema.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>attributes</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The data to load into the attributes hash.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A hash of options</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:mark_clean</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Mark the data as clean after ingesting it.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:write_to_read_only</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Allow data to be written to read only fields.  This option should only be
+used by the model class, and not by users.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 154</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">ingest_attributes</span>(attributes, options={})
+  write_to_read_only  = options.fetch(<span style="color:#A60">:write_to_read_only</span>,  <span style="color:#069">false</span>)
+  mark_clean          = options.fetch(<span style="color:#A60">:mark_clean</span>,          <span style="color:#069">false</span>)
+  <span style="color:#33B">@partial_data</span>       = options.fetch(<span style="color:#A60">:partial_data</span>,        <span style="color:#069">false</span>)
+  attributes          = (attributes || {}).deep_symbolize_keys
+  root_key            = <span style="color:#069">self</span>.class.singular_name.to_sym
+  attributes          = attributes.has_key?(root_key) ? attributes[root_key] : attributes
+
+  attributes.each <span style="color:#080;font-weight:bold">do</span> |attribute, value|
+    ingest_attribute(attribute, value, options)
+  <span style="color:#080;font-weight:bold">end</span>
+  clean! <span style="color:#080;font-weight:bold">if</span> mark_clean
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="initialize_attributes-instance_method">
+  
+    #<strong>initialize_attributes</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Build the attributes hash from the schema definitions.</p>
+
+<p>This is a non-destructive process, so if the attributes are already
+established and have values, then nothing will happen to them.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 126</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">initialize_attributes</span>()
+  <span style="color:#33B">@attributes</span>       ||= {}
+  merged_attributes = {}
+  defaults          = <span style="color:#069">self</span>.class.schema.defaults(<span style="color:#069">self</span>)
+
+  <span style="color:#777"># Merge the defaults in where attributes don't have a value defined.</span>
+  defaults.each <span style="color:#080;font-weight:bold">do</span> |name, value|
+    merged_attributes[name] = attributes[name] || value
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#33B">@attributes</span> = merged_attributes
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="new_model?-instance_method">
+  
+    #<strong>new_model?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Determine if the model data is new or not.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An indication if the model is new.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+247
+248
+249</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 247</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">new_model?</span>
+  <span style="color:#069">self</span>.primary_key.nil? <span style="color:#080;font-weight:bold">or</span> <span style="color:#069">self</span>.primary_key.empty?
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="primary_key-instance_method">
+  
+    #<strong>primary_key</strong>  &#x21d2; <tt>Any</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get the value of the primary key attribute.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Any</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The value of the primary key</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 99</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">primary_key</span>
+  <span style="color:#33B">@attributes</span>[<span style="color:#069">self</span>.primary_key_attribute]
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="primary_key_attribute-instance_method">
+  
+    #<strong>primary_key_attribute</strong>  &#x21d2; <tt>Symbol</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get the name of the attribute that represents the primary key of the model.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The name of the primary key field.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 109</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">primary_key_attribute</span>
+  <span style="color:#A60">:id</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="refresh-instance_method">
+  
+    #<strong>refresh</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="WscSdk::Model (class)">WscSdk::Model</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Refresh the data in the model from the API.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="WscSdk::Model (class)">WscSdk::Model</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A copy of the model if the refresh was successful. An error model if the
+refresh was a failure.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+305
+306
+307
+308
+309
+310
+311</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 305</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">refresh</span>
+  <span style="color:#080;font-weight:bold">if</span> new_model?
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Errors</span>.model_does_not_exist(<span style="color:#069">self</span>.endpoint)
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">self</span>.endpoint.refresh(<span style="color:#069">self</span>)
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="save-instance_method">
+  
+    #<strong>save</strong>  &#x21d2; <tt><span class='object_link'><a href="" title="WscSdk::Model (class)">WscSdk::Model</a></span></tt>, <tt>Nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Save the data in the model to the api.</p>
+
+<p>If the model is new, then the endpoint create method will be called, if the
+model is not new, then the endpoint update method will be called.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="WscSdk::Model (class)">WscSdk::Model</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If the created/updated model is valid and returns properly from the
+endpoint.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If the created/updated model is invalid.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 325</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">save</span>
+  result = <span style="color:#069">nil</span>
+  <span style="color:#080;font-weight:bold">if</span> new_model?
+    result = endpoint.create(<span style="color:#069">self</span>)
+    <span style="color:#33B">@attributes</span>[<span style="color:#069">self</span>.primary_key_attribute] = result.primary_key <span style="color:#080;font-weight:bold">if</span> result.success?
+  <span style="color:#080;font-weight:bold">elsif</span> dirty?
+    result = endpoint.update(<span style="color:#069">self</span>)
+  <span style="color:#080;font-weight:bold">else</span>
+    result = <span style="color:#069">self</span>
+  <span style="color:#080;font-weight:bold">end</span>
+  clean! <span style="color:#080;font-weight:bold">if</span> result.success?
+  result
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="schema-instance_method">
+  
+    #<strong>schema</strong>  &#x21d2; <tt><span class='object_link'><a href="Schema.html" title="WscSdk::Schema (class)">WscSdk::Schema</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get the current schema definition</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Schema.html" title="WscSdk::Schema (class)">WscSdk::Schema</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91
+92</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 90</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">schema</span>
+  <span style="color:#069">self</span>.class.schema
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="success?-instance_method">
+  
+    #<strong>success?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Return the success status of the API call that generated this model.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An indication of the status of the API call.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+364
+365
+366</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 364</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">success?</span>
+  <span style="color:#080;font-weight:bold">return</span> <span style="color:#069">true</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="valid!-instance_method">
+  
+    #<strong>valid!</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Determine if the model data is valid and raise an exception if its not.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If the model has invalid data.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+256
+257
+258</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 256</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">valid!</span>
+  raise <span style="color:#036;font-weight:bold">ArgumentError</span>.new(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Invalid attribute values: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span><span style="color:#33B">@errors</span>.map{ |f, m| <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>f<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>m<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>}.join(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20"> | </span><span style="color:#710">&quot;</span></span>)<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>) <span style="color:#080;font-weight:bold">unless</span> valid?
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="valid?-instance_method">
+  
+    #<strong>valid?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Determine if the model data is valid.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An indication if the model data is valid.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+265
+266
+267
+268</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 265</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">valid?</span>
+  validate
+  (errors.keys.length == <span style="color:#00D">0</span>)
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate-instance_method">
+  
+    #<strong>validate</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Validate the model data.</p>
+
+<p>This will populate the `.errors` hash if data is invalid.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/wsc_sdk/model.rb', line 274</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">validate</span>
+  <span style="color:#33B">@errors</span> = {}
+  <span style="color:#069">self</span>.class.schema.each <span style="color:#080;font-weight:bold">do</span> |name, attribute|
+    value = attribute.value_or_default(<span style="color:#069">self</span>)
+    <span style="color:#080;font-weight:bold">if</span> attribute.required?(<span style="color:#069">self</span>) <span style="color:#080;font-weight:bold">and</span> value.nil?
+      add_error(name, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">is required</span><span style="color:#710">&quot;</span></span>)
+    <span style="color:#080;font-weight:bold">end</span>
+
+    attribute.valid?(<span style="color:#069">self</span>) <span style="color:#080;font-weight:bold">unless</span> value.nil?
+  <span style="color:#080;font-weight:bold">end</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
