@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wowza Streaming Cloud - SDK Code Documentation</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/custom.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="wowza-wrapper">
+      <header>
+        <div class="logo">
+          <a href="https://www.wowza.com">
+            <img src="https://cloud.wowza.com/apidocs/assets/logo.png" alt="Wowza Logo" />
+          </a>
+          <h1>Wowza Streaming Cloud<br/>SDK Code Documentation</h1>
+          <div class="clearfix"></div>
+        </div>
+        <div class="links">
+          <a href="https://www.wowza.com/">Wowza Home</a>
+          <a href="https://www.wowza.com/docs">Docs & APIS</a>
+          <a href="https://www.wowza.com/community/index.html">Forums</a>
+          <a href="https://www.wowza.com/support">Support</a>
+        </div>
+        <div class="clearfix"></div>
+      </header>
+
+      <div id="content">
+        <div class="nav_wrap">
+          <iframe id="nav" src="file_list.html?1"></iframe>
+          <div id="resizer"></div>
+        </div>
+
+        <div id="main" tabindex="-1">
+          <div id="header">
+            <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+            <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+            <div class="clear"></div>
+          </div>
+
+          <div id="content"><div id='filecontents'>
+<p><img src="images/wsc-ruby-1800x400.png"></p>
+
+<h1 id="Wowza+Streaming+Cloud+Ruby+SDK">Wowza Streaming Cloud Ruby SDK</h1>
+
+<p>Welcome to the official Wowza Streaming Cloud Ruby SDK (WscSdk). We help
+developers bring live streaming into their applications - for any size
+audience, anywhere in the world. This SDK leverages the Wowza Streaming
+Cloud REST API to programmatically control live streams, transcoders,
+outputs, and stream targets.</p>
+
+<p>Need the basics? Get to know <a
+href="https://www.wowza.com/products/streaming-cloud">Wowza Streaming
+Cloud</a>.</p>
+
+<h3 id="SDK+version">SDK version</h3>
+
+<p>v1.3.0 (references Wowza Streaming Cloud REST API version 1.3)</p>
+
+<h2 id="Contents">Contents</h2>
+<ul><li>
+<p><a href="#Features">Features</a></p>
+</li><li>
+<p><a href="#Installation">Installation</a></p>
+</li><li>
+<p><a href="#Start_building">Start building</a></p>
+<ul><li>
+<p><a href="#Get_your_api_key_and_generate_an_access_key">Get your API key and
+generate an access key</a></p>
+</li><li>
+<p><a href="#Create_a_client">Create a client</a></p>
+</li><li>
+<p><a href="#Access_endpoints">Access endpoints</a></p>
+</li><li>
+<p><a href="#Use_templates">Use templates</a></p>
+</li><li>
+<p><a href="#Managing_lists">Manage Lists</a></p>
+</li><li>
+<p><a href="#Error_handling">Error Handling</a></p>
+</li></ul>
+</li><li>
+<p><a href="#Access_the_entire_wowza_streaming_cloud_rest_api">Access the
+entire Wowza Streaming Cloud REST API</a></p>
+</li><li>
+<p><a href="#Sdk_examples">SDK examples</a></p>
+</li><li>
+<p><a href="#Documentation">Documentation</a></p>
+</li><li>
+<p><a href="#Contribute">Contribute</a></p>
+</li><li>
+<p><a href="#Feedback">Feedback</a></p>
+</li><li>
+<p><a href="#Support">Support</a></p>
+</li><li>
+<p><a href="#Code_of_conduct">Code of conduct</a></p>
+</li><li>
+<p><a href="#License">License</a></p>
+</li></ul>
+
+<h2 id="Features">Features</h2>
+
+<p>This SDK represents a subset of the Features available in the Wowza
+Streaming Cloud REST API.</p>
+<ul><li>
+<p>Live streams</p>
+</li><li>
+<p>Transcoders</p>
+</li><li>
+<p>Outputs</p>
+</li><li>
+<p>Stream targets</p>
+</li></ul>
+
+<p>To add functionality related to players, stream sources, recordings,
+schedules, and usage metrics, see <a
+href="#Access_the_entire_wowza_streaming_cloud_rest_api">Access the entire
+Wowza Streaming Cloud REST API</a>.</p>
+
+<h2 id="Installation">Installation</h2>
+
+<h3 id="Prerequisites">Prerequisites</h3>
+<ul><li>
+<p>Ruby version 2.3 or higher</p>
+</li><li>
+<p>Access to the Wowza Streaming Cloud service. You can start with our <a
+href="https://www.wowza.com/pricing/cloud-developer-free-trial">free
+trial</a>.</p>
+</li></ul>
+
+<h3 id="Install+the+SDK">Install the SDK</h3>
+
+<p>To use <a href="https://rubygems.org/">RubyGems</a> for Installation, add
+this line to your application&#39;s Gemfile:</p>
+
+<pre class="code ruby"><code class="ruby">gem <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">wsc_sdk</span><span style="color:#710">'</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">~&gt; 1.3.0</span><span style="color:#710">'</span></span>
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#F00;background-color:#FAA">$</span> bundle</code></pre>
+
+<p>Or install it yourself using:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#F00;background-color:#FAA">$</span> gem install wsc_sdk</code></pre>
+
+<h2 id="Start+building">Start building</h2>
+
+<h3 id="Get+your+API+key+and+generate+an+access+key">Get your API key and generate an access key</h3>
+
+<p>Start by getting an API key and access key to authenticate requests.
+You&#39;ll find them in the Wowza Streaming Cloud user interface.</p>
+<ol><li>
+<p>Sign in to <a href="https://cloud.wowza.com">Wowza Streaming Cloud</a>.</p>
+</li><li>
+<p>In the menu bar, click your user name and choose <strong>API
+Access</strong>.</p>
+</li></ol>
+
+<p>See <a
+href="https://www.wowza.com/docs/how-to-use-the-wowza-streaming-cloud-rest-api#keys">Locate
+an API key and generate an access key</a> for more information.</p>
+
+<h3 id="Create+a+client">Create a client</h3>
+
+<p>To perform any SDK functions or API requests, start by creating an instance
+of of the <code>WscSdk::Client</code> object. This object requires your API
+key and access key. It handles all of the requirements for formulating a
+valid API request, and it gives you access to functions for listing,
+finding, creating, updating, and deleting models in the Wowza Streaming
+Cloud REST API.</p>
+
+<pre class="code ruby"><code class="ruby">require <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">wsc_sdk</span><span style="color:#710">'</span></span>
+
+  <span style="color:#036;font-weight:bold">WscSdk</span>.configure <span style="color:#080;font-weight:bold">do</span> |config|
+    config.api_key      = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">[your API key]</span><span style="color:#710">&quot;</span></span>
+    config.access_key   = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">[your access key]</span><span style="color:#710">&quot;</span></span>
+    config.logger       = ::<span style="color:#036;font-weight:bold">Logger</span>.new(<span style="color:#069">STDOUT</span>)
+  <span style="color:#080;font-weight:bold">end</span>
+
+  client      = <span style="color:#036;font-weight:bold">WscSdk</span>.client
+</code></pre>
+
+<h4 id="Set+up+environment+variables">Set up environment variables</h4>
+
+<p>For higher levels of security, and to keep sensitive keys out of your
+repositories, you can use environment variables to configure your clients.</p>
+
+<p>In a terminal you can establish the environment variables like this:</p>
+
+<pre class="code ruby"><code class="ruby">export <span style="color:#036;font-weight:bold">WSC_API_KEY</span>=[your-api-key]
+  export <span style="color:#036;font-weight:bold">WSC_API_ACCESS_KEY</span>=[your-api-access-key]
+</code></pre>
+
+<p>Then your configuration block can be setup like this:</p>
+
+<pre class="code ruby"><code class="ruby">require <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">wsc_sdk</span><span style="color:#710">'</span></span>
+
+  <span style="color:#036;font-weight:bold">WscSdk</span>.configure <span style="color:#080;font-weight:bold">do</span> |config|
+    config.api_key      = <span style="color:#069">ENV</span>[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">WSC_API_KEY</span><span style="color:#710">&quot;</span></span>]
+    config.access_key   = <span style="color:#069">ENV</span>[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">WSC_API_ACCESS_KEY</span><span style="color:#710">&quot;</span></span>]
+    config.logger       = ::<span style="color:#036;font-weight:bold">Logger</span>.new(<span style="color:#069">STDOUT</span>)
+  <span style="color:#080;font-weight:bold">end</span>
+
+  client      = <span style="color:#036;font-weight:bold">WscSdk</span>.client
+</code></pre>
+
+<h4 id="Using+the+sandbox+for+testing">Using the sandbox for testing</h4>
+
+<p>Wowza Streaming Cloud has a sandbox environment you can use for testing
+your code without incurring charges on your account.</p>
+
+<p>You can switch the hostname of the SDK to point the sandbox server for
+testing using this configuration:</p>
+
+<pre class="code ruby"><code class="ruby">require <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">wsc_sdk</span><span style="color:#710">'</span></span>
+
+  <span style="color:#036;font-weight:bold">WscSdk</span>.configure <span style="color:#080;font-weight:bold">do</span> |config|
+    config.api_key      = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">[your sandbox API key]</span><span style="color:#710">&quot;</span></span>
+    config.access_key   = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">[your sandbox access key]</span><span style="color:#710">&quot;</span></span>
+    config.logger       = ::<span style="color:#036;font-weight:bold">Logger</span>.new(<span style="color:#069">STDOUT</span>)
+    conifg.hostname     = <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">SANDBOX_HOSTNAME</span>
+  <span style="color:#080;font-weight:bold">end</span>
+
+  client      = <span style="color:#036;font-weight:bold">WscSdk</span>.client
+</code></pre>
+
+<h3 id="Access+endpoints">Access endpoints</h3>
+
+<p>You can access the controls for managing a model through endpoints. An
+endpoint is typically named for the model you&#39;re managing, but in
+plural form.</p>
+
+<p>For example, you manage the <code>WscSdk::Models::Transcoder</code> model
+through the <code>WscSdk::Endpoints::Transcoders</code> endpoint.</p>
+
+<p>You can access endpoints through the <a href="#Create_a_client">client</a>
+object.</p>
+
+<p>Using the <code>transcoders</code> example, you can access functionality to
+manage models like this:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Assign the transcoders endpoint to a variable</span>
+  transcoders = client.transcoders
+
+  <span style="color:#777"># List all transcoders</span>
+  <span style="color:#777">#</span>
+  <span style="color:#777"># Returns a ModelList object which behaves like a Hash.  The keys of the Hash</span>
+  <span style="color:#777"># are the primary keys of the model, and the values are the model themselves.</span>
+  <span style="color:#777">#</span>
+  list = transcoders.list
+
+  list.each <span style="color:#080;font-weight:bold">do</span> |id, transcoder|
+    <span style="color:#777"># Do something with the items in the list.</span>
+  <span style="color:#080;font-weight:bold">end</span>
+
+  <span style="color:#777"># Find a transcoder</span>
+  <span style="color:#777">#</span>
+  <span style="color:#777"># Returns the model that matches the primary key provided.  If the primary</span>
+  <span style="color:#777"># key doesn't exist, a WscSdk::Models::Error object is returned.</span>
+  <span style="color:#777">#</span>
+  transcoders.find(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">some_id</span><span style="color:#710">'</span></span>)
+
+  <span style="color:#777"># Create a transcoder</span>
+  <span style="color:#777">#</span>
+  <span style="color:#777"># Returns the model of the newly created object. If the validation failed,</span>
+  <span style="color:#777"># or there was an issue sending the data to the API, then a</span>
+  <span style="color:#777"># WscSdk::Models::Error object is returned.</span>
+  <span style="color:#777">#</span>
+  transcoders.create(some_transcoder_model)
+
+  <span style="color:#777"># Update a transcoder</span>
+  <span style="color:#777">#</span>
+  <span style="color:#777"># Returns the model of the updated object. If the validation failed,</span>
+  <span style="color:#777"># or there was an issue sending the data to the API, then a</span>
+  <span style="color:#777"># WscSdk::Models::Error object is returned.</span>
+  <span style="color:#777">#</span>
+  transcoders.update(some_transcoder_model)
+
+  <span style="color:#777"># Delete a transcoder</span>
+  <span style="color:#777">#</span>
+  <span style="color:#777"># Returns the model data of the deleted object, with the primary key value</span>
+  <span style="color:#777"># removed. If there was an issue sending the data to the API, then a</span>
+  <span style="color:#777"># WscSdk::Models::Error object is returned.</span>
+  <span style="color:#777">#</span>
+  transcoders.delete(some_transcoder_model)
+</code></pre>
+
+<p>The <code>Endpoint#list</code>, <code>Endpoint#find(id)</code>,
+<code>Endpoint#create(model_object)</code>,
+<code>Endpoint#update(model_object)</code>, and
+<code>Endpoint#delete(model_object)</code> methods are the most common
+methods inside of an endpoint, however these will change from
+model-to-model, so check the code <a
+href="#Documentation">Documentation</a> for specific details on the model
+you&#39;re attempting to interact with.</p>
+
+<h3 id="Use+templates">Use templates</h3>
+
+<p>This SDK provides predefined templates to make it easier to configure a
+model with common data values. Templates are available for live streams,
+transcoders, outputs, custom stream targets, Wowza stream targets, and
+ultra low latency stream targets.</p>
+
+<p>You use a template when using an endpoint to create a model. For example,
+to create a transcoder that uses the RTMP protocol to push a stream from
+the source to Wowza Streaming Cloud, use a template like this:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Build an RTMP/push transcoder using a predefined template</span>
+name            = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">My First SDK Transcoder</span><span style="color:#710">&quot;</span></span>
+transcoder_data = <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Templates</span>::<span style="color:#036;font-weight:bold">Transcoder</span>.rtmp_push(name)
+</code></pre>
+
+<p>Values for <em>transcoder_type</em>, <em>billing_mode</em>,
+<em>broadcast_location</em>, <em>protocol</em>, <em>delivery_method</em>
+and more are set by default.</p>
+
+<p>To override a preset value, add a modifier key:value pair like this:</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#777"># Build an RTMP/push transcoder using a predefined template with a modifier</span>
+name            = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">My First SDK Transcoder</span><span style="color:#710">&quot;</span></span>
+transcoder_data = <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Templates</span>::<span style="color:#036;font-weight:bold">Transcoder</span>.rtmp_push(name, <span style="color:#606">broadcast_location</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">eu_germany</span><span style="color:#710">&quot;</span></span>)
+</code></pre>
+
+<p>You can see the details for each available template in the <a
+href="https://wowza.com/resources/wsc/sdk/ruby/WscSdk/Templates.html">Templates
+Documentation</a>. Click <strong>View source</strong> to see the preset
+values.</p>
+
+<h3 id="Manage+lists">Manage lists</h3>
+
+<p>All of the endpoints that return lists allow you to control how the data is
+returned. You can configure the lists with following options:</p>
+<ul><li>
+<p><strong>Pagination</strong></p>
+</li><li>
+<p><strong>Filtering</strong></p>
+</li></ul>
+
+<h4 id="Paginate+lists">Paginate lists</h4>
+
+<p>Most Wowza Streaming Cloud REST API endpoints allow you to paginate the
+results of lists. The SDK fully Supports this functionality by passing
+optional parameters to <code>client.[endpoint].list</code> requests.</p>
+
+<h6 id="Pagination+parameters-3A">Pagination parameters:</h6>
+<ul><li>
+<p><strong>page</strong>: The page number of to request</p>
+</li><li>
+<p><strong>per_page</strong>: The number of items per page to request.</p>
+</li></ul>
+
+<p>Using your <a href="#Create_a_client">client</a> object, you can request a
+paginated list like this:</p>
+
+<pre class="code ruby"><code class="ruby">client.transcoders.list(<span style="color:#606">pagination</span>: { <span style="color:#606">page</span>: <span style="color:#00D">1</span>, <span style="color:#606">per_page</span>: <span style="color:#00D">20</span> })
+</code></pre>
+
+<p>The resulting list <code>Hash</code> will have a special key for the
+pagination information called <code>:pagination</code>. If you access this
+key, you&#39;ll get back information about the current pagination
+information.</p>
+
+<h4 id="Filter+lists">Filter lists</h4>
+
+<p><strong>Note:</strong> Currently only the transcoders endpoint allows for
+filtering items returned in the response.</p>
+
+<p>To filter content returned in a list call, you can add the
+<code>filter:</code> key to the <code>list</code> call.</p>
+
+<p>The filter is a Hash of acceptable field names and filter values. Although
+the API allows for more complex filtering, currently the SDK filter accepts
+only direct equality filtering.</p>
+
+<p>Using your <a href="#Create_a_client">client</a> object, you can request a
+list of transcoders that are currently started, like this:</p>
+
+<pre class="code ruby"><code class="ruby">client.transcoders.list(<span style="color:#606">filter</span>: { <span style="color:#606">state</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">started</span><span style="color:#710">'</span></span> })
+</code></pre>
+
+<h3 id="Error+handling">Error handling</h3>
+
+<p>An SDK call that returns an unraised error will return it as a
+<code>WscSdk::Models::Error</code> instance.</p>
+
+<p>To determine if a model or model list generated an error during it&#39;s
+request, you can call the <code>success?</code> method to determine the
+outcome.</p>
+
+<pre class="code ruby"><code class="ruby">transcoder_list = client.transcoders.list
+
+  <span style="color:#080;font-weight:bold">if</span> transcoder_list.success?
+    <span style="color:#777"># Do some stuff with your list.</span>
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#777"># If it wasn't a success, then the returned model is an instance of WscSdk::Models::Error.</span>
+    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Your request for the transcoder list generated an error: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>transcoder_list.code<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>transcoder_list.title<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+<h2 id="Sending+files+through+the+SDK">Sending files through the SDK</h2>
+
+<p>Some API endpoints allow you to send files for use in configuring a live
+stream, transcoder, player or hosted page. These files must be converted
+from their original format to a Base64-encoded string representation in
+order to be processed by Wowza Streaming Cloud.</p>
+
+<p>There is a static convenience method in the client that will load a file
+from your local system and properly encode it for delivery to the API.</p>
+
+<pre class="code ruby"><code class="ruby"><span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Client</span>.file_to_base64(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/path/to/some/file</span><span style="color:#710">&quot;</span></span>)
+</code></pre>
+
+<p>For example, if you want to embed a watermark image into a transcoded
+stream, your code might look like this:</p>
+
+<pre class="code ruby"><code class="ruby">
+transcoder = <span style="color:#d70">$client</span>.transcoders.build
+
+transcoder.watermark_image = <span style="color:#036;font-weight:bold">WscSdk</span>::<span style="color:#036;font-weight:bold">Client</span>.file_to_base64(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/path/to/some/file.jpg</span><span style="color:#710">&quot;</span></span>)
+
+transcoder.save
+</code></pre>
+
+<h2 id="Access+the+entire+Wowza+Streaming+Cloud+REST+API">Access the entire Wowza Streaming Cloud REST API</h2>
+
+<p>This SDK is still under active development, so many endpoints haven&#39;t
+been built in just yet. To help with this, we&#39;ve exposed a low-level
+method inside the client for handling any endpoint inside the API.</p>
+
+<p>This method generates the necessary request headers, does some basic
+interpretation of the request, and returns a Hash object of the response
+data. It doesn&#39;t do any data validation or management. It&#39;s up to
+you to handle the data going in and coming out of the request and make sure
+it&#39;s structured according to the Documentation.</p>
+
+<p>See the <a href="https://sandbox.cloud.wowza.com/api/current/docs">Wowza
+Streaming Cloud API reference</a> and <a
+href="https://www.wowza.com/docs/wowza-streaming-cloud-rest-api">API
+Documentation</a> for more information.</p>
+
+<h5 id="Examples">Examples</h5>
+
+<pre class="code ruby"><code class="ruby">
+  <span style="color:#777"># Request a list of players</span>
+  players_list = client.request_endpoint(<span style="color:#A60">:get</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/players</span><span style="color:#710">&quot;</span></span>)
+
+  <span style="color:#777"># Display the list of players and their types</span>
+  players_list[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">players</span><span style="color:#710">&quot;</span></span>].each <span style="color:#080;font-weight:bold">do</span> |player|
+    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>player[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">id</span><span style="color:#710">&quot;</span></span>]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20">: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>player[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">type</span><span style="color:#710">&quot;</span></span>]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">end</span>
+
+  <span style="color:#777"># Get the details for the first player in the list</span>
+  player_id = player_list[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">players</span><span style="color:#710">&quot;</span></span>].first[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">id</span><span style="color:#710">&quot;</span></span>]
+  player = client.request_endpoint(<span style="color:#A60">:get</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/players/</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>player_id<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>)
+
+  <span style="color:#777"># Display the player details</span>
+  puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Player:</span><span style="color:#710">&quot;</span></span>
+  player[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">player</span><span style="color:#710">&quot;</span></span>].each <span style="color:#080;font-weight:bold">do</span> |attribute, value|
+    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20"> - </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>attribute.to_s.ljust(<span style="color:#00D">25</span>)<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> : </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>value<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">end</span>
+
+  <span style="color:#777"># Update an existing player.</span>
+  updated_player_data = {
+    <span style="color:#606">player</span>: {
+      <span style="color:#606">hosted_page_title</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">This is my updated Hosted Page with Player</span><span style="color:#710">&quot;</span></span>,
+      <span style="color:#606">hosted_page_description</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">new description for my hosted page</span><span style="color:#710">&quot;</span></span>
+    }
+  }
+
+  updated_player = client.request_endpoint(<span style="color:#A60">:post</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">/players/</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>player_id<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>, updated_player_data)
+  puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Player:</span><span style="color:#710">&quot;</span></span>
+  player[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">player</span><span style="color:#710">&quot;</span></span>].each <span style="color:#080;font-weight:bold">do</span> |attribute, value|
+    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20"> - </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>attribute.to_s.ljust(<span style="color:#00D">25</span>)<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> : </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>value<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">end</span>
+</code></pre>
+
+<h2 id="SDK+examples">SDK examples</h2>
+
+<p>Check out the ruby example files in this repo to learn how to use SDK
+functions to configure and manage models.</p>
+<ul><li>
+<p><a href="/examples/client.rb">Set up a client</a></p>
+</li><li>
+<p><a href="/examples/live_streams">Work with live streams</a></p>
+</li><li>
+<p><a href="/examples/transcoders">Work with transcoders</a></p>
+</li><li>
+<p><a href="/examples/outputs">Work with outputs</a></p>
+</li><li>
+<p><a href="/examples/stream_targets">Work with stream targets</a></p>
+</li></ul>
+
+<h2 id="Documentation">Documentation</h2>
+
+<p>You can dig into the details in the <a
+href="https://wowza.com/resources/wsc/sdk/ruby/index.html">Wowza Streaming
+Cloud Ruby SDK reference Documentation</a>.</p>
+
+<h2 id="Contribute">Contribute</h2>
+
+<p>For the moment, we&#39;re not accepting public contributions for the Wowza
+Streaming Cloud Ruby SDK. We may open the code up to contributions in the
+future. For now, relay your concerns and things you&#39;d like to see added
+by emailing us at <a
+href="mailto:cloud-Feedback@wowza.com">cloud-Feedback@wowza.com</a>.</p>
+
+<h2 id="Feedback">Feedback</h2>
+
+<p>We welcome your Feedback on the SDK, its Documentation, and the experience
+of using it. For now, we have disabled GitHub issues for this repo. To
+provide Feedback, email us at <a
+href="mailto:cloud-Feedback@wowza.com">cloud-Feedback@wowza.com</a>.</p>
+
+<h2 id="Support">Support</h2>
+
+<p>For now, we have disabled GitHub issues for this repo. To request
+assistance with the SDK, open a Support ticket with <a
+href="https://www.wowza.com/portal/help">Wowza Support</a>.</p>
+
+<h2 id="Code+of+conduct">Code of conduct</h2>
+
+<p>Please adhere to the guidelines described in the <a
+href="#License">License</a> for this SDK.</p>
+
+<h2 id="License">License</h2>
+
+<p>This code is distributed under the <a href="LICENSE.txt">BSD-3 License</a>.</p>
+</div></div>
+
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
