@@ -261,7 +261,7 @@ The filter is a Hash of acceptable field names and filter values. Although the A
 Using your [client](#create-a-client) object, you can request a list of transcoders that are currently started, like this:
 
 ```ruby
-  client.transcoders.list(filter: { state: 'started' })
+  client.transcoders.list(filters: { state: 'started' })
 ```
 
 ### Error handling
