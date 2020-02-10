@@ -265,8 +265,16 @@ describe WscSdk::Endpoint do
         list_payload << "this is some bad data }{ ][,. "
       }
 
+      let(:bad_list_type_payload) {
+        list_payload = "500"
+      }
+
       let(:bad_model_payload) {
         model_payload << "this is some bad data }{ ][,. "
+      }
+
+      let(:bad_model_type_payload) {
+        model_payload = "500"
       }
 
       it "can transform a payload of model data into a model list", unit_test: true do
@@ -278,6 +286,14 @@ describe WscSdk::Endpoint do
 
       it "will handle a JSON error in a payload for a list of models", unit_test: true do
         bad_list = endpoint.transform_list(bad_list_payload)
+        expect(bad_list.class).to eq(WscSdk::Models::Error)
+        expect(bad_list.success?).to be_falsey
+        expect(bad_list.status).to eq(422)
+        expect(bad_list.code).to eq("ERR-422-PayloadInvalid")
+      end
+
+      it "will handle a type error in a payload for a list of models", unit_test: true do
+        bad_list = endpoint.transform_list(bad_list_type_payload)
         expect(bad_list.class).to eq(WscSdk::Models::Error)
         expect(bad_list.success?).to be_falsey
         expect(bad_list.status).to eq(422)
@@ -296,6 +312,14 @@ describe WscSdk::Endpoint do
         expect(bad_model.success?).to be_falsey
         expect(bad_model.status).to eq(422)
         expect(bad_model.code).to eq("ERR-422-PayloadInvalid")
+      end
+
+      it "will handle a type error in a payload for an individual model", unit_test: true do
+        bad_list = endpoint.transform_model(bad_model_type_payload)
+        expect(bad_list.class).to eq(WscSdk::Models::Error)
+        expect(bad_list.success?).to be_falsey
+        expect(bad_list.status).to eq(422)
+        expect(bad_list.code).to eq("ERR-422-PayloadInvalid")
       end
 
       it "can handle a JSON error in a payload", unit_test: true do

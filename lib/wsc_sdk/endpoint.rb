@@ -319,16 +319,21 @@ module WscSdk
 
     # Transform a response payload into a list of models.
     #
-    # @param payload [Hash]
-    #   The response payload from an API request.
+    # @param payload [String]
+    #   The response body from an API request.
     #
     # @return [WscSdk::ModelList]
     #   The list of models
     #
     def transform_list(payload)
       list = WscSdk::ModelList.new
+
       begin
-        data    = JSON.parse(payload).deep_symbolize_keys
+        parsed_json = JSON.parse(payload)
+        if not parsed_json.is_a?(Hash)
+          return handle_type_error(parsed_json)
+        end
+        data        = parsed_json.deep_symbolize_keys
 
         data[model_name_plural.to_sym].each do |model_data|
           model = self.class.model.new(self)
@@ -373,7 +378,11 @@ module WscSdk
       model         = nil
 
       begin
-        data              = JSON.parse(payload).deep_symbolize_keys
+        parsed_json       = JSON.parse(payload)
+        if not parsed_json.is_a?(Hash)
+          return handle_type_error(parsed_json)
+        end
+        data              = parsed_json.deep_symbolize_keys
         model             = origin_model.nil? ? model_class.new(self) : origin_model
         root_key          = model.class.singular_name.to_sym
         model_data        = data.has_key?(root_key) ? data[root_key] : data
@@ -406,6 +415,27 @@ module WscSdk
     #
     def handle_json_error(json_error, payload=nil)
       client.logger.error("Payload Invalid : #{json_error.message}")
+      client.logger.debug("Payload Data    : #{payload}") if payload
+      return WscSdk::Errors.invalid_payload(self)
+    end
+
+    # If the response payload is of an unexpected type, then make
+    # sure we have a uniform response mechanism.
+    #
+    # A logger error message is written with the error message.
+    # A logger debug message is written with the payload information.
+    # A WscSdk::Models::Error object is returned
+    #
+    # @param payload (String)
+    #   If a payload is available, then we will log the details at a DEBUG
+    #   level.
+    #
+    # @raise [WscSdk::Model::Error]
+    #   Returns an error model so that the SDK can continue without interruption
+    #   but details will be available, and the `.success?` test will fail.
+    #
+    def handle_type_error(payload=nil)
+      client.logger.error("Payload Invalid : Response body of type #{payload.class} is invalid")
       client.logger.debug("Payload Data    : #{payload}") if payload
       return WscSdk::Errors.invalid_payload(self)
     end
