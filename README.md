@@ -25,8 +25,6 @@ v1.3.0 (references Wowza Streaming Cloud REST API version 1.3)
 - [SDK examples](#sdk-examples)
 - [Documentation](#documentation)
 - [Contribute](#contribute)
-- [Feedback](#feedback)
-- [Support](#support)
 - [Code of conduct](#code-of-conduct)
 - [License](#license)
 
@@ -371,26 +369,13 @@ Check out the ruby example files in this repo to learn how to use SDK functions 
 
 You can dig into the details in the [Wowza Streaming Cloud Ruby SDK reference documentation](https://wowza.com/resources/wsc/sdk/ruby/index.html).
 
-
 ## Contribute
 
-For the moment, we're not accepting public contributions for the Wowza Streaming Cloud Ruby SDK. We may open the code up to contributions in the future. For now, relay your concerns and things you'd like to see added by emailing us at [cloud-feedback@wowza.com](mailto:cloud-feedback@wowza.com).
-
-
-## Feedback
-
-We welcome your feedback on the SDK, its documentation, and the experience of using it. For now, we have disabled GitHub issues for this repo. To provide feedback, email us at [cloud-feedback@wowza.com](mailto:cloud-feedback@wowza.com).
-
-
-## Support
-
-For now, we have disabled GitHub issues for this repo. To request assistance with the SDK, open a support ticket with [Wowza Support](https://www.wowza.com/portal/help).
-
+This project is moving to a community based open source model! We will be accepting pull requests shortly.
 
 ## Code of conduct
 
-Please adhere to the guidelines described in the [license](#license) for this SDK.
-
+Please adhere to the guidelines described in the [Code of Conduct](CODE_OF_CONDUCT.md) for this SDK.
 
 ## License
 
