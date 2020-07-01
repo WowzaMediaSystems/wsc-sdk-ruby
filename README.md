@@ -1,3 +1,7 @@
+**Interested in maintaining this SDK? Please respond to [this issue](https://github.com/WowzaMediaSystems/wsc-sdk-ruby/issues/15) if you'd like to support and developer this SDK moving forward. If not, with growing security issues and the next new version of the API making this SDK out of date, we will archive and eventually remove this SDK.**
+
+
+
 ![wowza streaming cloud ruby sdk logo](images/wsc-ruby-1800x400.png)
 
 # Wowza Streaming Cloud Ruby SDK
