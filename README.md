@@ -1,3 +1,5 @@
+**If you need to upgrade the version of the API that your SDK is using, please see the `SDK Version` section below**
+
 **Interested in maintaining this SDK? Please respond to [this issue](https://github.com/WowzaMediaSystems/wsc-sdk-ruby/issues/15) if you'd like to support and developer this SDK moving forward. If not, with growing security issues and the next new version of the API making this SDK out of date, we will archive and eventually remove this SDK.**
 
 
@@ -13,6 +15,27 @@ Need the basics? Get to know [Wowza Streaming Cloud](https://www.wowza.com/produ
 ### SDK version
 
 v1.3.0 (references Wowza Streaming Cloud REST API version 1.3)
+
+#### Changing the API Version used in your SDK
+
+> NOTE: This is not a error proof fix, so you should test your code, and adjust any of the errors where failure may occur.
+
+Since the SDK is no longer supported, we will not be providing updated versions of the code.  With that, you can manually upgrade your SDK by adding the following information to your Configuration block:
+
+```ruby
+  WscSdk.configure do |config|
+    config.api_key      = "[your API key]"
+    config.access_key   = "[your access key]"
+    config.logger       = ::Logger.new(STDOUT)
+    config.version      = "v1.6" # Add this line to your configuration block.
+  end
+```
+
+#### Fixing issues with the Upgraded version
+
+If you upgrade the API version, you may run into errors.   You can continue to use the SDK to get around these issues by using the `request_endpoint` method in the SDK to get raw data back from the API and use in your code.   
+
+See the `Access the entire Wowza Streaming Cloud REST API` section below for more details on how this works.
 
 ## Contents
 
